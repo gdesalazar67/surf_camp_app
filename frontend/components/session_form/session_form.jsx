@@ -6,7 +6,10 @@ class SessionForm extends React.Component {
         super(props)
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            first_name: '',
+            last_name: '',
+            zip_code: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -34,7 +37,42 @@ class SessionForm extends React.Component {
         );
     }
 
-    
+    renderSignInNames(){
+        const type = this.props.formType;
+        if (type === "signup"){
+           return( 
+           <div>
+                 <label>
+                    <input type="text" value={this.state.first_name}
+                        onChange={this.update('first_name')}
+                        className="login-input" />
+                </label>
+                <br />
+                
+                <label>
+                    <input type="text" value={this.state.last_name}
+                        onChange={this.update('last_name')}
+                        className="login-input" />
+                </label>
+            </div>
+            ) }
+    }
+
+    renderZipcode(){
+        const type = this.props.formType;
+        if (type === "signup"){
+            return(
+                <div>
+                    <label>
+                        <input type="number" value={this.state.zip_code}
+                            onChange={this.update('zip_code')}
+                            className="login-input" />
+                    </label>
+                </div>
+            )
+        }
+    }
+
 
     render(){
 
@@ -49,6 +87,7 @@ class SessionForm extends React.Component {
                     {this.renderErrors()}
                 <div className="login-form">
                     <br/>
+                    {this.renderSignInNames()}
                     <label>
                         <input type="text" value={this.state.email}
                             onChange={this.update('email')}
@@ -60,6 +99,7 @@ class SessionForm extends React.Component {
                             onChange={this.update('password')}
                             className="login-input"/>
                     </label>
+                    {this.renderZipcode()}
                     <br/>
                         <input className="session-submit" type="submit" value={this.props.formType} />
                     <br/>
