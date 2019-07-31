@@ -18,7 +18,7 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
-    update(feild){
+    update(field){
         return event =>this.setState({
             [field]: event.currentTarget.value
         });
@@ -27,15 +27,14 @@ class SessionForm extends React.Component {
     renderErrors(){
         return(
             <ul>
-                {this.props.errors.map((error, idx) =>{
-                    return(
-                        <li ley={`err${idx}`}>{error}</li>
-                    )
-                })}
+                {this.props.errors.map((error, i)=>(
+                    <li key={`error-${i}`}>{error}</li>
+                ))}
             </ul>
         );
     }
 
+    
 
     render(){
 
@@ -47,22 +46,24 @@ class SessionForm extends React.Component {
                     <p>It's about time for another surftrip</p>
                  <br/>
                     Please {this.props.formType}
-                    {this.rendersErrors()}
+                    {this.renderErrors()}
                 <div className="login-form">
                     <br/>
-                    <input type="text" value={this.state.email}
-                        onchange={this.update('email')}
-                        className="login-input">Email
-                    </input>
+                    <label>
+                        <input type="text" value={this.state.email}
+                            onChange={this.update('email')}
+                            className="login-input"/>
+                    </label>
                     <br/>
-                    <input type="password" value={this.state.password}
-                        onchange={this.update('password')}
-                        className="login-input">Password
-                    </input>
+                    <label>
+                        <input type="password" value={this.state.password}
+                            onChange={this.update('password')}
+                            className="login-input"/>
+                    </label>
                     <br/>
                         <input className="session-submit" type="submit" value={this.props.formType} />
                     <br/>
-                    if not user please{this.props.navLink}
+                     {this.props.navLink}
 
                 </div>
                 </form>

@@ -6,9 +6,9 @@ import SessionForm from './session_form';
 
 const msp = ({ errors }) => {
     return {
-        errors: errors.session,
+        errors: errors,
         formType: 'login',
-        navLink: <Link to="/signup">sign up first</Link>,
+        navLink: <Link to="/signup">Don't have a SurfCamp account? Signup!</Link>,
     };
 };
 
