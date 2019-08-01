@@ -42,22 +42,21 @@ class SessionForm extends React.Component {
         if (type === "signup"){
            return( 
            <div>
-                 <label>
+                 <div className="login-form-fields">
                     <input type="text" value={this.state.first_name}
                         onChange={this.update('first_name')}
                         className="login-input" 
                         placeholder="First name"
                         />
-                </label>
-                <br />
-                
-                <label>
+                </div>
+    
+                <div className="login-form-fields">
                     <input type="text" value={this.state.last_name}
                         onChange={this.update('last_name')}
                         className="login-input" 
                         placeholder="Last name"
                         />
-                </label>
+                </div>
             </div>
             ) }
     }
@@ -67,13 +66,13 @@ class SessionForm extends React.Component {
         if (type === "signup"){
             return(
                 <div>
-                    <label>
+                    <div className="login-form-fields">
                         <input type="number" value={this.state.zip_code}
                             onChange={this.update('zip_code')}
                             className="login-input" 
                             placeholder="zipcode"
                             />
-                    </label>
+                    </div>
                 </div>
             )
         }
@@ -85,34 +84,31 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h2>Welcome back!</h2>
-                <br/>
-                    <p>It's about time for another surftrip</p>
-                 <br/>
-                    Please {this.props.formType}
+                    <h2 className="login-big-title">Waves be calling!</h2>
+                    <p className="login-small-title">It's about time for another surftrip</p>
                     {this.renderErrors()}
                 <div className="login-form">
-                    <br/>
+                   
                     {this.renderSignInNames()}
-                    <label>
+                    <div className="login-form-fields">
                         <input type="text" value={this.state.email}
                             onChange={this.update('email')}
                             className="login-input"
                             placeholder="email"
                             />
-                    </label>
-                    <br/>
-                    <label>
+                    </div>
+                   
+                    <div className="login-form-fields">
                         <input type="password" value={this.state.password}
                             onChange={this.update('password')}
                             className="login-input"
                             placeholder="password"
                             />
-                    </label>
+                    </div>
                     {this.renderZipcode()}
-                    <br/>
+                   
                         <input className="session-submit" type="submit" value={this.props.formType} />
-                    <br/>
+                   
                      {this.props.navLink}
 
                 </div>
