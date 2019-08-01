@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { openModal } from '../../actions/modal_actions';
+// import { openModal } from '../../actions/modal_actions';
+// import {logout} from "../../actions/session_actions"
 
 export default ({ currentUser, logout, openModal }) => {
+    debugger
     const display = currentUser ? (
         <div>
             <h3>Welcome {currentUser.username}!</h3>

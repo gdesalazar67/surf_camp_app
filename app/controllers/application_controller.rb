@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     private
 
     def current_user
-        @current_user = find_by_session_token(session[:session_token])
+        @current_user = User.find_by_session_token(session[:session_token])
         if @current_user
             return @current_user
         else 

@@ -1655,3 +1655,777 @@ Processing by Api::UsersController#create as JSON
 Completed 200 OK in 293ms (Views: 8.8ms | ActiveRecord: 7.7ms)
 
 
+Started GET "/" for ::1 at 2019-08-01 14:30:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 794ms (Views: 788.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user" for ::1 at 2019-08-01 14:31:32 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "ItrbhdYNofspQ4ARP4UE_g"], ["password_digest", "$2a$12$e4JrfR7Eii60Lb9F/qvszOl/.y1PW2XhZ6YZm5sxzU7NI/3CCagG."], ["zip_code", 7087], ["created_at", "2019-08-01 18:31:32.756045"], ["updated_at", "2019-08-01 18:31:32.756045"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vcdZ5cCUHcO_tLFMXfJwwA"], ["updated_at", "2019-08-01 18:31:32.766481"], ["id", 16]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.5ms)
+Completed 200 OK in 296ms (Views: 10.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2019-08-01 14:34:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 695ms (Views: 690.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-01 14:35:21 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "zip_code"=>""}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gdesalazar@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 2.8ms)
+
+
+  
+NoMethodError (undefined method `is_password?' for #<Class:0x00007f83f16055f0>):
+  
+app/models/user.rb:24:in `find_by_creds'
+app/controllers/api/sessions_controller.rb:4:in `create'
+Started POST "/api/session" for ::1 at 2019-08-01 14:35:28 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "zip_code"=>""}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gdesalazar@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `is_password?' for #<Class:0x00007f83f16055f0>):
+  
+app/models/user.rb:24:in `find_by_creds'
+app/controllers/api/sessions_controller.rb:4:in `create'
+Started GET "/" for ::1 at 2019-08-01 14:38:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-01 14:39:29 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "zip_code"=>""}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gdesalazar@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+Completed 401 Unauthorized in 440ms (Views: 0.2ms | ActiveRecord: 84.9ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-01 14:39:40 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "zip_code"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gdesalazar@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+Completed 401 Unauthorized in 266ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2019-08-01 14:41:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 98ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:33 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (10.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "1Z6rWKAHfCnNzx0EQF1Xbg"], ["password_digest", "$2a$12$/dPHzvAKrm7ebDxzJdSn4eJy/mp6RVpN4fZsFDhSecaVSwq1al9W2"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:33.904078"], ["updated_at", "2019-08-01 18:41:33.904078"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 10.9ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:39 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "uLIXeRGRXmyXWrwgOegmTg"], ["password_digest", "$2a$12$cKO/hR9vP69Lr88wyk7hCuSKJovqFeMqJeQkjObnkpCrCBaICWuZS"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:39.640239"], ["updated_at", "2019-08-01 18:41:39.640239"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:40 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:40 -0400
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "tBcUvPMsTiqgOlsfKKIMbA"], ["password_digest", "$2a$12$SrdoKVsCFJlTdD.NldvxRO4vdbkoquP6CjRQtb7WJUAQJfHa.TU4a"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:40.443540"], ["updated_at", "2019-08-01 18:41:40.443540"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:40 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Processing by Api::UsersController#create as JSON
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:40 -0400
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[36mUser Create (265.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "5tWKF-8kGoUMTw42DqRn6A"], ["password_digest", "$2a$12$bf0hksbjTA56ovycbMdVU.H9ZEYStMYu0b1z3pMKDTqIBkfz81nAy"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:40.832771"], ["updated_at", "2019-08-01 18:41:40.832771"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:41 -0400
+  ↳ app/controllers/api/users_controller.rb:4
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 541ms (ActiveRecord: 267.1ms)
+
+
+  
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "1-nuXB3xSc0Pzf2qNBp-sQ"], ["password_digest", "$2a$12$fvjVJ/RsDwi3Pr14ZfiJ0./92P5.Au39Hc8nuZu/qACQ.oUL9obRK"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:41.103935"], ["updated_at", "2019-08-01 18:41:41.103935"]]
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 361ms (ActiveRecord: 4.6ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "A7s53DiHoapgyNve3Exmlg"], ["password_digest", "$2a$12$Mx4XpDjE/HkfS66nKS3aiODWBT7xxlpqvm3pUtg0DaxDss6rqc63i"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:41.848990"], ["updated_at", "2019-08-01 18:41:41.848990"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 547ms (ActiveRecord: 6.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Create (5.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "Mr7ivFDnZRnMtnLvwx29TQ"], ["password_digest", "$2a$12$4yWkdJXT.6C0/cOKZP2xPuaaPxjp4rUUlwowN.NCwrHsHDgUaCqFi"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:41.853354"], ["updated_at", "2019-08-01 18:41:41.853354"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 358ms (ActiveRecord: 6.9ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:42 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:43 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Processing by Api::UsersController#create as JSON
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "FJNPBMWy1UrfWWyoM80crg"], ["password_digest", "$2a$12$D/OOUTkeSEqkKWWSoi5Wze00S9XuCHSByNMGftScoAKM7KfqrSSKe"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:43.260109"], ["updated_at", "2019-08-01 18:41:43.260109"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (267.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:43 -0400
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 542ms (ActiveRecord: 270.6ms)
+
+
+  
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:43 -0400
+  ↳ app/controllers/api/users_controller.rb:4
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Processing by Api::UsersController#create as JSON
+  [1m[36mUser Create (83.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "Gcglhe8fnPFAhKerpw296A"], ["password_digest", "$2a$12$KJJ4Vfnp.39Uz.LpZUzzfOhYW3affKtZ9Fxe0uaWpttz/Rj/Y/mee"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:43.536170"], ["updated_at", "2019-08-01 18:41:43.536170"]]
+  ↳ app/controllers/api/users_controller.rb:4
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (262.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:43 -0400
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 890ms (ActiveRecord: 83.8ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Processing by Api::UsersController#create as JSON
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "WDJYfD82sXf0uAjKMb_9aQ"], ["password_digest", "$2a$12$zJSC6CgVZoybnOQmUJ3PsuS5bvwWVCH7n8OwSeqhylcL86RsLbwhO"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:44.149991"], ["updated_at", "2019-08-01 18:41:44.149991"]]
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  ↳ app/controllers/api/users_controller.rb:4
+  
+app/controllers/api/users_controller.rb:4:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (265.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "oPFCwuqE_bjDDdUbBGoW3g"], ["password_digest", "$2a$12$ECGeDaNHLVhBS7ptmkUfPuW/Tp8KxhTEH1Yy2PJ.UzGkwE/5h3gre"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:44.157154"], ["updated_at", "2019-08-01 18:41:44.157154"]]
+  [1m[35m (84.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  ↳ app/controllers/api/users_controller.rb:4
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "IJkQJesxC0SP4b5MHzm5rw"], ["password_digest", "$2a$12$P9f6tmnxRrsYnnu1LxlWeuhMzp1GTJGZVbDIard2hm4sg64b3O8Xi"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:44.509572"], ["updated_at", "2019-08-01 18:41:44.509572"]]
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 890ms (ActiveRecord: 348.6ms)
+
+
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 626ms (ActiveRecord: 267.0ms)
+
+
+  
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 4.4ms)
+
+
+  
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+app/controllers/api/users_controller.rb:4:in `create'
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:45 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:46 -0400
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "NtSI9jiYkWgo6-fVUUs57w"], ["password_digest", "$2a$12$sqpCu4U6h05lH29zxQHZ3.d1FetyPTWWb/TOoZdYlyCxReAHH9OTe"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:46.253098"], ["updated_at", "2019-08-01 18:41:46.253098"]]
+Processing by Api::UsersController#create as JSON
+  ↳ app/controllers/api/users_controller.rb:4
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (262.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 536ms (ActiveRecord: 264.8ms)
+
+
+  
+  ↳ app/controllers/api/users_controller.rb:4
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Create (86.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "AVZhoVWmBFgANEKDYbrgnw"], ["password_digest", "$2a$12$CZP9qz3ZJE4Fy7grzZLgceIxuIYRALRECSk7nnivbP1Qw8Oknjovy"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:46.521478"], ["updated_at", "2019-08-01 18:41:46.521478"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 355ms (ActiveRecord: 87.8ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:46 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:47 -0400
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Processing by Api::UsersController#create as JSON
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "-L6y5YIohs-Yyvk0QGUp1Q"], ["password_digest", "$2a$12$VNJtUcJrpKu8H9XuhKb8X./YI60GyduohDDHmU/xtzWFZZC1XfK1m"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:47.010781"], ["updated_at", "2019-08-01 18:41:47.010781"]]
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  ↳ app/controllers/api/users_controller.rb:4
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:47 -0400
+Completed 500 Internal Server Error in 553ms (ActiveRecord: 5.5ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "_aHLF3BawR7m-L1TPmQFlQ"], ["password_digest", "$2a$12$1VYnL8jhihp/maLMo/Q9NuG2myJQosJ/LeIZvFIVw3PE20uF3wfVW"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:47.288111"], ["updated_at", "2019-08-01 18:41:47.288111"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  
+app/controllers/api/users_controller.rb:4:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 635ms (ActiveRecord: 2.5ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Create (90.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "TY9ymge93yVOn9-Vuu_yGg"], ["password_digest", "$2a$12$tGuxHLnm0CFhIQsxQbiSJ.G.nW7gz66LropeEAc0dm4AXGWYIK03W"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:47.653335"], ["updated_at", "2019-08-01 18:41:47.653335"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 368ms (ActiveRecord: 92.2ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:48 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:48 -0400
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "_GWCfG9LW-FN3zf03mp9jw"], ["password_digest", "$2a$12$7kygldz5XZVO7xIk4zCVF.0/3PqyAF.xCcZXcbELgnjHtNqOaON/K"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:48.416228"], ["updated_at", "2019-08-01 18:41:48.416228"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Processing by Api::UsersController#create as JSON
+  ↳ app/controllers/api/users_controller.rb:4
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 5.8ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  
+  ↳ app/controllers/api/users_controller.rb:4
+app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Create (109.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "0cXntwnxc1wNlNS03Ne_vw"], ["password_digest", "$2a$12$ejA/1eXzUvY2tr17Q.NZr.fMr9nT7GUIqyxpIfLlxyeB95gwbQX2q"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:48.718271"], ["updated_at", "2019-08-01 18:41:48.718271"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 408ms (ActiveRecord: 112.1ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:41:49 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"gdesalazar@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "gdesalazar@gmail.com"], ["session_token", "V1wF1EMCydOJGnRAXXT3yg"], ["password_digest", "$2a$12$Vc8jMSeX50pub9NItELVxOIqw8ObX7t/07lgVIzYxbzx4JtnwRkdC"], ["zip_code", 7087], ["created_at", "2019-08-01 18:41:49.712006"], ["updated_at", "2019-08-01 18:41:49.712006"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 3.3ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(gdesalazar@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:44:45 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"galito67@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "galito67@gmail.com"], ["session_token", "Fd7HUz98F8Tn_gyayKERPQ"], ["password_digest", "$2a$12$inKE1Nuooa55lfSVL4vIQOQBKBEk8prFzqeTkSNbWb6HGFjoOkpF6"], ["zip_code", 7087], ["created_at", "2019-08-01 18:44:46.183064"], ["updated_at", "2019-08-01 18:44:46.183064"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(galito67@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:45:02 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"galito67@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "galito67@gmail.com"], ["session_token", "KfKnlwRmgl_Mh7GfD8T0mg"], ["password_digest", "$2a$12$mYDSx6zweDFi7R5QhNleIu2I6iOso9DRw70BzwGiNVWETkuHYlAjy"], ["zip_code", 7087], ["created_at", "2019-08-01 18:45:02.333724"], ["updated_at", "2019-08-01 18:45:02.333724"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(galito67@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/user" for ::1 at 2019-08-01 14:45:02 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"galito67@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Started POST "/api/user" for ::1 at 2019-08-01 14:45:03 -0400
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "galito67@gmail.com"], ["session_token", "QEY8U2obmAfaup0SaD4Oxw"], ["password_digest", "$2a$12$2W5W6DzRtN/ll7pFCdfE/OqMwciRi/WtlY.rk4h4zELQrVGMc/cmu"], ["zip_code", 7087], ["created_at", "2019-08-01 18:45:03.280852"], ["updated_at", "2019-08-01 18:45:03.280852"]]
+  ↳ app/controllers/api/users_controller.rb:4
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"galito67@gmail.com", "password"=>"[FILTERED]", "first_name"=>"galo", "last_name"=>"desalazar", "zip_code"=>"07087"}}
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 579ms (ActiveRecord: 3.4ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  
+  ↳ app/controllers/api/users_controller.rb:4
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(galito67@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+  [1m[36mUser Create (99.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "galo"], ["last_name", "desalazar"], ["email", "galito67@gmail.com"], ["session_token", "y3xzkpCG8OVuMrSUDTEVHg"], ["password_digest", "$2a$12$2DsB/.FXS14o1DVEmawcP.XWquwTq1PlEB9NuvPSTVD4mX3Yda69W"], ["zip_code", 7087], ["created_at", "2019-08-01 18:45:03.575555"], ["updated_at", "2019-08-01 18:45:03.575555"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 388ms (ActiveRecord: 100.9ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(galito67@gmail.com) already exists.
+: INSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started GET "/" for ::1 at 2019-08-01 14:46:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 90ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-01 14:46:20 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-01 14:46:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-01 14:46:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user" for ::1 at 2019-08-01 14:47:17 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"cat@gmail.com", "password"=>"[FILTERED]", "first_name"=>"marina", "last_name"=>"cat", "zip_code"=>"11103"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "marina"], ["last_name", "cat"], ["email", "cat@gmail.com"], ["session_token", "eb8bqZRSVjXwAWh7ViattQ"], ["password_digest", "$2a$12$3w3b.f9n/if5R2u3hmw26.DnWHDaECYlihSC3/513UHVTCa0TNuKC"], ["zip_code", 11103], ["created_at", "2019-08-01 18:47:18.191786"], ["updated_at", "2019-08-01 18:47:18.191786"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "udQl3rH1KRV-MnXXOKpkog"], ["updated_at", "2019-08-01 18:47:18.197201"], ["id", 41]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 293ms (Views: 8.7ms | ActiveRecord: 5.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:12 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f69ce150>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:14 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f83fa9e8>):
+  
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:14 -0400
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:14 -0400
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83eff64d50>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:14 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.0ms)
+
+
+Processing by Api::SessionsController#destroy as JSON
+  
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f81b89f0>):
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f24cdb28>):
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:15 -0400
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f42cda60>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:16 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f865b138>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:16 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83efe2a430>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:17 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.0ms)
+
+
+  
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:17 -0400
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f6eb3d00>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f849aa10>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:18 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f6f7ba30>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:18 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f76b9f90>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:18 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f68caab0>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:19 -0400
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:19 -0400
+Processing by Api::SessionsController#destroy as JSON
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 0.0ms)
+
+
+  
+Completed 500 Internal Server Error in 298ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f243e630>):
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f26990d8>):
+  
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:20 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:20 -0400
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f41ddbf0>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f59f7a88>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started DELETE "/api/session" for ::1 at 2019-08-01 14:48:21 -0400
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_by_session_token' for #<Api::SessionsController:0x00007f83f753acc8>):
+  
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/api/sessions_controller.rb:18:in `destroy'
+Started GET "/" for ::1 at 2019-08-01 14:49:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 84ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-01 14:50:21 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"cat@gmail.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "zip_code"=>""}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cat@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "G3oYVq8EgckUBvuC2szg9g"], ["updated_at", "2019-08-01 18:50:21.434326"], ["id", 41]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 309ms (Views: 9.5ms | ActiveRecord: 15.2ms)
+
+
