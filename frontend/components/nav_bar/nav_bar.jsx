@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { openModal } from '../../actions/modal_actions';
 
-export default ({ currentUser, logout }) => {
+export default ({ currentUser, logout, openModal }) => {
     const display = currentUser ? (
         <div>
             <h3>Welcome {currentUser.username}!</h3>
             <button onClick={logout}>Logout</button>
         </div>
     ) : (
-            <div>
-                <Link className="btn" to="/signup">Sign Up</Link>
-                <Link className="btn" to="/login">Log In</Link>
-            </div>
+            <nav className="login-signup">
+                <button onClick={() => openModal('login')}>Login</button>
+                &nbsp;or&nbsp;
+                <button onClick={() => openModal('signup')}>Signup</button>
+            </nav>
         );
     return (
         <header className="nav-bar">

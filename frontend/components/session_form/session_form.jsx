@@ -45,14 +45,18 @@ class SessionForm extends React.Component {
                  <label>
                     <input type="text" value={this.state.first_name}
                         onChange={this.update('first_name')}
-                        className="login-input" />
+                        className="login-input" 
+                        placeholder="First name"
+                        />
                 </label>
                 <br />
                 
                 <label>
                     <input type="text" value={this.state.last_name}
                         onChange={this.update('last_name')}
-                        className="login-input" />
+                        className="login-input" 
+                        placeholder="Last name"
+                        />
                 </label>
             </div>
             ) }
@@ -66,7 +70,9 @@ class SessionForm extends React.Component {
                     <label>
                         <input type="number" value={this.state.zip_code}
                             onChange={this.update('zip_code')}
-                            className="login-input" />
+                            className="login-input" 
+                            placeholder="zipcode"
+                            />
                     </label>
                 </div>
             )
@@ -91,13 +97,17 @@ class SessionForm extends React.Component {
                     <label>
                         <input type="text" value={this.state.email}
                             onChange={this.update('email')}
-                            className="login-input"/>
+                            className="login-input"
+                            placeholder="email"
+                            />
                     </label>
                     <br/>
                     <label>
                         <input type="password" value={this.state.password}
                             onChange={this.update('password')}
-                            className="login-input"/>
+                            className="login-input"
+                            placeholder="password"
+                            />
                     </label>
                     {this.renderZipcode()}
                     <br/>
