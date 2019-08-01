@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import {logout} from "../../actions/session_actions"
 
 export default ({ currentUser, logout, openModal }) => {
-    debugger
+    
     const display = currentUser ? (
         <div>
             <h3>Welcome {currentUser.username}!</h3>
