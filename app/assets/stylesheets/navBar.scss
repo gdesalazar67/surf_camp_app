@@ -1,5 +1,11 @@
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .nav-bar{
-     display: flex;
+  display: flex;
   justify-content: space-between;
   margin: auto;
   margin-right: 0px;
@@ -24,13 +30,33 @@
     padding: 0;
     margin-right: 20px;
     font-size: 1.15rem
+  }
+  
+  .button-link:hover{
+    border-bottom: 1px solid #333333;
+    // padding-bottom: 3px;
+  }
+  
+  .header-link{
+    font-size: 1.15rem
+  }
+  
+  .login-signup{
+    padding-right: 10px;
+  }
+  
+  .nav-bar-right{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15rem;
 }
 
-.button-link:hover{
-  border-bottom: 1px solid #333333;
-  // padding-bottom: 3px;
+.nav-bar-links{
+  margin-right: 20px;
+  padding-bottom: 6px;
+  height: 20px;
 }
 
-.header-link{
-  font-size: 1.15rem
+.nav-bar-links:hover{
+  border-bottom: 1px solid #40d9ac;
 }

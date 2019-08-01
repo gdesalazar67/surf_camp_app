@@ -12,16 +12,17 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import Modal from './modal/modal';
-
+import Searchbar from './searchbar/search_bar'
 const App = ()=>(
     <div>
         <Modal />
-        <header>
-            <NavBarContainer/>
-        </header>
+        
+        <NavBarContainer/>
+        
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            <Route exact path="/" component={Searchbar}/>
         </Switch>
     </div>
 );
