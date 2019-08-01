@@ -8,13 +8,13 @@ export default ({ currentUser, logout, openModal }) => {
     const display = currentUser ? (
         <div>
             <h3>Welcome {currentUser.username}!</h3>
-            <button onClick={logout}>Logout</button>
+            <button className="button-link" onClick={logout}>Logout</button>
         </div>
     ) : (
             <nav className="login-signup">
-                <button onClick={() => openModal('login')}>Login</button>
-                &nbsp;or&nbsp;
-                <button onClick={() => openModal('signup')}>Signup</button>
+                <button className="button-link" onClick={() => openModal('login')}>Login</button>
+               
+                <button className="button-link" onClick={() => openModal('signup')}>Signup</button>
             </nav>
         );
     return (
