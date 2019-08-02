@@ -5337,3 +5337,806 @@ No template found for Api::SessionsController#destroy, rendering head :no_conten
 Completed 204 No Content in 72ms (ActiveRecord: 2.7ms)
 
 
+Started POST "/api/session" for ::1 at 2019-08-02 11:51:10 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (2.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9LXGeyM8PB_qW5HK4e7V_g"], ["updated_at", "2019-08-02 15:51:10.383007"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (7.6ms)
+Completed 200 OK in 318ms (Views: 18.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:54:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 741ms (Views: 737.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 11:54:39 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (2.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "AVGuD9vRLkgsYfdi2c6jeg"], ["updated_at", "2019-08-02 15:54:39.856419"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 283ms (Views: 9.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:55:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 696ms (Views: 691.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 11:55:17 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "XCdle11mN4oU0ex6fRkQZw"], ["updated_at", "2019-08-02 15:55:17.842341"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 288ms (Views: 10.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 12:00:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 932ms (Views: 925.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 12:01:00 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (2.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "aU9iJa6wcS98dHp--4Ge9w"], ["updated_at", "2019-08-02 16:01:01.083873"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 293ms (Views: 13.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 12:01:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 788ms (Views: 783.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 12:01:39 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "yudrDxfVxN_jsYZC96Y7uA"], ["updated_at", "2019-08-02 16:01:39.612104"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.5ms)
+Completed 200 OK in 287ms (Views: 10.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 12:19:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 719ms (Views: 715.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 12:19:12 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"gsdgsdg", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "zip_code"=>""}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gsdgsdg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+Completed 401 Unauthorized in 7ms (Views: 0.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/user" for ::1 at 2019-08-02 12:19:26 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"sdgsd", "password"=>"[FILTERED]", "first_name"=>"gsdgsdg", "last_name"=>"sdgsdg", "zip_code"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 422 Unprocessable Entity in 299ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 12:19:43 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"fdgdsgf", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "zip_code"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fdgdsgf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3144630128635722090)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSurfspots (20190802174609)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (95.6ms)[0m  [1m[35mCREATE TABLE "surfspots" ("id" bigserial primary key, "host_id" integer NOT NULL, "title" character varying NOT NULL, "description" character varying NOT NULL, "price" integer NOT NULL, "lat" decimal NOT NULL, "long" decimal NOT NULL, "max_guest" integer NOT NULL, "campfire?" boolean NOT NULL, "pets?" boolean NOT NULL, "toilets?" boolean NOT NULL, "showers?" boolean NOT NULL, "wifi?" boolean NOT NULL, "water?" boolean NOT NULL, "tent?" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190802174609_create_surfspots.rb:3
+  [1m[35m (18.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3144630128635722090)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3144630128635722090)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSurfspots (20190802174609)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (31.5ms)[0m  [1m[35mCREATE TABLE "surfspots" ("id" bigserial primary key, "host_id" integer NOT NULL, "title" character varying NOT NULL, "description" character varying NOT NULL, "price" integer NOT NULL, "lat" decimal NOT NULL, "long" decimal NOT NULL, "max_guest" integer NOT NULL, "campfire?" boolean NOT NULL, "pets?" boolean NOT NULL, "toilets?" boolean NOT NULL, "showers?" boolean NOT NULL, "wifi?" boolean NOT NULL, "water?" boolean NOT NULL, "tent?" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190802174609_create_surfspots.rb:3
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE  INDEX  "index_surfspots_on_host_id_and_lat_and_long_and_price" ON "surfspots"  ("host_id", "lat", "long", "price")[0m
+  ↳ db/migrate/20190802174609_create_surfspots.rb:20
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_surfspots_on_title" ON "surfspots"  ("title")[0m
+  ↳ db/migrate/20190802174609_create_surfspots.rb:21
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190802174609"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (5.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3144630128635722090)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-08-02 15:29:31 -0400
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/galodesalazar/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 1644ms (Views: 1638.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 15:37:56 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (4.7ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for ::1 at 2019-08-02 15:38:32 -0400
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (9.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "EYwc0wuhPPHe_zryICzBAA"], ["updated_at", "2019-08-02 19:38:32.210023"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (7467.1ms)
+Completed 200 OK in 43107ms (Views: 7487.3ms | ActiveRecord: 61.5ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 800ms (Views: 795.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 15:39:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 126ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 15:40:56 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "O8igIpSbnjDkVm6yz2GoPQ"], ["updated_at", "2019-08-02 19:41:26.066674"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (242868.7ms)
+Completed 200 OK in 276970ms (Views: 247243.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 15:46:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 128ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 15:57:01 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/session" for ::1 at 2019-08-02 15:57:17 -0400
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (5.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "u40Arhv7wJr9VfhMCeGJQA"], ["updated_at", "2019-08-02 19:57:17.776204"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  Rendering api/users/show.json.jbuilder
+  ↳ app/models/user.rb:23
+  Rendered api/users/show.json.jbuilder (37139.8ms)
+  [1m[35m (1756.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (3064.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lmXPnpZMcgaKci6hRTlkLQ"], ["updated_at", "2019-08-02 20:00:25.828136"], ["id", 44]]
+  ↳ app/models/user.rb:46
+Completed 200 OK in 211428ms (Views: 70952.9ms | ActiveRecord: 37.4ms)
+
+
+  [1m[35m (6197.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (19887.4ms)
+Completed 200 OK in 179502ms (Views: 45033.4ms | ActiveRecord: 24669.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-08-02 16:03:21 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lmXPnpZMcgaKci6hRTlkLQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lmXPnpZMcgaKci6hRTlkLQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (5.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (8.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "elrVYm6x8_wsFiNXefI1QA"], ["updated_at", "2019-08-02 20:03:21.904461"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+No template found for Api::SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 140ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 16:11:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 534ms (Views: 530.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 16:11:34 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (3.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2z0Md29zxHhzaTfFGZpX9g"], ["updated_at", "2019-08-02 20:11:34.860729"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 339ms (Views: 10.5ms | ActiveRecord: 23.2ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-08-02 16:11:37 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2z0Md29zxHhzaTfFGZpX9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2z0Md29zxHhzaTfFGZpX9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "5KquBYIOw7BdRPbysB8FRA"], ["updated_at", "2019-08-02 20:11:37.698272"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+No template found for Api::SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 101ms (ActiveRecord: 4.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-02 16:11:40 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "zlHO3OP5Lovl71wiWjsOPg"], ["updated_at", "2019-08-02 20:11:40.741851"], ["id", 44]]
+  ↳ app/models/user.rb:46
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.1ms)
+Completed 200 OK in 284ms (Views: 9.2ms | ActiveRecord: 2.9ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Create (13.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "demo"], ["last_name", "demo"], ["email", "demo1@gmail.com"], ["session_token", "vZiam4x01AK1bgPmBsfZug"], ["password_digest", "$2a$12$Z1sm..qvlATN6NvMvTm6k.8K3r2KAJpO27lWDk0z5DpGZ4UEV156y"], ["zip_code", 11103], ["created_at", "2019-08-02 21:15:37.172609"], ["updated_at", "2019-08-02 21:15:37.172609"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (2.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 42]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 44]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 41]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSurfspot Load (7.0ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "demo"], ["last_name", "demo"], ["email", "demo1@gmail.com"], ["session_token", "_tn0wfnQ8OyEyHhbi0sbvw"], ["password_digest", "$2a$12$ephXBIjZTGVOarEfF5Vg/.B8AgjvNu5FY33NukD0L1FUujVqyzp9K"], ["zip_code", 11103], ["created_at", "2019-08-02 21:37:17.239404"], ["updated_at", "2019-08-02 21:37:17.239404"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marina"], ["last_name", "demo"], ["email", "marina1@gmail.com"], ["session_token", "7IVZTPFoGx1tMY7cSk8QfA"], ["password_digest", "$2a$12$06Uk/NffFevR3T3W4NLKgePpqevLfgiBItOZZjSREaBMKk/FpNrTi"], ["zip_code", 90001], ["created_at", "2019-08-02 21:37:17.519341"], ["updated_at", "2019-08-02 21:37:17.519341"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "demo"], ["email", "luke1@gmail.com"], ["session_token", "VlUqMMYBWtBML1VlXq0z4g"], ["password_digest", "$2a$12$scRUoDVfDHfJ4FqDV9NNpeW25HIB4d.lqCryAeHSZ3RTLdPmTpvYS"], ["zip_code", 90001], ["created_at", "2019-08-02 21:37:17.786493"], ["updated_at", "2019-08-02 21:37:17.786493"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marc"], ["last_name", "demo"], ["email", "marc1@gmail.com"], ["session_token", "eRDHnKU841K9vxzNU_ApGw"], ["password_digest", "$2a$12$O22XruS1xcd.KwiyKy5dce359.jHoWFGiFiNLes1TuzjSgNU67YRO"], ["zip_code", 90050], ["created_at", "2019-08-02 21:37:18.059276"], ["updated_at", "2019-08-02 21:37:18.059276"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kuna"], ["last_name", "demo"], ["email", "kuna1@gmail.com"], ["session_token", "0-OOJbyAx8c71EWLEz_sDA"], ["password_digest", "$2a$12$EUwHKL9b/gEKfftbCo.VvOezXza3plrxVn3eGm/HivYlu6PHv1GkO"], ["zip_code", 92014], ["created_at", "2019-08-02 21:37:18.332295"], ["updated_at", "2019-08-02 21:37:18.332295"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 46]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 47]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 48]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 49]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 50]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSurfspot Load (2.8ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "demo"], ["last_name", "demo"], ["email", "demo1@gmail.com"], ["session_token", "MUnyj8TwI_a_TtSZThVdig"], ["password_digest", "$2a$12$sZVa0Hfd/lhTvzXIQlEmhO/W.Q0EHaleqgBmtclJeHektpJfZxF.O"], ["zip_code", 11103], ["created_at", "2019-08-02 22:04:33.812035"], ["updated_at", "2019-08-02 22:04:33.812035"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marina"], ["last_name", "demo"], ["email", "marina1@gmail.com"], ["session_token", "dzko5-8pPmU2UKtO-fvJJA"], ["password_digest", "$2a$12$ngeJEGX6oXoxCdSBF17sOOeC0vS.594aNsB1iygyEgEcmmW3tcLbi"], ["zip_code", 90001], ["created_at", "2019-08-02 22:04:34.081418"], ["updated_at", "2019-08-02 22:04:34.081418"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "demo"], ["email", "luke1@gmail.com"], ["session_token", "lEY8UcrFfss5rll-ap8ygg"], ["password_digest", "$2a$12$v09eaYlBhvupWqWt8nKseOx1D19mV7jps19bxSBz0RmpEkI3Nv1Z6"], ["zip_code", 90001], ["created_at", "2019-08-02 22:04:34.351795"], ["updated_at", "2019-08-02 22:04:34.351795"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marc"], ["last_name", "demo"], ["email", "marc1@gmail.com"], ["session_token", "fK_dw0v7lSAyW9HH9Pf4sQ"], ["password_digest", "$2a$12$QDI.5BuinYnscMYkTCqDDO6w5zdOPLE6hl.Reh2swXJKfd53V.6qu"], ["zip_code", 90050], ["created_at", "2019-08-02 22:04:34.619185"], ["updated_at", "2019-08-02 22:04:34.619185"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kuna"], ["last_name", "demo"], ["email", "kuna1@gmail.com"], ["session_token", "7WnluMAEaRVStleAF9bNkw"], ["password_digest", "$2a$12$Add2RR8AXaZfTF062Y9y0ujCj3fu9IRF6BhLvYml5D/74FCrMLh2u"], ["zip_code", 92014], ["created_at", "2019-08-02 22:04:34.887856"], ["updated_at", "2019-08-02 22:04:34.887856"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (2.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 51]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 52]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 53]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 54]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 55]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSurfspot Load (1.0ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "demo"], ["last_name", "demo"], ["email", "demo1@gmail.com"], ["session_token", "QGaqYCmMq5snBme_caFO2A"], ["password_digest", "$2a$12$K/vGXxzg5u.l.plp.Esd9exdTI6NUhOxV5MXMYhJcWQf9R/1xlyFS"], ["zip_code", 11103], ["created_at", "2019-08-02 22:15:51.346084"], ["updated_at", "2019-08-02 22:15:51.346084"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marina"], ["last_name", "demo"], ["email", "marina1@gmail.com"], ["session_token", "wgJdqVhVgkUoHYkoh0go8A"], ["password_digest", "$2a$12$o6zchBNm5s5QniP7Vgt6Ous8Ql3Wc/lbxH56YPhs0WmUKx0DNcAUe"], ["zip_code", 90001], ["created_at", "2019-08-02 22:15:51.620767"], ["updated_at", "2019-08-02 22:15:51.620767"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "demo"], ["email", "luke1@gmail.com"], ["session_token", "PnEz6azyVbT-A-Wi241h9g"], ["password_digest", "$2a$12$NrbD/O96gk7gjEsZMQYvLuKfGHZ51Ps6fqIVkgDJGtSdflGXkcH3G"], ["zip_code", 90001], ["created_at", "2019-08-02 22:15:51.906844"], ["updated_at", "2019-08-02 22:15:51.906844"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marc"], ["last_name", "demo"], ["email", "marc1@gmail.com"], ["session_token", "T1aDrVwlT-gJi7nsKAfh5Q"], ["password_digest", "$2a$12$aidpmklUI0RUviXbRBUGReMPCOVlPooLGBEuzunyVg18BXLaS5hS6"], ["zip_code", 90050], ["created_at", "2019-08-02 22:15:52.177011"], ["updated_at", "2019-08-02 22:15:52.177011"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "session_token", "password_digest", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kuna"], ["last_name", "demo"], ["email", "kuna1@gmail.com"], ["session_token", "scsAgoROx4MakXy5L-aIJA"], ["password_digest", "$2a$12$Z5onr5.eWXyrwXaSVm376ur1V.Fn1ahu9nCcDruqdIfgbw81P/6jC"], ["zip_code", 92014], ["created_at", "2019-08-02 22:15:52.447789"], ["updated_at", "2019-08-02 22:15:52.447789"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mSurfspot Create (6.2ms)[0m  [1m[32mINSERT INTO "surfspots" ("host_id", "title", "description", "price", "lat", "long", "max_guest", "campfire?", "pets?", "toilets?", "showers?", "wifi?", "water?", "tent?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["host_id", 56], ["title", "Surfrider Beach"], ["description", "Tubes for days"], ["price", 50], ["lat", "33.668244"], ["long", "-118.019043"], ["max_guest", 4], ["campfire?", true], ["pets?", true], ["toilets?", true], ["showers?", false], ["wifi?", true], ["water?", true], ["tent?", true], ["created_at", "2019-08-02 22:15:52.485964"], ["updated_at", "2019-08-02 22:15:52.485964"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mSurfspot Create (0.5ms)[0m  [1m[32mINSERT INTO "surfspots" ("host_id", "title", "description", "price", "lat", "long", "max_guest", "campfire?", "pets?", "toilets?", "showers?", "wifi?", "water?", "tent?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["host_id", 57], ["title", "Montanita Beach"], ["description", "Hippy sand breaks"], ["price", 30], ["lat", "-1.8259639"], ["long", "-80.7580102"], ["max_guest", 4], ["campfire?", true], ["pets?", true], ["toilets?", false], ["showers?", false], ["wifi?", false], ["water?", false], ["tent?", true], ["created_at", "2019-08-02 22:15:52.497944"], ["updated_at", "2019-08-02 22:15:52.497944"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mSurfspot Create (0.5ms)[0m  [1m[32mINSERT INTO "surfspots" ("host_id", "title", "description", "price", "lat", "long", "max_guest", "campfire?", "pets?", "toilets?", "showers?", "wifi?", "water?", "tent?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["host_id", 58], ["title", "Puerto Escondido"], ["description", "Burrito barrel"], ["price", 50], ["lat", "15.8649046"], ["long", "-97.0867278"], ["max_guest", 6], ["campfire?", true], ["pets?", true], ["toilets?", true], ["showers?", true], ["wifi?", true], ["water?", true], ["tent?", true], ["created_at", "2019-08-02 22:15:52.503118"], ["updated_at", "2019-08-02 22:15:52.503118"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+Started GET "/" for ::1 at 2019-08-02 18:16:39 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 134ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:17:24 -0400
+  
+SyntaxError (/Users/galodesalazar/Desktop/surfCampApp/app/controllers/api/surfspots_controller.rb:41: syntax error, unexpected ',', expecting =>
+    keys = {:host_id, :title, :description, :price...
+                    ^):
+  
+app/controllers/api/surfspots_controller.rb:41: syntax error, unexpected ',', expecting =>
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:19:14 -0400
+  
+SyntaxError (/Users/galodesalazar/Desktop/surfCampApp/app/controllers/api/surfspots_controller.rb:46: syntax error, unexpected ':', expecting ')'
+...:campfire?, :pets?, :toilets? :showers?,    
+...                              ^):
+  
+app/controllers/api/surfspots_controller.rb:46: syntax error, unexpected ':', expecting ')'
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:19:57 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (1.5ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:1
+  Rendered api/surfspots/_surfspot.json.jbuilder (15.3ms)
+  Rendered api/surfspots/index.json.jbuilder (199.6ms)
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 14.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:1:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102321799320'
+app/views/api/surfspots/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102325275960'
+app/views/api/surfspots/index.json.jbuilder:2:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102325275960'
+app/views/api/surfspots/index.json.jbuilder:1:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102325275960'
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:21:54 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (0.7ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:1
+  Rendered api/surfspots/_surfspot.json.jbuilder (10.9ms)
+  Rendered api/surfspots/index.json.jbuilder (21.1ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:1:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102382945220'
+app/views/api/surfspots/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102383028820'
+app/views/api/surfspots/index.json.jbuilder:2:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102383028820'
+app/views/api/surfspots/index.json.jbuilder:1:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102383028820'
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:22:28 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (0.5ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:1
+  Rendered api/surfspots/_surfspot.json.jbuilder (119804.7ms)
+  Rendered api/surfspots/index.json.jbuilder (119809.5ms)
+Completed 500 Internal Server Error in 119823ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: 
+    2: debugger
+    3: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:3:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102368838280'
+app/views/api/surfspots/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102383908120'
+app/views/api/surfspots/index.json.jbuilder:2:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102383908120'
+app/views/api/surfspots/index.json.jbuilder:1:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102383908120'
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:24:28 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (1.7ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:1
+  Rendered api/surfspots/_surfspot.json.jbuilder (1717.7ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (1228.9ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (1054.0ms)
+  Rendered api/surfspots/index.json.jbuilder (4019.8ms)
+Completed 200 OK in 4031ms (Views: 4026.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:24:58 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (0.4ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:1
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.5ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.2ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.2ms)
+  Rendered api/surfspots/index.json.jbuilder (6.1ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:25:24 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (1.1ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:1
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.9ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.3ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.4ms)
+  Rendered api/surfspots/index.json.jbuilder (14.5ms)
+Completed 200 OK in 32ms (Views: 26.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-02 18:26:15 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (0.7ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:1
+  Rendered api/surfspots/_surfspot.json.jbuilder (1.1ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.2ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.2ms)
+  Rendered api/surfspots/index.json.jbuilder (12.5ms)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/surfspots/1" for ::1 at 2019-08-02 18:27:17 -0400
+Processing by Api::SurfspotsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSurfspot Load (2.9ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/surfspots_controller.rb:35
+  Rendering api/surfspots/show.json.jbuilder
+  Rendered api/surfspots/_surfspot.json.jbuilder (3.6ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/api/surfspots/show.json.jbuilder:6
+  Rendered api/surfspots/show.json.jbuilder (199.7ms)
+Completed 200 OK in 249ms (Views: 202.7ms | ActiveRecord: 13.7ms)
+
+

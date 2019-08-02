@@ -17,13 +17,17 @@ class SessionForm extends React.Component {
     }
 
 
+    componentWillUnmount(){
+        this.props.removeErrors()
+    }
     handleSubmit(event){
         event.preventDefault();
         const user = Object.assign({},this.state);
         this.props.processForm(user);
     }
-
+    
     demoSubmit(event){
+        
         event.preventDefault();
         const user ={
             email: "demo1@gmail.com",
@@ -49,6 +53,7 @@ class SessionForm extends React.Component {
     }
 
     renderSignInNames(){
+        
         const type = this.props.formType;
         if (type === "signup"){
            return( 

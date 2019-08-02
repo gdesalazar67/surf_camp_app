@@ -1,4 +1,5 @@
 export const login = user =>{
+    
     return(
         $.ajax({
             method: "POST",
@@ -9,6 +10,7 @@ export const login = user =>{
 }
 
 export const logout = () =>{
+    
     return(
         $.ajax({
             method: "DELETE",

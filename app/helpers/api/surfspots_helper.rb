@@ -1,0 +1,2 @@
+module Api::SurfspotsHelper
+end

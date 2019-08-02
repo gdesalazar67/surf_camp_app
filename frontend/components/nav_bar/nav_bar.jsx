@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 export default ({ currentUser, logout, openModal }) => {
     
     const display = currentUser ? (
-        <div>
-            <h3>Welcome {currentUser.username}!</h3>
+        <div className="login-signup">
             <button className="button-link" onClick={logout}>Logout</button>
+            <p className="button-link">{currentUser.first_name}</p>
         </div>
     ) : (
             <nav className="login-signup">

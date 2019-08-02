@@ -5,7 +5,7 @@ class User < ApplicationRecord
     attr_reader :password
     after_initialize :ensure_session_token
 
-    # has_many :surfspots
+    has_many :surfspots
 
     # has_many :reviews,
     #     primary_key: :id,

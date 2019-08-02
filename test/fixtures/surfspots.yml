@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  host_id: 1
+  title: MyString
+  description: MyString
+  price: 1
+  lat: 9.99
+  long: 9.99
+  max_guest: 1
+  campfire?: false
+  pets?: false
+  toilets?: false
+  showers?: false
+  wifi?: false
+  water?: false
+  tent?: false
+
+two:
+  host_id: 1
+  title: MyString
+  description: MyString
+  price: 1
+  lat: 9.99
+  long: 9.99
+  max_guest: 1
+  campfire?: false
+  pets?: false
+  toilets?: false
+  showers?: false
+  wifi?: false
+  water?: false
+  tent?: false
