@@ -3,6 +3,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import { signup, login } from '../../actions/session_actions';
 import SessionForm from './session_form';
+import {openModal,closeModal} from '../../actions/modal_actions'
 
 const msp = ({ errors }) => {
     return {
@@ -16,7 +17,7 @@ const mdp = dispatch => {
         processForm: (user) => dispatch(signup(user)),
         otherForm: (
             <button onClick={() => dispatch(openModal('login'))}>
-                Login
+                <strong>Login</strong>
             </button>
         ),
         closeModal: () => dispatch(closeModal()),

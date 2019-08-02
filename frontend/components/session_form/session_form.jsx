@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { openModal } from '../../actions/modal_actions';
+
 
 class SessionForm extends React.Component {
     constructor(props){
@@ -111,12 +111,12 @@ class SessionForm extends React.Component {
         if(type === "signup"){
            return (
            <div>
-             <button className="button-link" onClick={() => openModal('login')}>Login</button>
+                Already a memember?&nbsp;{this.props.otherForm}    
            </div>)
         }else {
             return ( 
             <div>
-              <button className="button-link" onClick={() => openModal('signup')}>Signup</button>
+                not a memember?&nbsp;{this.props.otherForm}             
             </div>)
         }
     };
@@ -155,11 +155,9 @@ class SessionForm extends React.Component {
                    
                      <input className="session-submit" type="submit" value={this.props.formType} />
                     <button onClick={this.demoSubmit}>
-                        <input className="demo-button" type="submit" value="Demo LogIn"/>
+                        <input className="demo-button" type="submit" value="Demo Login"/>
                     </button>
-                     {/* {this.renderLink()}; */}
-                     {this.props.navLink}
-
+                     {this.renderLink()}
                 </div>
                 </form>
             </div>
