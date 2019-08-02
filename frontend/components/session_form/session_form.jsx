@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { openModal } from '../../actions/modal_actions';
 
 class SessionForm extends React.Component {
     constructor(props){
@@ -22,13 +23,13 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
-    demoSubmit(){
+    demoSubmit(event){
         event.preventDefault();
         const user ={
             email: "demo@gmail.com",
             password: "1234567"
         }
-        this.props.processForm(user)
+        this.props.demoLogin(user);
     }
 
     update(field){
@@ -88,14 +89,49 @@ class SessionForm extends React.Component {
         }
     }
 
+    renderGreeting(){
+        const type = this.props.formType;
+        if(type === "signup"){
+           return (
+           <div>
+            <h2 className="login-big-title">Join Surfcamp</h2>
+            <p className="login-small-title">Discover the best surfspots near you</p>
+           </div>)
+        }else {
+            return ( 
+            <div>
+             <h2 className="login-big-title">Waves be calling!</h2>
+             <p className="login-small-title">It's about time for another surftrip</p>
+            </div>)
+        }
+    };
+
+    renderLink(){
+        const type = this.props.formType;
+        if(type === "signup"){
+           return (
+           <div>
+             <button className="button-link" onClick={() => openModal('login')}>Login</button>
+           </div>)
+        }else {
+            return ( 
+            <div>
+              <button className="button-link" onClick={() => openModal('signup')}>Signup</button>
+            </div>)
+        }
+    };
+
+    
+
+    
+
 
     render(){
 
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h2 className="login-big-title">Waves be calling!</h2>
-                    <p className="login-small-title">It's about time for another surftrip</p>
+                    {this.renderGreeting()}
                     {this.renderErrors()}
                 <div className="login-form">
                    
@@ -118,9 +154,10 @@ class SessionForm extends React.Component {
                     {this.renderZipcode()}
                    
                      <input className="session-submit" type="submit" value={this.props.formType} />
-                    <form onSubmit={this.demoSubmit}>
+                    <button onClick={this.demoSubmit}>
                         <input className="demo-button" type="submit" value="Demo LogIn"/>
-                    </form>
+                    </button>
+                     {/* {this.renderLink()}; */}
                      {this.props.navLink}
 
                 </div>
