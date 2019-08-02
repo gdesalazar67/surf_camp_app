@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
             zip_code: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoSubmit = this.demoSubmit.bind(this);
     }
 
 
@@ -19,6 +20,15 @@ class SessionForm extends React.Component {
         event.preventDefault();
         const user = Object.assign({},this.state);
         this.props.processForm(user);
+    }
+
+    demoSubmit(){
+        event.preventDefault();
+        const user ={
+            email: "demo@gmail.com",
+            password: "1234567"
+        }
+        this.props.processForm(user)
     }
 
     update(field){
@@ -107,8 +117,10 @@ class SessionForm extends React.Component {
                     </div>
                     {this.renderZipcode()}
                    
-                        <input className="session-submit" type="submit" value={this.props.formType} />
-                   
+                     <input className="session-submit" type="submit" value={this.props.formType} />
+                    <form onSubmit={this.demoSubmit}>
+                        <input className="demo-button" type="submit" value="Demo LogIn"/>
+                    </form>
                      {this.props.navLink}
 
                 </div>
