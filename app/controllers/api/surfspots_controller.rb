@@ -10,6 +10,7 @@ class Api::SurfspotsController < ApplicationController
     end
 
     def index
+        
         @surfspots = Surfspot.all
     end
 
