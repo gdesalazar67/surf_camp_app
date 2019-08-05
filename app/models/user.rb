@@ -12,12 +12,15 @@ class User < ApplicationRecord
     #     foreign_key: :author_id,
     #     class_name: :Review  
 
-    # has_many :bookings 
+    has_many :bookings,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Booking
 
-    # has_many :booked_spots,
-    #     primary_key: :id,
-    #     foreign_key: :host_id,
-    #     class_name: :Booking
+    has_many :booked_spots,
+        primary_key: :id,
+        foreign_key: :host_id,
+        class_name: :Booking
 
     def self.find_by_creds(email, password)
         user = User.find_by(email: email)

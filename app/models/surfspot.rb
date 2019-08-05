@@ -7,7 +7,12 @@ class Surfspot < ApplicationRecord
         primary_key: :id,
         foreign_key: :host_id,
         class_name: :User 
-    
+        
+     has_many :bookings,
+         primary_key: :id,
+         foreign_key: :surfspot_id,
+         class_name: :Booking
+        
 
 
 end
