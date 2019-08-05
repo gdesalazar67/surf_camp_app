@@ -3,9 +3,9 @@ import {fetchSurfspot} from '../../actions/surfspots_actions';
 import SurfSpotShow from './surfspot_show_page';
 
 const msp = (state, ownProps)=>{
-    
+
     return({
-        surfspot: state.entities.surfSpots[ownProps.match.params.id],  
+        surfspot: state.entities.surfSpots[ownProps.match.params.id] 
     })
 }
 

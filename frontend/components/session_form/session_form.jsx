@@ -63,6 +63,7 @@ class SessionForm extends React.Component {
                         onChange={this.update('first_name')}
                         className="login-input" 
                         placeholder="First name"
+                        required
                         />
                 </div>
     
@@ -71,6 +72,7 @@ class SessionForm extends React.Component {
                         onChange={this.update('last_name')}
                         className="login-input" 
                         placeholder="Last name"
+                        required
                         />
                 </div>
             </div>

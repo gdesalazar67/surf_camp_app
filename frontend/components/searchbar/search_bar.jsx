@@ -10,9 +10,15 @@ export default ()=>{
             </p>
             <div className="surfcamp-search-widget">
                 <div className="search-txt-container">
+                    <div className='row'>
+                    <div className="magnify-glass">
+                        <img src="https://image.flaticon.com/icons/svg/54/54990.svg"/>
+                    </div>
                     <input type="txt" 
                         className="search-txt" 
                         placeholder="Search..."/>
+                    </div>
+                    <input className="search-submit" type="submit" value="Search"/>
                 </div>
             </div>
 

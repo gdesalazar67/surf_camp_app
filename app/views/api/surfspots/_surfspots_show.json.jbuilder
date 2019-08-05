@@ -1,1 +1,10 @@
-json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest
+
+json.campfire surfspot.campfire?
+json.pets surfspot.pets?
+json.toilets surfspot.toilets?
+json.showers surfspot.showers?
+json.wifi surfspot.wifi?
+json.water surfspot.water?
+json.tent surfspot.tent?
+

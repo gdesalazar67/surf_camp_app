@@ -12,9 +12,8 @@ export default ({ currentUser, logout, openModal }) => {
         </div>
     ) : (
             <nav className="login-signup">
-                <button className="button-link" onClick={() => openModal('login')}>Login</button>
-               
                 <button className="button-link" onClick={() => openModal('signup')}>Signup</button>
+                <button className="button-link" onClick={() => openModal('login')}>Login</button>           
             </nav>
         );
     return (

@@ -10,7 +10,7 @@ const surfSpotsReducer =(state = {}, action)=>{
             newState = merge({}, state, action.surfspots);
             return  newState;
         case RECEIVE_SURFSPOT:
-            newState = merge({}, action.surfspot);
+            newState = merge({}, {[action.surfspot.id]: action.surfspot});
             return newState;
         case REMOVE_SURFSPOT:
             newState = merge({}, state);
