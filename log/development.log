@@ -10106,3 +10106,364 @@ Processing by Api::SurfspotsController#index as JSON
 Completed 200 OK in 34ms (Views: 29.3ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/" for ::1 at 2019-08-05 09:55:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (3.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 164ms (Views: 156.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 09:55:08 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (2.1ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (44.7ms)
+  Rendered api/surfspots/index.json.jbuilder (55.7ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+    2: 
+    3: json.host do 
+    4:     json.partial! "api/users/user", user: @surfspot.user
+    5: end
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:4:in `block in _app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102382981020'
+app/views/api/surfspots/_surfspot.json.jbuilder:3:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102382981020'
+app/views/api/surfspots/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102379717840'
+app/views/api/surfspots/index.json.jbuilder:3:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102379717840'
+app/views/api/surfspots/index.json.jbuilder:2:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102379717840'
+Started GET "/" for ::1 at 2019-08-05 09:55:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (2.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 120ms (Views: 115.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 09:55:32 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (1.5ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (7.1ms)
+  Rendered api/surfspots/index.json.jbuilder (14.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+    2: 
+    3: json.host do 
+    4:     json.partial! "api/users/user", user: @surfspot.user
+    5: end
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:4:in `block in _app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102384202840'
+app/views/api/surfspots/_surfspot.json.jbuilder:3:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102384202840'
+app/views/api/surfspots/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102369069240'
+app/views/api/surfspots/index.json.jbuilder:3:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102369069240'
+app/views/api/surfspots/index.json.jbuilder:2:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102369069240'
+Started GET "/" for ::1 at 2019-08-05 09:55:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (2.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 235ms (Views: 229.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 09:55:44 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (0.7ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (1.2ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.3ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (2.4ms)
+  Rendered api/surfspots/index.json.jbuilder (27.7ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-08-05 09:55:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 207ms (Views: 192.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 09:55:54 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (4.4ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (18.3ms)
+  Rendered api/surfspots/index.json.jbuilder (39.9ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+    2: 
+    3: json.host do 
+    4:     json.partial! "api/users/user", user: @surfspot.user
+    5: end
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:4:in `block in _app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102396213080'
+app/views/api/surfspots/_surfspot.json.jbuilder:3:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102396213080'
+app/views/api/surfspots/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102392409660'
+app/views/api/surfspots/index.json.jbuilder:3:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102392409660'
+app/views/api/surfspots/index.json.jbuilder:2:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102392409660'
+Started GET "/" for ::1 at 2019-08-05 09:57:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (202.8ms)
+Completed 200 OK in 276ms (Views: 151.8ms | ActiveRecord: 122.2ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 09:57:06 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (1.6ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (1.0ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.6ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (0.8ms)
+  Rendered api/surfspots/index.json.jbuilder (90.8ms)
+Completed 200 OK in 112ms (Views: 91.3ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-05 09:58:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 192ms (Views: 173.2ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 09:58:26 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (2.6ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (7.6ms)
+  Rendered api/surfspots/index.json.jbuilder (88.2ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 13.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+    2: 
+    3: json.host do 
+    4:     json.partial! "api/users/user", user: @surfspot.user
+    5: end
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:4:in `block in _app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102382980180'
+app/views/api/surfspots/_surfspot.json.jbuilder:3:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102382980180'
+app/views/api/surfspots/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102325835380'
+app/views/api/surfspots/index.json.jbuilder:3:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102325835380'
+app/views/api/surfspots/index.json.jbuilder:2:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102325835380'
+Started GET "/api/surfspots/1" for ::1 at 2019-08-05 10:08:31 -0400
+Processing by Api::SurfspotsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSurfspot Load (1.3ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/surfspots_controller.rb:36
+  Rendering api/surfspots/show.json.jbuilder
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:4
+  Rendered api/users/_user.json.jbuilder (2.5ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (45.1ms)
+  Rendered api/surfspots/show.json.jbuilder (53.9ms)
+Completed 200 OK in 85ms (Views: 66.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-05 10:09:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 173ms (Views: 165.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 10:09:50 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (1.5ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (10.4ms)
+  Rendered api/surfspots/index.json.jbuilder (20.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+    2: 
+    3: json.host do 
+    4:     json.partial! "api/users/user", user: @surfspot.user
+    5: end
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:4:in `block in _app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102399800200'
+app/views/api/surfspots/_surfspot.json.jbuilder:3:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102399800200'
+app/views/api/surfspots/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102371982940'
+app/views/api/surfspots/index.json.jbuilder:3:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102371982940'
+app/views/api/surfspots/index.json.jbuilder:2:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102371982940'
+Started GET "/" for ::1 at 2019-08-05 10:12:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 148ms (Views: 143.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 10:12:34 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (0.8ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (6.5ms)
+  Rendered api/surfspots/index.json.jbuilder (13.2ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+    2: 
+    3: json.host do 
+    4:     json.partial! "api/users/user", user: @surfspot.user
+    5: end
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:4:in `block in _app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102398119640'
+app/views/api/surfspots/_surfspot.json.jbuilder:3:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102398119640'
+app/views/api/surfspots/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102398134800'
+app/views/api/surfspots/index.json.jbuilder:3:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102398134800'
+app/views/api/surfspots/index.json.jbuilder:2:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102398134800'
+Started GET "/api/surfspots" for ::1 at 2019-08-05 10:13:59 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (0.7ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspot.json.jbuilder (4.6ms)
+  Rendered api/surfspots/index.json.jbuilder (9.3ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    1: json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest, :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?
+    2: 
+    3: json.host do 
+    4:     json.partial! "api/users/user", user: @surfspot.user
+    5: end
+  
+app/views/api/surfspots/_surfspot.json.jbuilder:4:in `block in _app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102383462680'
+app/views/api/surfspots/_surfspot.json.jbuilder:3:in `_app_views_api_surfspots__surfspot_json_jbuilder__3544634794564703146_70102383462680'
+app/views/api/surfspots/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102390477740'
+app/views/api/surfspots/index.json.jbuilder:3:in `block in _app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102390477740'
+app/views/api/surfspots/index.json.jbuilder:2:in `_app_views_api_surfspots_index_json_jbuilder__1428968158547472385_70102390477740'
+  [1m[36mSurfspot Load (1.9ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+Started GET "/api/surfspots/1" for ::1 at 2019-08-05 10:22:08 -0400
+Processing by Api::SurfspotsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSurfspot Load (1.3ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/surfspots_controller.rb:36
+  Rendering api/surfspots/show.json.jbuilder
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:4
+  Rendered api/users/_user.json.jbuilder (3.0ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (20.6ms)
+  Rendered api/surfspots/show.json.jbuilder (29.8ms)
+Completed 200 OK in 70ms (Views: 44.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/surfspots/1" for ::1 at 2019-08-05 10:27:18 -0400
+Processing by Api::SurfspotsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSurfspot Load (0.8ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/surfspots_controller.rb:36
+  Rendering api/surfspots/show.json.jbuilder
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:4
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (20.2ms)
+  Rendered api/surfspots/show.json.jbuilder (29.1ms)
+Completed 200 OK in 62ms (Views: 49.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 10:27:23 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (0.5ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (3.1ms)
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (0.2ms)
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (0.3ms)
+  Rendered api/surfspots/index.json.jbuilder (32.7ms)
+Completed 200 OK in 50ms (Views: 42.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-05 10:27:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AGEXfVsBEtBpdt66e1D_xQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 226ms (Views: 220.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-05 10:27:33 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (1.6ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (1.0ms)
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (0.5ms)
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (0.6ms)
+  Rendered api/surfspots/index.json.jbuilder (17.2ms)
+Completed 200 OK in 38ms (Views: 29.3ms | ActiveRecord: 1.6ms)
+
+
