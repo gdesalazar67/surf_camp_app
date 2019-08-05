@@ -1,0 +1,42 @@
+.show-listing{
+    padding: 15px 15px 0;
+    display: block;
+
+}
+
+.show-photo{
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+}
+.show-info-container{
+    display: block;
+    padding: 0 10px;
+    width: 58.33333333%;
+}
+
+.show-title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1;
+}
+
+.host-container{
+    border-top: 1px solid #ebebeb;
+    width: 58.33333333%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    // padding: 0 10px;
+    
+}
+.show-host{
+    display: block;
+    margin-top: 10px;
+    
+    
+
+}
+
