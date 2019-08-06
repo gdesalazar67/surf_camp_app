@@ -43,6 +43,7 @@ class SessionForm extends React.Component {
     }
 
     renderErrors(){
+        debugger
         return(
             <ul>
                 {this.props.errors.map((error, i)=>(
@@ -89,6 +90,7 @@ class SessionForm extends React.Component {
                             onChange={this.update('zip_code')}
                             className="login-input" 
                             placeholder="zipcode"
+                            required
                             />
                     </div>
                 </div>
@@ -148,6 +150,7 @@ class SessionForm extends React.Component {
                             onChange={this.update('email')}
                             className="login-input"
                             placeholder="email"
+                            required
                             />
                     </div>
                    
@@ -156,13 +159,14 @@ class SessionForm extends React.Component {
                             onChange={this.update('password')}
                             className="login-input"
                             placeholder="password"
+                            required
                             />
                     </div>
                     {this.renderZipcode()}
                    
                      <input className="session-submit" type="submit" value={this.props.formType} />
                     <button onClick={this.demoSubmit}>
-                        <input className="demo-button" type="submit" value="Demo Login"/>
+                        <input className="demo-button" type="submit" value="Demo Login" required/>
                     </button>
                      {this.renderLink()}
                 </div>
