@@ -9,3 +9,7 @@ end
 json.surfspot do 
      json.partial! 'api/surfspots/surfspots_show', surfspot: @booking.surfspot
 end 
+
+json.user do 
+    json.partial! 'api/users/user', user: @booking.user
+end 

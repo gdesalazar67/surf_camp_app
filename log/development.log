@@ -15458,3 +15458,60 @@ Processing by Api::BookingsController#show as JSON
 Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 5.9ms)
 
 
+Started GET "/api/bookings/2" for ::1 at 2019-08-06 08:51:44 -0400
+Processing by Api::BookingsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookings_controller.rb:13
+  Rendering api/bookings/show.json.jbuilder
+  Rendered api/bookings/_booking.json.jbuilder (0.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/views/api/bookings/show.json.jbuilder:6
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  [1m[36mSurfspot Load (1.1ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/bookings/show.json.jbuilder:10
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (0.7ms)
+  Rendered api/bookings/show.json.jbuilder (16.1ms)
+Completed 200 OK in 26ms (Views: 20.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/bookings/2" for ::1 at 2019-08-06 08:52:55 -0400
+Processing by Api::BookingsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookings_controller.rb:13
+  Rendering api/bookings/show.json.jbuilder
+  Rendered api/bookings/_booking.json.jbuilder (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/views/api/bookings/show.json.jbuilder:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  [1m[36mSurfspot Load (0.4ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/bookings/show.json.jbuilder:10
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/views/api/bookings/show.json.jbuilder:14
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/bookings/show.json.jbuilder (14.1ms)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/bookings/2" for ::1 at 2019-08-06 08:53:17 -0400
+Processing by Api::BookingsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookings_controller.rb:13
+  Rendering api/bookings/show.json.jbuilder
+  Rendered api/bookings/_booking.json.jbuilder (0.8ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/views/api/bookings/show.json.jbuilder:6
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  [1m[36mSurfspot Load (0.8ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/bookings/show.json.jbuilder:10
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/views/api/bookings/show.json.jbuilder:14
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/bookings/show.json.jbuilder (20.7ms)
+Completed 200 OK in 32ms (Views: 26.4ms | ActiveRecord: 3.3ms)
+
+
