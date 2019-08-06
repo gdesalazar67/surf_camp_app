@@ -1,9 +1,10 @@
 import {RECEIVE_ALL_BOOKINGS, RECEIVE_BOOKING, REMOVE_BOOKING}from "../actions/bookings_actions";
 import {merge} from 'lodash';
 
-export default bookingsReducer = (state = {}, action)=>{
+const bookingsReducer = (state = {}, action)=>{
     Object.freeze(state);
-    let newState,
+    let newState;
+
     switch(action.type){
         case RECEIVE_ALL_BOOKINGS:
             newState = merge({}, state, action.bookings);
@@ -14,10 +15,11 @@ export default bookingsReducer = (state = {}, action)=>{
         case REMOVE_BOOKING:
             newState = mergee({}, state);
             newState.delete(action.id);
-            return newState 
+            return newState;
         default:
             return state;
     }
 }
 
 export default bookingsReducer;
+

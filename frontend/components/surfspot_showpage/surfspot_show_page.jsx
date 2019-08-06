@@ -1,4 +1,5 @@
 import React from "react";
+import BookingsForm from '../bookings_form/booking_form';
 
  export default class SurfSpotShow extends React.Component{
 
@@ -128,7 +129,7 @@ import React from "react";
 
         render(){
             // debugger
-            if(!this.props.surfspot.host){
+            if(!this.props.surfspot || !this.props.surfspot.host){
                 return(<div></div>);
             }
            return (
@@ -164,8 +165,9 @@ import React from "react";
                     </div>
 
                    </div>
-
+                   <BookingsForm/>
                </div>
             )
         }
- }
+    }
+    
