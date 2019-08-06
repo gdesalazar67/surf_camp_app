@@ -45,7 +45,7 @@ class Api::BookingsController < ApplicationController
         render json: ["This booking is not under you user profile"] unless bookings.include?(@booking)
         
         if @booking.destroy 
-            render "api/bookings"
+            render "api/bookings/show"
         else
             render json: ["Error occured when trying to delete"],  status: 422
         end
