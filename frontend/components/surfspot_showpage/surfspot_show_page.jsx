@@ -127,8 +127,9 @@ import React from "react";
 
 
         render(){
-            if(!this.props.surfspot){
-                return(null);
+            // debugger
+            if(!this.props.surfspot.host){
+                return(<div></div>);
             }
            return (
                <div className="show-listing">
