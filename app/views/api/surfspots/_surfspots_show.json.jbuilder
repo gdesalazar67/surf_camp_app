@@ -1,4 +1,6 @@
 json.extract! surfspot, :id, :host_id, :title, :description, :price, :lat, :long, :max_guest
+ 
+json.photos surfspot.photos.pluck(:img_url)
 
 json.campfire surfspot.campfire?
 json.pets surfspot.pets?

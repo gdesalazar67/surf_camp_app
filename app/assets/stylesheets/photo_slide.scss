@@ -1,0 +1,89 @@
+@mixin large {
+   @media (max-width: 1024px) { @content; }
+}
+ 
+@mixin medium {
+   @media (max-width: 700px) { @content; }
+}
+ 
+ .photo-slider {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  max-width: 1395px;
+
+}
+
+.surfspot_photo {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  background: #fff;
+  height: 425px;
+
+  @include medium {
+     width: 100%;
+     height: 50vh;
+  }
+  img{
+     min-height: -webkit-fill-available;
+     max-height: 625px;
+  }
+}
+
+.slick-list {
+    max-width: 1250px;
+}
+
+.slider {
+  height: 420px;
+}
+se
+.slick-slide {
+  padding: 7px;
+  height: 400px;
+  overflow: hidden;
+
+  img {
+     height: 400px;
+
+     @include large {
+        width: 100%;
+     }
+  }
+}
+
+.slick-slider {
+  button {
+      
+     @include large {
+        display: none
+        c
+     }
+  }
+}
+
+.slick-arrow {
+  @include large {
+     display: none;
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+  color: gray;
+  font-size: 1.4rem;
+  font-family: 'slick';
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+  color: #39C39A;
+}
+
+.slick-next:before, .slick-prev:before{
+    color:  rgb(192, 240, 240) !important;
+}
+
+.price{
+    text-align: left;
+    margin-left: 2%;
+}

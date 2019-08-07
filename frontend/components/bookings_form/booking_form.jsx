@@ -100,7 +100,7 @@ class BookingForm extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                     <div className="booking_widget">
                         <div className="booking_banner">
-                            <h2>${surfspot.price}</h2>
+                            <h2 className="price">${surfspot.price}</h2>
                             <p id="widget_per_night">per night</p>
                         </div>
                         <div className="booking_well">

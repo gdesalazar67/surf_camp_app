@@ -9,6 +9,7 @@
 User.destroy_all
 Surfspot.destroy_all
 Booking.destroy_all
+Photo.destroy_all
 
 user01 = User.create!(first_name: 'demo', last_name: 'demo', email: 'demo1@gmail.com', zip_code: 11103, password: "1234567")
 user02 = User.create!(first_name: 'Marina', last_name: 'demo', email: 'marina1@gmail.com', zip_code: 90001, password: "1234567")
@@ -26,3 +27,8 @@ surfspot3 =Surfspot.create!(host_id: user03.id, title: "Puerto Escondido", descr
 Booking.create!(user_id: user01.id, surfspot_id: surfspot1.id, check_in: 20190809, check_out: 20190812, num_guest: 4, host_id: user02.id)
 Booking.create!(user_id: user02.id, surfspot_id: surfspot2.id, check_in: 20190810, check_out: 20190817, num_guest: 4, host_id: user03.id)
 Booking.create!(user_id: user03.id, surfspot_id: surfspot3.id, check_in: 20190811, check_out: 20190815, num_guest: 4, host_id: user01.id)
+# photos
+
+Photo.create!(surfspot_id: surfspot1.id, img_url:"http://cdn.cnn.com/cnnnext/dam/assets/130624173927-50-surf-spots-rincon.jpg")
+Photo.create!(surfspot_id: surfspot1.id, img_url:"https://i.pinimg.com/originals/1f/71/84/1f71849eb74198c9394c11bb3af5989d.jpg")
+Photo.create!(surfspot_id: surfspot1.id, img_url:"https://i.pinimg.com/474x/a2/31/12/a23112d706daba0907afec5129cc42e4--hammocks-costa-rica.jpg")

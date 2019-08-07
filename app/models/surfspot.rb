@@ -12,7 +12,10 @@ class Surfspot < ApplicationRecord
          primary_key: :id,
          foreign_key: :surfspot_id,
          class_name: :Booking
-        
-
-
+         
+    has_many :photos,
+         primary_key: :id,
+         foreign_key: :surfspot_id,
+         class_name: :Photo
+         
 end

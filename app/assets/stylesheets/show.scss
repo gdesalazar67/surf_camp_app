@@ -1,7 +1,14 @@
 .show-listing{
     padding: 15px 15px 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
+}
+
+p{
+    margin-left: 2%;
+    text-align: left;
 }
 
 .show-photo{
@@ -21,6 +28,7 @@
     font-weight: 500;
     font-size: 42px;
     line-height: 1;
+    // margin-left: 2%;
 }
 
 .host-container{
@@ -32,11 +40,13 @@
     // padding: 0 10px;
     margin-bottom: 20px;
     justify-content: space-between;
-    
+    padding-right: 3.25%;  
 }
+
 .show-host{
     display: block;
     margin-top: 10px;
+    margin-left: 3.25%;
 }
 
 .show-host-1{
@@ -92,5 +102,6 @@
 
 .info-calendar-container{
     display: flex;
+    margin-left: 4%;
     
 }
