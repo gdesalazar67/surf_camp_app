@@ -5,7 +5,7 @@ import {openModal} from '../../actions/modal_actions'
 import { withRouter } from "react-router-dom";
 
 const msp = (state, ownProps) =>{
-    debugger
+    
     const surfspot = state.entities.surfSpots[ownProps.match.params.id] || {};
     return({
         currentUserId: state.session.id,

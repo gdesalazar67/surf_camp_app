@@ -13,7 +13,7 @@ export const fetchBooking = (id) =>(
 )
 
 export const createBooking = (booking)=>{
-    // debugger
+    // 
     return(
 
     $.ajax({

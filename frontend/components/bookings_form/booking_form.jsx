@@ -44,7 +44,7 @@ class BookingForm extends React.Component{
             let selectedDay = format(day, "YYYY-MM-DD");
             // selectedDay = parseInt(selectedDay);            
             this.setState({[inOut]: selectedDay});
-            debugger
+            
         };
     }
 
@@ -60,7 +60,7 @@ class BookingForm extends React.Component{
 
 
     renderErrors() {
-        // debugger 
+        //  
         // if(this.props.errors){
             return (
                 <ul className="booking-errors-container">
@@ -79,7 +79,7 @@ class BookingForm extends React.Component{
     }
 
     render(){
-        debugger
+        
         const today = new Date();
         const {surfspot} = this.props;
 
@@ -92,7 +92,7 @@ class BookingForm extends React.Component{
         }
         
 
-        debugger
+        
 
         return (
             

@@ -129,7 +129,7 @@ export default class SurfSpotShow extends React.Component{
 
 
         render(){
-            // debugger
+            // 
             if(!this.props.surfspot || !this.props.surfspot.host){
                 return(<div></div>);
             }
