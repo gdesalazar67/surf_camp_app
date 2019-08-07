@@ -17,7 +17,7 @@ export const receiveBookings = bookings =>{
 export const receiveBooking = booking => {
     return ({
         booking,
-        type: RECEIVE_ALL_BOOKING
+        type: RECEIVE_BOOKING
     })
 }
 export const removeBooking = id => {

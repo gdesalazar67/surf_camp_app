@@ -1,7 +1,8 @@
 import React from "react";
-import BookingsForm from '../bookings_form/booking_form';
+import BookingsForm from '../bookings_form/booking_form_container';
+// import {withRouter} from "react-router-dom";
 
- export default class SurfSpotShow extends React.Component{
+export default class SurfSpotShow extends React.Component{
 
     constructor(props){
         super(props)
@@ -170,4 +171,5 @@ import BookingsForm from '../bookings_form/booking_form';
             )
         }
     }
+
     

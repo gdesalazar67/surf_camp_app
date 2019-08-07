@@ -2,9 +2,11 @@ import {connect} from 'react-redux';
 import BookingForm from './booking_form';
 import {createBooking, fetchBooking, removeErrors}  from '../../actions/bookings_actions';
 import {openModal} from '../../actions/modal_actions'
+import { withRouter } from "react-router-dom";
 
 const msp = (state, ownProps) =>{
-    const surfspot = state.entities.surfspots[ownProps.surfspot.id] ||{};
+    debugger
+    const surfspot = state.entities.surfSpots[ownProps.match.params.id] || {};
     return({
         currentUserId: state.session.id,
         surfspot,
@@ -21,5 +23,5 @@ const mdp = dispatch=>{
     })
 }
 
-export default connect(null, mdp)(BookingForm);
+export default withRouter(connect(msp, mdp)(BookingForm));
 

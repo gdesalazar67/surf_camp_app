@@ -12,13 +12,17 @@ export const fetchBooking = (id) =>(
     })
 )
 
-export const createBooking = (booking)=>(
+export const createBooking = (booking)=>{
+    // debugger
+    return(
+
     $.ajax({
         method: 'POST',
-        url: `api/surfspots/${booking.surfspot.id}/bookings`,
+        url: `api/surfspots/${booking.surfspot_id}/bookings`,
         data: {booking}
     })
-)
+    );
+}
 
 export const updateBooking = (booking)=>(
     $.ajax({
