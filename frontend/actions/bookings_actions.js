@@ -49,27 +49,28 @@ export const fetchBookings = ()=> dispatch =>(
 export const fetchBooking = (id)=> dispatch =>(
     BookingsAPIUtil.fetchBooking(id).then(booking=>(
         dispatch(receiveBooking(booking))
-    ), err =>(dispatch(receiveBookingErrors(err)))
+    ), err =>(dispatch(receiveBookingErrors(err.responseJSON)))
     )
 )
 
 export const deleteBooking = (id)=>dispatch=>(
     BookingsAPIUtil.deleteBooking(id).then(booking=>(
         dispatch(removeBooking(id))
-    ), err=>(dispatch(receiveBookingErrors(err)))
+    ), err => (dispatch(receiveBookingErrors(err.responseJSON)))
     )
 )
 
 export const createBooking = (booking) => dispatch => (
-    BookingsAPIUtil.createBooking(booking).then(booking => (
-        dispatch(receiveBooking(booking))
-    ), err => (dispatch(receiveBookingErrors(err)))
+    BookingsAPIUtil.createBooking(booking).then(booking => {
+        alert("Booking Confirmed")
+       return  dispatch(receiveBooking(booking))
+    }, err => (dispatch(receiveBookingErrors(err.responseJSON)))
     )
 )
 export const updateBooking = (booking) => dispatch => (
     BookingsAPIUtil.updateBooking(booking).then(booking => (
         dispatch(receiveBooking(booking))
-    ), err => (dispatch(receiveBookingErrors(err)))
+    ), err => (dispatch(receiveBookingErrors(err.responseJSON)))
     )
 )
 

@@ -136,6 +136,7 @@ export default class SurfSpotShow extends React.Component{
            return (
                <div className="show-listing">
                    <img src="http://cdn.cnn.com/cnnnext/dam/assets/130624173927-50-surf-spots-rincon.jpg" className="show-photo" />
+                <div className="info-calendar-container">
                    <div className="show-info-container">
                         <p className="show-title">{`${this.props.surfspot.title}`}</p>
                         <p className="show-description">{`${this.props.surfspot.description}`}</p>   
@@ -167,6 +168,7 @@ export default class SurfSpotShow extends React.Component{
 
                    </div>
                    <BookingsForm/>
+                </div>
                </div>
             )
         }

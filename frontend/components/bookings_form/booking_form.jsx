@@ -18,9 +18,9 @@ class BookingForm extends React.Component{
         this.handleDayClick = this.handleDayClick.bind(this);
     }
     
-    componentWillUnmount() {
-        this.props.removeErrors()
-    }
+    // componentWillUnmount() {
+    //     this.props.removeErrors()
+    // }
    
     
     handleSubmit(event){
@@ -34,10 +34,7 @@ class BookingForm extends React.Component{
             booking.surfspot_id = this.props.surfspot.id;
             booking.host_id = this.props.surfspot.host_id;
             
-            debugger
-            this.props.createBooking(booking).then(
-                alert("Booking Confirmed")
-                )
+            this.props.createBooking(booking)
         }
     }
         // this.setState({confirmed: true})
@@ -64,7 +61,7 @@ class BookingForm extends React.Component{
 
     renderErrors() {
         // debugger 
-        if(this.props.errors){
+        // if(this.props.errors){
             return (
                 <ul className="booking-errors-container">
                 {this.props.errors.map((error, i) => (
@@ -72,7 +69,7 @@ class BookingForm extends React.Component{
                     ))}
             </ul>
             );
-        }
+        // }
     }
 
     dayAfterCheckIn(day) {
