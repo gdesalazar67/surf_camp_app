@@ -74,7 +74,7 @@ class BookingForm extends React.Component{
 
     dayAfterCheckIn(day) {
         const nextDay = new Date(day)
-        nextDay.setDate(day.getDate() + 1)
+        nextDay.setDate(day.getDate() + 2)
         return nextDay
     }
 
