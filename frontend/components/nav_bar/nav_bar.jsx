@@ -19,7 +19,14 @@ export default ({ currentUser, logout, openModal }) => {
     return (
         <header className="nav-bar">
             <Link to="/" className="header-link">
-                <h1>Surf Camp</h1>
+                <h1 className="logo-container">
+                    <div className="logo">
+                        <img src={window.surfcamplogoURL}/>
+                    </div>
+                    <div>
+                        Surf Camp
+                    </div>
+                </h1>
             </Link>
             <div className="nav-bar-right">
                 <label className="nav-bar-links">

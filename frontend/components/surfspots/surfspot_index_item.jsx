@@ -21,7 +21,7 @@ class SurfspotIndexItem extends React.Component{
             
             <li className="surfspot-container" >
                 <Link to={`/surfspots/${this.props.surfspot.id}`}>
-                    <img src="http://cdn.cnn.com/cnnnext/dam/assets/130624173927-50-surf-spots-rincon.jpg" className="photo"/>
+                    <img src={this.props.surfspot.photos[2]} className="photo"/>
                     <p className="surfspot-title">{`${this.props.surfspot.title}`}</p>
                     <p className="surfspot-description">{`${this.props.surfspot.description}`}</p>
                     <p className="surfspot-price">${`${this.props.surfspot.price}`}/night</p>
