@@ -31,6 +31,7 @@ export default class Index extends React.Component{
         return(
             <div>
                 <SearchBar/>
+                <p className="search-txt2">Peep it...</p>
                 <div className="index-container">
                     <ul className="index-list">
                         {surfspots}
