@@ -6,6 +6,7 @@
     margin-left: 10%;
     // width: 100%;
     overflow: hidden;
+    margin-top: 30px;
 }
 
 .index-list{
@@ -26,10 +27,13 @@
     box-sizing: border-box;
     box-shadow:  0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
-    width: 380px;
+    width: 365px;
     background-color: white;
     // max-height: 320px;
     overflow: hidden;
+    // max-height: 320px;
+    // min-width: 33.33333333%;
+    border: 1px solid #ebebeb;
 }
 
 .photo{
@@ -41,19 +45,27 @@
 
 .surfspot-price{
     text-align: right;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    font-weight: 550;
+    font-size: 1.4rem;
 }
 
 .surfspot-title{
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 550;
+    font-size: 1.4rem;
     overflow: hidden;
-    line-height: 2.4rem;
+    line-height: 2rem;
     // box-sizing: border-box;
+    margin-left: 3%;
+    margin-top: 7.5px;
 }
 .surfspot-description{
-    font-size: 16px;
+    font-size: .90rem;
     color: #757575;
     // line-height: 1.42;
+    margin-left: 3%;
+    min-height: 57px;
 }
 
 .search-txt2{

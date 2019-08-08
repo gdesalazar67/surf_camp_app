@@ -20,13 +20,16 @@ class SurfspotIndexItem extends React.Component{
         return(
             
             <li className="surfspot-container" >
+                <div className="photo-index-card">
                 <Link to={`/surfspots/${this.props.surfspot.id}`}>
-                    <img src={this.props.surfspot.photos[2]} className="photo"/>
+                        <img src={this.props.surfspot.photos[2]} className="photo"/>
+                </Link>   
+                </div>
+                <Link to={`/surfspots/${this.props.surfspot.id}`}>               
                     <p className="surfspot-title">{`${this.props.surfspot.title}`}</p>
                     <p className="surfspot-description">{`${this.props.surfspot.description}`}</p>
                     <p className="surfspot-price">${`${this.props.surfspot.price}`}/night</p>
-                </Link>                    
-                
+                </Link>  
             </li>
         )
     }
