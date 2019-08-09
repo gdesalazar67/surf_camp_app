@@ -18,9 +18,9 @@ class BookingForm extends React.Component{
         this.handleDayClick = this.handleDayClick.bind(this);
     }
     
-    // componentWillUnmount() {
-    //     this.props.removeErrors()
-    // }
+    componentWillUnmount() {
+        this.props.removeErrors()
+    }
    
     
     handleSubmit(event){
