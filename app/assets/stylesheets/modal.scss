@@ -6,7 +6,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(94, 93, 93, 0.7);
+  background: rgba(238, 237, 237, 0.623);
   z-index: 10;
 }
 
@@ -20,10 +20,11 @@
 .login-form-container {
   display: flex;
   justify-content: center;
+
 }
 
 .login-form-box{ 
-    padding: 35px;
+  padding: 15px;
   background: white;
   position: relative;
   display: flex;
@@ -35,7 +36,7 @@
 
 .login-big-title{
     display: block;
-    font-size: 2.6rem;
+    font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
     color: #333333;
@@ -43,7 +44,7 @@
 
 .login-small-title{
     display: block;
-    font-size: 1.25rem;
+    font-size: .9rem;
     font-weight: 400;
     color: #757575;
     text-align: center;
@@ -56,6 +57,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 270px;
 }
 
 .login-form-fields{
@@ -66,14 +68,15 @@
 }
 
 .login-input{
-    border: 1px solid #333333;
-    font-weight: 700 !important;
-    color: #333333;
+    border: .25px solid #070707;
+    font-weight: 450 !important;
+    color: #070707;
     height: 68px;
-    font-size: 1.8rem;
+    font-size: 1rem;
     padding: 16px;
     margin: 0 0 10px;
     background: #ffff;
+    width: 270px;
 }
 
 .session-submit{
@@ -82,11 +85,11 @@
   margin: 10px;
   font-size: 1.25rem;
   padding: 16px;
-  background-color: rgb(64, 217, 172);
+  background-color: #26bf73;
   color: white;
   width: 100%;
   text-align: center;
-  border: 2px solid #40d9ac;
+  border: 2px solid #26bf73;
 }
 .session-submit:hover{
   border-bottom: 2px solid #40d9ac;

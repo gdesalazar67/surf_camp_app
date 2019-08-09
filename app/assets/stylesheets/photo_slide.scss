@@ -75,14 +75,13 @@ se
   font-family: 'slick';
 }
 
-.slick-prev:hover:before, .slick-next:hover:before {
-  color: #39C39A;
-}
 
 .slick-next:before, .slick-prev:before{
-    color:  rgb(192, 240, 240) !important;
+    color:   #238ab0 !important;
 }
-
+.slick-prev:hover:before, .slick-next:hover:before {
+  color: #fadb98;
+}
 .price{
     text-align: left;
     margin-left: 2%;

@@ -144,6 +144,7 @@ export default class SurfSpotShow extends React.Component{
                         <p className="show-title">{`${this.props.surfspot.title}`}</p>
                         <p className="show-description">{`${this.props.surfspot.description}`}</p>   
                          <div className='host-container'>
+                               <p className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg"/></p>
                               <p className="show-host">Hosted by {`${this.props.surfspot.host.first_name}`}</p>   
                            <p className="show-host-1">
                                These small, perfectly formed crests where Johnny Fain and Miki Dora surfed 

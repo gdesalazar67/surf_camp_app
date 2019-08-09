@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
                     <input type="text" value={this.state.first_name}
                         onChange={this.update('first_name')}
                         className="login-input" 
-                        placeholder="First name"
+                        placeholder="First name..."
                         required
                         />
                 </div>
@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
                     <input type="text" value={this.state.last_name}
                         onChange={this.update('last_name')}
                         className="login-input" 
-                        placeholder="Last name"
+                        placeholder="Last name..."
                         required
                         />
                 </div>
@@ -89,7 +89,7 @@ class SessionForm extends React.Component {
                         <input type="number" value={this.state.zip_code}
                             onChange={this.update('zip_code')}
                             className="login-input" 
-                            placeholder="zipcode"
+                            placeholder="Zipcode..."
                             required
                             />
                     </div>
@@ -149,7 +149,7 @@ class SessionForm extends React.Component {
                         <input type="text" value={this.state.email}
                             onChange={this.update('email')}
                             className="login-input"
-                            placeholder="email"
+                            placeholder="Email..."
                             required
                             />
                     </div>
@@ -158,7 +158,7 @@ class SessionForm extends React.Component {
                         <input type="password" value={this.state.password}
                             onChange={this.update('password')}
                             className="login-input"
-                            placeholder="password"
+                            placeholder="Password..."
                             required
                             />
                     </div>
