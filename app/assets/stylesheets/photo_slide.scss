@@ -27,6 +27,7 @@
   }
   img{
      min-height: -webkit-fill-available;
+     object-fit: cover;
      max-height: 420px;
   }
 }
@@ -46,7 +47,7 @@ se
 
   img {
      height: 400px;
-
+    object-fit: cover;
      @include large {
         width: 100%;
      }
@@ -86,3 +87,4 @@ se
     text-align: left;
     margin-left: 2%;
 }
+

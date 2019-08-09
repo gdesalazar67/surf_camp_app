@@ -60,8 +60,7 @@ class BookingForm extends React.Component{
 
 
     renderErrors() {
-        //  
-        // if(this.props.errors){
+       
             return (
                 <ul className="booking-errors-container">
                 {this.props.errors.map((error, i) => (
