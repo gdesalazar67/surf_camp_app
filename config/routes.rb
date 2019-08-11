@@ -7,9 +7,10 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :surfspots, only: [:create, :destroy, :show, :update, :index] do 
       resources :bookings, only: [:create]
+      resources :reviews, only: [:create, :index, :update]
     end 
     resources :bookings, only: [:index, :show, :destroy, :update]
-
+    resources :reviews, only: [:destroy, :show]
   end
    
 
