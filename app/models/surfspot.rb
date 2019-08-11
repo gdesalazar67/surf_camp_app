@@ -17,5 +17,10 @@ class Surfspot < ApplicationRecord
          primary_key: :id,
          foreign_key: :surfspot_id,
          class_name: :Photo
+
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :surfspot_id,
+        class_name: :Review 
          
 end

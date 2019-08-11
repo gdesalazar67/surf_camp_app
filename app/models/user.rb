@@ -7,10 +7,10 @@ class User < ApplicationRecord
 
     has_many :surfspots
 
-    # has_many :reviews,
-    #     primary_key: :id,
-    #     foreign_key: :author_id,
-    #     class_name: :Review  
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :author_id,
+        class_name: :Review  
 
     has_many :bookings,
         primary_key: :id,
