@@ -3,12 +3,12 @@ class Review < ApplicationRecord
 
     belongs_to :surfspot,
         primary_key: :id,
-        forgein_key: :surfspot_id,
+        foreign_key: :surfspot_id,
         class_name: :Surfspot 
 
     belongs_to :author,
         primary_key: :id,
-        forgein_key: :author_id,
+        foreign_key: :author_id,
         class_name: :User
 
 

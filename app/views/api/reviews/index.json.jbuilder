@@ -1,5 +1,5 @@
-@reviews.each do |review|
+@reviews.map do |review|
     json.set! review.id do 
-        Json.partial! 'api/reviews/review', review: review 
+        json.partial! 'api/reviews/review', review: review 
     end
 end 
