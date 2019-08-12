@@ -6,7 +6,7 @@ export default (state = {}, action)=>{
     let newState;
     switch (action.type){
         case RECEIVE_ALL_REVIEWS:
-            newState = merge({}, state, action.reviews)
+            newState = merge({}, action.reviews)
             return newState;
         case RECEIVE_REVIEW:
             newState = merge({}, state, {[action.review.id]: action.review});

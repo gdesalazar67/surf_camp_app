@@ -26,7 +26,7 @@ export const removeReview = (reviewId)=>{
     })
 };
 export const receiveErrors = (errors)=>{
-    debugger
+    
     return({
         type: RECEIVE_ERRORS,
         errors,

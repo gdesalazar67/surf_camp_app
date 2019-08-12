@@ -3,7 +3,7 @@ import { merge } from "lodash";
 
 export default (state = [], action) => {
     Object.freeze(state);
-    debugger
+    
     switch (action.type) {
         case RECEIVE_ERRORS:
            return  merge([], action.errors);

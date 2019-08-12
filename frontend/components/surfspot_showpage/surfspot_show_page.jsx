@@ -2,6 +2,7 @@ import React from "react";
 import BookingsForm from '../bookings_form/booking_form_container';
 import PhotoSlideShow from "../photo_slider/photo_slider";
 // import {withRouter} from "react-router-dom";
+import ReviewsIndex from "../reviews/reviews_index_container"
 
 export default class SurfSpotShow extends React.Component{
 
@@ -169,8 +170,8 @@ export default class SurfSpotShow extends React.Component{
                         {this.renderToilets()}
                      </div>
                     </div>
-
                    </div>
+                   <ReviewsIndex/>
                    <BookingsForm/>
                 </div>
                </div>

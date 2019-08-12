@@ -3,13 +3,11 @@ import ReviewsIndex from "./reviewsIndex";
 import {withRouter} from "react-router";
 import {fetchReview, fetchReviews, deleteReview} from "../../actions/reviews_actions"
 
-const msp = (state, ownProps)=>{
+const msp = (state)=>{
     
     return({
         reviews: state.entities.reviews,
         currentUser: state.session.id,
-        user: state.entities.users[state.session.id]
-
     })
 
 }

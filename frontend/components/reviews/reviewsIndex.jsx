@@ -8,6 +8,7 @@ class ReviewsIndex extends React.Component{
     }
 
     componentDidMount(){
+        
         this.props.fetchReviews(this.props.match.params.id)
     }
 
@@ -16,6 +17,7 @@ class ReviewsIndex extends React.Component{
             return null;
         };
 
+        
         const reviewlist = Object.values(this.props.reviews).map(
             review=>{return(
                 <ReviewItem
