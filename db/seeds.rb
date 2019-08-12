@@ -12,7 +12,7 @@ Booking.destroy_all
 Photo.destroy_all
 Review.destroy_all
 
-user01 = User.create!(first_name: 'demo', last_name: 'demo', email: 'demo1@gmail.com', zip_code: 11103, password: "1234567")
+user01 = User.create!(first_name: 'Demo User', last_name: 'demo', email: 'demo1@gmail.com', zip_code: 11103, password: "1234567")
 user02 = User.create!(first_name: 'Marina', last_name: 'demo', email: 'marina1@gmail.com', zip_code: 90001, password: "1234567")
 user03 = User.create!(first_name: 'Luke', last_name: 'demo', email: 'luke1@gmail.com', zip_code: 90001, password: "1234567")
 user04 = User.create!(first_name: 'Marc', last_name: 'demo', email: 'marc1@gmail.com', zip_code: 90050, password: "1234567")
@@ -68,16 +68,16 @@ Photo.create!(surfspot_id: surfspot6.id, img_url:"https://s-ec.bstatic.com/image
 Photo.create!(surfspot_id: surfspot6.id, img_url:"https://cdn.cnn.com/cnnnext/dam/assets/160129060426-samoa-20150525-scc-sta-0336-piula-1-super-169.jpg")
 Photo.create!(surfspot_id: surfspot6.id, img_url:"https://www.homesweethome.travel/wp-content/uploads/2017/08/accommodation-bali-keramas-beach-surf-camping-1067x800.jpg")
 
-Review.create!(author_id: user02.id, surfspot_id: surfspot1.id, body: "Amazing waves and sunset")
+Review.create!(author_id: user01.id, surfspot_id: surfspot1.id, body: "Amazing waves and sunset")
 Review.create!(author_id: user02.id, surfspot_id: surfspot1.id, body: "great spot not bugs")
 Review.create!(author_id: user03.id, surfspot_id: surfspot1.id, body: "WOW!! is all I have to say")
 
-Review.create!(author_id: user02.id, surfspot_id: surfspot2.id, body: "Amazing waves and sunset")
+Review.create!(author_id: user01.id, surfspot_id: surfspot2.id, body: "Amazing waves and sunset")
 Review.create!(author_id: user02.id, surfspot_id: surfspot2.id, body: "great spot not bugs")
 Review.create!(author_id: user03.id, surfspot_id: surfspot2.id, body: "WOW!! is all I have to say")
 
 Review.create!(author_id: user02.id, surfspot_id: surfspot3.id, body: "Amazing waves and sunset")
-Review.create!(author_id: user02.id, surfspot_id: surfspot3.id, body: "great spot not bugs")
+Review.create!(author_id: user01.id, surfspot_id: surfspot3.id, body: "great spot not bugs")
 Review.create!(author_id: user03.id, surfspot_id: surfspot3.id, body: "WOW!! is all I have to say")
 
 Review.create!(author_id: user02.id, surfspot_id: surfspot4.id, body: "Amazing waves and sunset")
@@ -86,8 +86,8 @@ Review.create!(author_id: user03.id, surfspot_id: surfspot4.id, body: "WOW!! is 
 
 Review.create!(author_id: user02.id, surfspot_id: surfspot5.id, body: "Amazing waves and sunset")
 Review.create!(author_id: user02.id, surfspot_id: surfspot5.id, body: "great spot not bugs")
-Review.create!(author_id: user03.id, surfspot_id: surfspot5.id, body: "WOW!! is all I have to say")
+Review.create!(author_id: user01.id, surfspot_id: surfspot5.id, body: "WOW!! is all I have to say")
 
 Review.create!(author_id: user02.id, surfspot_id: surfspot6.id, body: "Amazing waves and sunset")
 Review.create!(author_id: user02.id, surfspot_id: surfspot6.id, body: "great spot not bugs")
-Review.create!(author_id: user03.id, surfspot_id: surfspot6.id, body: "WOW!! is all I have to say")
+Review.create!(author_id: user01.id, surfspot_id: surfspot6.id, body: "WOW!! is all I have to say")

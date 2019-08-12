@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom';
 import {format} from "date-fns";
 
 const ReviewItem = ({review, currentUser, deleteReview, user})=>{
-    const createDate = format(review.created_at, "MMMM Do YYYY");
-
+    let createDate = format(review.created_at, "MMMM Do, YYYY");
+debugger
     if(currentUser === review.author_id){
         return(
             <div className="review-item-container">
                 <div className="review-details">
                     <div className="author-date">
-                        <div className="review-author">{review.first_name}</div>
+                        <div className="review-author">{review.authorFirstName}</div>
                         <div className="review-date">{createDate}</div>
                     </div>
                     <div className="review-body">{review.body}</div>
@@ -34,7 +34,7 @@ const ReviewItem = ({review, currentUser, deleteReview, user})=>{
             <div className="review-item-container">
                 <div className="review-details">
                     <div className="author-date">
-                        <div className="review-author">{review.first_name}</div>
+                        <div className="review-author">{review.authorFirstName}</div>
                         <div className="review-date">{createDate}</div>
                     </div>
                     <div className="review-body">{review.body}</div>

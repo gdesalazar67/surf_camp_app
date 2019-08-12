@@ -170,8 +170,8 @@ export default class SurfSpotShow extends React.Component{
                         {this.renderToilets()}
                      </div>
                     </div>
+                    <ReviewsIndex/>
                    </div>
-                   <ReviewsIndex/>
                    <BookingsForm/>
                 </div>
                </div>
