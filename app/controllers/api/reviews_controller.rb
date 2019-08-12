@@ -27,8 +27,7 @@ class Api::ReviewsController < ApplicationController
 
     def destroy 
         @review = Review.find(params[:id])
-
-        if @review.destory 
+        if @review.destroy 
             render "api/reviews/show"
         else 
             render json: ["Error occured when trying to delete"],  status: 422

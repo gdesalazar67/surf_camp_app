@@ -50,32 +50,32 @@ export const fetchReview = (id) => dispatch =>{
     );
 };
 
-export const updateReview = (review) => disptach =>{
+export const updateReview = (review) => dispatch =>{
 
     return (
         REVIEWAPIUtil.updateReview(review).then(review =>
             (dispatch(receiveReview(review))
-            ), error => (disptach(receiveErrors(error.responseJSON))
+            ), error => (dispatch(receiveErrors(error.responseJSON))
             ))
     );
 };
 
-export const createReview = (review) => disptach =>{
+export const createReview = (review) => dispatch =>{
 
     return (
         REVIEWAPIUtil.createReview(review).then(review =>
             (dispatch(receiveReview(review))
-            ), error => (disptach(receiveErrors(error.responseJSON))
+            ), error => (dispatch(receiveErrors(error.responseJSON))
             ))
     );
 };
 
-export const deleteReview = (id) => disptach =>{
+export const deleteReview = (id) => dispatch =>{
 
     return (
         REVIEWAPIUtil.deleteReview(id).then(review =>
             (dispatch(removeReview(id))
-            ), error => (disptach(receiveErrors(error.responseJSON))
+            ), error => (dispatch(receiveErrors(error.responseJSON))
             ))
     );
 };
