@@ -1,15 +1,20 @@
-export {RECEIVE_ERRORS, RECEIVE_REVIEW} from "../actions/reviews_actions";
-export {merge} from "lodash";
+import {RECEIVE_ALL_REVIEWS, RECEIVE_REVIEW, DELETE_REVIEW} from "../actions/reviews_actions";
+import {merge} from "lodash";
 
-export default (state =[], action)=>{
+export default (state = {}, action)=>{
     Object.freeze(state);
-    let newState,
+    let newState;
     switch (action.type){
-        case RECEIVE_ERRORS:
-            newState = merge([], action.errors)
+        case RECEIVE_ALL_REVIEWS:
+            newState = merge({}, state, action.reviews)
             return newState;
         case RECEIVE_REVIEW:
-            return [];
+            newState = merge({}, state, {[action.review.id]: action.review});
+            return newState;
+        case DELETE_REVIEW:
+            newState = merge({}, state);
+            delete newState[action.reviewId];
+            return newState;
         default:
             return state;
     }

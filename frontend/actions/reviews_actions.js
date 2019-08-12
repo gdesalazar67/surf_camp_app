@@ -4,7 +4,7 @@ export const RECEIVE_ALL_REVIEWS = "RECEIVE_ALL_REVIEWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const DELETE_REVIEW = "DELETE_REVIEW";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
-export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
+
 
 export const receiveAllReviews = (reviews)=>{
     return({
@@ -32,12 +32,7 @@ export const receiveErrors = (errors)=>{
     })
 };
 
-export const receiveReviews = (reviews)=>{
-    return({
-        type: RECEIVE_REVIEWS,
-        reviews,
-    })
-};
+
 
 
 export const fetchReviews = (id) => dispatch =>{
