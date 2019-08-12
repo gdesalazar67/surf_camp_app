@@ -38598,3 +38598,208 @@ Processing by Api::SurfspotsController#show as JSON
 Completed 200 OK in 48ms (Views: 29.5ms | ActiveRecord: 11.6ms)
 
 
+Started GET "/" for ::1 at 2019-08-11 22:57:42 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/galodesalazar/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 3620ms (Views: 3613.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 22:57:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 95ms (Views: 90.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 22:57:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 106ms (Views: 103.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 22:57:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 67ms (Views: 63.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:06:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 156ms (Views: 151.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:06:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:07:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 954ms (Views: 949.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:14:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 926ms (Views: 921.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:20:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 994ms (Views: 989.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:22:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 136ms (Views: 132.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:23:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:36:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 1027ms (Views: 1020.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:37:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 937ms (Views: 935.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:40:20 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 143ms (Views: 138.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:41:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1808ms (Views: 1803.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/surfspots" for ::1 at 2019-08-11 23:41:04 -0400
+Processing by Api::SurfspotsController#index as JSON
+  Rendering api/surfspots/index.json.jbuilder
+  [1m[36mSurfspot Load (2.1ms)[0m  [1m[34mSELECT "surfspots".* FROM "surfspots"[0m
+  ↳ app/views/api/surfspots/index.json.jbuilder:2
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "59"]]
+  ↳ app/views/api/surfspots/_surfspots_show.json.jbuilder:3
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (51.8ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "60"]]
+  ↳ app/views/api/surfspots/_surfspots_show.json.jbuilder:3
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (2.5ms)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "61"]]
+  ↳ app/views/api/surfspots/_surfspots_show.json.jbuilder:3
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (3.0ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "62"]]
+  ↳ app/views/api/surfspots/_surfspots_show.json.jbuilder:3
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (2.3ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "63"]]
+  ↳ app/views/api/surfspots/_surfspots_show.json.jbuilder:3
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (2.2ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "64"]]
+  ↳ app/views/api/surfspots/_surfspots_show.json.jbuilder:3
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (2.0ms)
+  Rendered api/surfspots/index.json.jbuilder (149.3ms)
+Completed 200 OK in 180ms (Views: 106.6ms | ActiveRecord: 53.7ms)
+
+
+Started GET "/api/surfspots/59" for ::1 at 2019-08-11 23:47:15 -0400
+Processing by Api::SurfspotsController#show as JSON
+  Parameters: {"id"=>"59"}
+  [1m[36mSurfspot Load (0.8ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/api/surfspots_controller.rb:36
+  Rendering api/surfspots/show.json.jbuilder
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "59"]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:3
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:16
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (35.4ms)
+  Rendered api/surfspots/show.json.jbuilder (38.1ms)
+Completed 200 OK in 48ms (Views: 37.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 23:49:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "RSswZVMz-rOwSLzHsqQ9AQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 1069ms (Views: 1065.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/surfspots/59" for ::1 at 2019-08-11 23:49:55 -0400
+Processing by Api::SurfspotsController#show as JSON
+  Parameters: {"id"=>"59"}
+  [1m[36mSurfspot Load (12.8ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/api/surfspots_controller.rb:36
+  Rendering api/surfspots/show.json.jbuilder
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "59"]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:3
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:16
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (24.1ms)
+  Rendered api/surfspots/show.json.jbuilder (27.2ms)
+Completed 200 OK in 53ms (Views: 21.7ms | ActiveRecord: 30.2ms)
+
+

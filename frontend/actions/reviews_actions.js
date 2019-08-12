@@ -2,7 +2,7 @@ import * as REVIEWAPIUtil from "../util/reviews_api_util";
 
 export const RECEIVE_ALL_REVIEWS = "RECEIVE_ALL_REVIEWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
-export const DELETE_REVIEW = "DELETE_REVIEW";
+export const REMOVE_REVIEW = "REMOVE_REVIEW";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 
@@ -19,13 +19,14 @@ export const receiveReview = (review)=>{
     })
 };
 
-export const deleteReview = (reviewId)=>{
+export const removeReview = (reviewId)=>{
     return({
-        type: DELETE_REVIEW,
+        type: REMOVE_REVIEW,
         reviewId,
     })
 };
 export const receiveErrors = (errors)=>{
+    debugger
     return({
         type: RECEIVE_ERRORS,
         errors,
@@ -54,7 +55,7 @@ export const updateReview = (review) => disptach =>{
     return (
         REVIEWAPIUtil.updateReview(review).then(review =>
             (dispatch(receiveReview(review))
-            ), error => (disptach(receiveErrors(error.responseJson))
+            ), error => (disptach(receiveErrors(error.responseJSON))
             ))
     );
 };
@@ -64,7 +65,7 @@ export const createReview = (review) => disptach =>{
     return (
         REVIEWAPIUtil.createReview(review).then(review =>
             (dispatch(receiveReview(review))
-            ), error => (disptach(receiveErrors(error.responseJson))
+            ), error => (disptach(receiveErrors(error.responseJSON))
             ))
     );
 };
@@ -73,8 +74,8 @@ export const deleteReview = (id) => disptach =>{
 
     return (
         REVIEWAPIUtil.deleteReview(id).then(review =>
-            (dispatch(deleteReview(id))
-            ), error => (disptach(receiveErrors(error.responseJson))
+            (dispatch(removeReview(id))
+            ), error => (disptach(receiveErrors(error.responseJSON))
             ))
     );
 };

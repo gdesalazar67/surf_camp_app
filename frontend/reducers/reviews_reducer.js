@@ -1,4 +1,4 @@
-import {RECEIVE_ALL_REVIEWS, RECEIVE_REVIEW, DELETE_REVIEW} from "../actions/reviews_actions";
+import {RECEIVE_ALL_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW} from "../actions/reviews_actions";
 import {merge} from "lodash";
 
 export default (state = {}, action)=>{
@@ -11,7 +11,7 @@ export default (state = {}, action)=>{
         case RECEIVE_REVIEW:
             newState = merge({}, state, {[action.review.id]: action.review});
             return newState;
-        case DELETE_REVIEW:
+        case REMOVE_REVIEW:
             newState = merge({}, state);
             delete newState[action.reviewId];
             return newState;

@@ -1,16 +1,15 @@
-export { RECEIVE_ERRORS, RECEIVE_REVIEW } from "../actions/reviews_actions";
-export { merge } from "lodash";
+import { RECEIVE_ERRORS, RECEIVE_REVIEW } from "../actions/reviews_actions";
+import { merge } from "lodash";
 
 export default (state = [], action) => {
     Object.freeze(state);
-    let newState;
+    debugger
     switch (action.type) {
         case RECEIVE_ERRORS:
-            newState = merge([], action.errors)
-            return newState;
+           return  merge([], action.errors);
         case RECEIVE_REVIEW:
             return [];
         default:
             return state;
     }
-}
+};
