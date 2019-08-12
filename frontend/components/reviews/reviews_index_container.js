@@ -8,6 +8,7 @@ const msp = (state, ownProps)=>{
     return({
         reviews: state.entities.reviews,
         currentUser: state.session.id,
+        user: state.entities.users[state.session.id]
 
     })
 
