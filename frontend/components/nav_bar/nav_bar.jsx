@@ -7,14 +7,20 @@ export default ({ currentUser, logout, openModal }) => {
     
     const display = currentUser ? (
         <div className="login-signup">
-            <button className="button-link" onClick={logout}>Logout</button>
-            <p className="button-link">{currentUser.first_name}</p>
+            <button className="button-link" id="logout-b" onClick={logout}>Logout</button>
+            {/* <p id="current-user">{currentUser.first_name}</p> */}
+            <h1 className="logo-container">
+                <div className="logo" id="userProfilePhoto">
+                    <img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg" />
+                </div>
+            </h1>
         </div>
     ) : (
             <nav className="login-signup">
                 <button className="button-link" onClick={() => openModal('signup')}>Signup</button>
                 <button className="button-link" onClick={() => openModal('login')}>Login</button>           
             </nav>
+            
         );
     return (
         <header className="nav-bar">
@@ -29,18 +35,20 @@ export default ({ currentUser, logout, openModal }) => {
                 </h1>
             </Link>
             <div className="nav-bar-right">
-                <label className="nav-bar-links">
-                    <a href="https://www.hipcamp.com/discover">Camp</a>
-                </label>
-                <label className="nav-bar-links">
-                    <a href="https://www.hipcamp.com/host">Host</a>
-                </label>
-                <label className="nav-bar-links">
-                    <a href="/">About</a>
-                </label>
-                <label className="nav-bar-links">
-                    <a href="https://support.hipcamp.com/hc/en-us">Help</a>
-                </label>
+                <Link to="/" className="header-link">
+                    <label className="nav-bar-links">
+                      Camp
+                    </label>
+                    <label className="nav-bar-links">
+                        Host
+                    </label>
+                    <label className="nav-bar-links">
+                        About
+                    </label>
+                    <label className="nav-bar-links">
+                        Help
+                    </label>
+                </Link>
                 {display}
             </div>
         </header>
