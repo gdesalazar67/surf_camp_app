@@ -43711,3 +43711,122 @@ No template found for Api::SessionsController#destroy, rendering head :no_conten
 Completed 204 No Content in 76ms (ActiveRecord: 5.0ms)
 
 
+Started POST "/api/session" for ::1 at 2019-08-22 10:50:36 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:49
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "5nXGemprdjBxhhd_9H7FVA"], ["updated_at", "2019-08-22 14:50:36.328213"], ["id", 141]]
+  ↳ app/models/user.rb:49
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:49
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (3.6ms)
+Completed 200 OK in 282ms (Views: 11.4ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-08-22 10:52:01 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5nXGemprdjBxhhd_9H7FVA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5nXGemprdjBxhhd_9H7FVA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:49
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "kOfKFX5Dx5S0dIIj3S6wIQ"], ["updated_at", "2019-08-22 14:52:01.479356"], ["id", 141]]
+  ↳ app/models/user.rb:49
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:49
+No template found for Api::SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 112ms (ActiveRecord: 42.6ms)
+
+
+Started GET "/api/surfspots/73" for ::1 at 2019-08-22 11:13:13 -0400
+Processing by Api::SurfspotsController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mSurfspot Load (1.4ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/surfspots_controller.rb:36
+  Rendering api/surfspots/show.json.jbuilder
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "73"]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:3
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 143], ["LIMIT", 1]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:16
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (22.7ms)
+  Rendered api/surfspots/show.json.jbuilder (33.4ms)
+Completed 200 OK in 64ms (Views: 52.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/surfspots/73/reviews" for ::1 at 2019-08-22 11:13:13 -0400
+Processing by Api::ReviewsController#index as JSON
+  Parameters: {"surfspot_id"=>"73"}
+  [1m[36mSurfspot Load (41.8ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:39
+  Rendering api/reviews/index.json.jbuilder
+  [1m[36mReview Load (44.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."surfspot_id" = $1[0m  [["surfspot_id", 73]]
+  ↳ app/views/api/reviews/index.json.jbuilder:1
+  [1m[36mSurfspot Load (0.4ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:5
+  Rendered api/reviews/_review.json.jbuilder (6.2ms)
+  [1m[36mCACHE Surfspot Load (0.0ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:5
+  Rendered api/reviews/_review.json.jbuilder (3.7ms)
+  [1m[36mCACHE Surfspot Load (0.0ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 143], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:5
+  Rendered api/reviews/_review.json.jbuilder (4.0ms)
+  Rendered api/reviews/index.json.jbuilder (101.4ms)
+Completed 200 OK in 165ms (Views: 73.6ms | ActiveRecord: 87.9ms)
+
+
+Started POST "/api/session" for ::1 at 2019-08-22 11:31:24 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:49
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "d5sqqGT6G5qv2s4G6nbuZg"], ["updated_at", "2019-08-22 15:31:24.488730"], ["id", 141]]
+  ↳ app/models/user.rb:49
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:49
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered api/users/show.json.jbuilder (6.4ms)
+Completed 200 OK in 350ms (Views: 18.2ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/api/surfspots/73/bookings" for ::1 at 2019-08-22 12:37:10 -0400
+Processing by Api::BookingsController#create as JSON
+  Parameters: {"booking"=>{"num_guest"=>"1", "check_in"=>"2019-08-23", "check_out"=>"2019-08-24", "user_id"=>"141", "surfspot_id"=>"73", "host_id"=>"143"}, "surfspot_id"=>"73"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookings_controller.rb:23
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookings_controller.rb:23
+  [1m[36mSurfspot Load (0.8ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookings_controller.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 143], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookings_controller.rb:23
+  [1m[36mBooking Create (53.6ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "surfspot_id", "check_in", "check_out", "num_guest", "host_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 141], ["surfspot_id", 73], ["check_in", "2019-08-23"], ["check_out", "2019-08-24"], ["num_guest", 1], ["host_id", 143], ["created_at", "2019-08-22 16:37:10.672839"], ["updated_at", "2019-08-22 16:37:10.672839"]]
+  ↳ app/controllers/api/bookings_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookings_controller.rb:23
+  Rendering api/bookings/show.json.jbuilder
+  Rendered api/bookings/_booking.json.jbuilder (0.8ms)
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "73"]]
+  ↳ app/views/api/surfspots/_surfspots_show.json.jbuilder:3
+  Rendered api/surfspots/_surfspots_show.json.jbuilder (4.3ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/bookings/show.json.jbuilder (15.7ms)
+Completed 200 OK in 210ms (Views: 24.5ms | ActiveRecord: 126.8ms)
+
+
