@@ -15,12 +15,7 @@ debugger
                     </div>
                     <div className="review-body">{review.body}</div>
                 </div>
-                <div className="edit-delete">
-                    <Link
-                        className="link-edit"
-                        to={`/api/reviews/${review.id}`}>
-                        Edit
-                     </Link>
+                <div className="delete">
                     <button
                         className="review-delete-button"
                         onClick={() => deleteReview(review.id)}>

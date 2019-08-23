@@ -1,0 +1,101 @@
+.review-container{
+    width: 58.33333333%;
+    border-top: 1px solid #ebebeb;
+    margin-top: 5px;
+    padding-right: 3.25%;
+    padding-top: 15px;
+    
+}
+
+.create-review-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.review-button-link{
+   padding: 7px 12px;
+   position: relative;
+   font-size: 13px;
+   font-weight: 700;
+   border: 2px solid  #26bf73;
+   background-color:  #26bf73;
+   color: #fff;
+   cursor: pointer;
+
+   &:hover {
+       border: 3px solid  #39C39A;
+       background-color: #fff;
+       color:  #39C39A;
+       transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+   }
+
+}
+
+
+.add-reviews{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.review-list-container{
+    
+}
+
+.review-item-container{
+// border-bottom: 1px solid #ebebeb;
+padding-right: 6.25%;
+width: 100%;
+border-top: 1px solid #ebebeb;
+padding-top: 15px;
+padding-bottom: 7px;
+padding-left: 16px;
+
+}
+.review-details{
+ display: flex;
+flex-direction: column;
+}
+.author-date{
+ display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding-bottom: 9px;
+
+}
+
+.review-author{
+    font-weight: bold;
+
+}
+
+.review-date{
+font-weight: bold;
+}
+
+.review-body{
+    font-size: 15px;
+    text-align: left;
+    // padding-left: 13px;
+
+}
+.delete{
+    text-align: right;
+    font-size: 15px;
+    &:hover {
+       
+       font-weight: bold;
+       
+   }
+}
+.review-delete-button{
+
+}
+
+.review-body{
+
+}
+
+
