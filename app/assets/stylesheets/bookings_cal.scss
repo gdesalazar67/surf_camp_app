@@ -316,7 +316,7 @@
   min-height: 200px;
   width: 319px;
   z-index: 8;
-  background-color: #fff;
+  background-color: transparent;
   right: 20%;
 }
 
@@ -447,11 +447,15 @@
   position:   relative;
   text-align: center;
   border: 1px solid #ebebeb;
+  background: white;
   padding: 10px;
 //   width: 93%;
   color: #fff;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+.booking_error_message{
+  background-color: white;
 }
 
 .widget_button{
