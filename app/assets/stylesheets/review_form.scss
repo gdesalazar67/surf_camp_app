@@ -3,21 +3,26 @@
   background: white;
   box-sizing: border-box;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  height: 466px;
+//   height: 466px;
   width: 575px;
 
 }
 
 .review-form-title{
- font-size: 20px;
- display: inline-block;
- text-align: center;
- width: 100%;
+ 
+font-size: 20px;
+display: inline-block;
+text-align: center;
+width: 100%;
+padding-left: 0;
+margin-bottom: 13px;
+margin-top: 10px;
+margin-left: 0px;
 }
+
 form {
     height: auto;
     width: auto;
-    background: blue;
 }
 
 .create-review-submit{
@@ -28,9 +33,12 @@ form {
   padding: 16px;
   background-color: #26bf73;
   color: white;
-  width: 100%;
+  width: 60%;
   text-align: center;
   border: 2px solid #26bf73;
+  margin-top: 34px;
+  margin-bottom: 20px;
+  margin-left: 112px;
 }
 .create-review-submit:hover{
   border-bottom: 2px solid #40d9ac;
@@ -39,5 +47,10 @@ form {
 }
 
 .review-form-input{
-background: #40d9ac
+border: 1px solid #ebebeb;
+width: 100%;
+padding-top: 13px;
+padding-left: 15px;
+padding-right: 15px;
+padding-bottom: 13px;
 }
