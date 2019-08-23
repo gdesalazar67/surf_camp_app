@@ -21,6 +21,8 @@ The technologies used to create SurfCamp are React, Redux, PostgresSQL, Ruby on 
 * Bookings Calendar
 * Campsite info
 * List all reviews and allows User to add Review 
+
+![surfspot show page](https://user-images.githubusercontent.com/48927999/63622694-7a253a00-c5c5-11e9-9d26-019d941381ad.png)
  
 # Future plans
 * Add search bar function and Google maps
