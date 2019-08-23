@@ -1,6 +1,7 @@
 import {connect} from "react-redux";
 import ReviewsIndex from "./reviewsIndex";
-import {withRouter} from "react-router";
+import {withRouter} from "react-router-dom";
+import {openModal} from "../../actions/modal_actions";
 import {fetchReview, fetchReviews, deleteReview} from "../../actions/reviews_actions"
 
 const msp = (state)=>{
@@ -12,11 +13,12 @@ const msp = (state)=>{
 
 }
 
-const msd = dispatach =>{
+const msd = dispatch =>{
     return({
-        fetchReviews: (id)=>dispatach(fetchReviews(id)),
-        fetchReview: (id)=>dispatach(fetchReview(id)),
-        deleteReview: (id)=> dispatach(deleteReview(id)) 
+        fetchReviews: (id)=>dispatch(fetchReviews(id)),
+        fetchReview: (id)=>dispatch(fetchReview(id)),
+        deleteReview: (id)=> dispatch(deleteReview(id)),
+        openModal: (modal)=> dispatch(openModal(modal)),
     })
 }
 

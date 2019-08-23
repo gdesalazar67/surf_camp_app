@@ -1,5 +1,7 @@
 import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions';
 import {RECEIVE_CURRENT_USER} from '../actions/session_actions'
+import {RECEIVE_REVIEW} from "../actions/reviews_actions";
+
 export default function modalReducer(state = null, action) {
     switch (action.type) {
         case OPEN_MODAL:
@@ -7,6 +9,8 @@ export default function modalReducer(state = null, action) {
         case CLOSE_MODAL:
             return null;
         case RECEIVE_CURRENT_USER:
+            return null;
+        case RECEIVE_REVIEW:
             return null;
         default:
             return state;

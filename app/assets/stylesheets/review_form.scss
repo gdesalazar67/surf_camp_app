@@ -1,0 +1,43 @@
+.review-form-container{
+  padding: 15px;
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  height: 466px;
+  width: 575px;
+
+}
+
+.review-form-title{
+ font-size: 20px;
+ display: inline-block;
+ text-align: center;
+ width: 100%;
+}
+form {
+    height: auto;
+    width: auto;
+    background: blue;
+}
+
+.create-review-submit{
+  text-transform: capitalize;
+  height: 68px;
+  margin: 10px;
+  font-size: 1.25rem;
+  padding: 16px;
+  background-color: #26bf73;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #26bf73;
+}
+.create-review-submit:hover{
+  border-bottom: 2px solid #40d9ac;
+  color: #40d9ac;
+  background-color: white;
+}
+
+.review-form-input{
+background: #40d9ac
+}

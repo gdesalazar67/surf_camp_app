@@ -1,5 +1,6 @@
 import React from "react";
-import ReviewItem from "./review_Item"
+import ReviewItem from "./review_Item";
+import {withRouter} from "react-router-dom";
 
 class ReviewsIndex extends React.Component{
 
@@ -12,6 +13,7 @@ class ReviewsIndex extends React.Component{
         this.props.fetchReviews(this.props.match.params.id)
     }
 
+   
     render(){
         if (!this.props.reviews){
             return null;
@@ -31,12 +33,18 @@ class ReviewsIndex extends React.Component{
         );
 
         return(
-            <ul className="review-list-container">
-                {reviewlist}
-            </ul>
+
+            <div className="review-container">
+                <nav className="create-review-button">
+                    <button className="button-link" onClick={() => this.props.openModal('reviewModal')}>Tell us about your experiance</button>
+                </nav>
+                <ul className="review-list-container">
+                    {reviewlist}                 
+                </ul>
+            </div>
         )
     }
 
 }
 
-export default ReviewsIndex;
+export default withRouter(ReviewsIndex);
