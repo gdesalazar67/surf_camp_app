@@ -6,11 +6,20 @@ class ReviewsIndex extends React.Component{
 
     constructor(props){
         super(props);
+        this.onClick = this.onClick.bind(this);
     }
 
     componentDidMount(){
         
         this.props.fetchReviews(this.props.match.params.id)
+    }
+
+    onClick(){
+        if(!this.props.currentUser){
+          return  this.props.openModal('login')
+        }else{
+            return this.props.openModal('reviewModal')
+        }
     }
 
    
@@ -36,7 +45,7 @@ class ReviewsIndex extends React.Component{
 
             <div className="review-container">
                 <nav className="create-review-button">
-                    <button className="button-link" onClick={() => this.props.openModal('reviewModal')}>Tell us about your experiance</button>
+                    <button className="button-link" onClick={this.onClick}>Tell us about your experiance</button>
                 </nav>
                 <ul className="review-list-container">
                     {reviewlist}                 

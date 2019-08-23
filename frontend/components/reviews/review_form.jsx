@@ -20,7 +20,7 @@ class ReviewForm extends React.Component{
     handleSubmit(event){
 
         event.preventDefault();
-
+        
         let review = merge({}, this.state);
         review.author_id = this.props.currentUserId;
         review.surfspot_id = this.props.surfspot.id;
