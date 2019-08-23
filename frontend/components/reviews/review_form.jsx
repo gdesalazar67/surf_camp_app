@@ -41,7 +41,7 @@ class ReviewForm extends React.Component{
 
     render(){
 
-        debugger
+        
         return(
             <div className="review-form-container">
                 <p className="review-form-title">{`${this.props.surfspot.title}`}</p>

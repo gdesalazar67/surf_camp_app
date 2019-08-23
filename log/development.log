@@ -50122,3 +50122,63 @@ Processing by Api::BookingsController#create as JSON
 Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for ::1 at 2019-08-23 00:12:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1q0JhPeSsxawf4mIsjCDdw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1q0JhPeSsxawf4mIsjCDdw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 142ms (Views: 135.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/surfspots/73" for ::1 at 2019-08-23 00:12:08 -0400
+Processing by Api::SurfspotsController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mSurfspot Load (167.6ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/surfspots_controller.rb:36
+  Rendering api/surfspots/show.json.jbuilder
+  [1m[35m (63.9ms)[0m  [1m[34mSELECT "photos"."img_url" FROM "photos" WHERE "photos"."surfspot_id" = $1[0m  [["surfspot_id", "73"]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:3
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 143], ["LIMIT", 1]]
+  ↳ app/views/api/surfspots/_surfspot.json.jbuilder:16
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/surfspots/_surfspot.json.jbuilder (73.5ms)
+  Rendered api/surfspots/show.json.jbuilder (77.1ms)
+Completed 200 OK in 258ms (Views: 23.0ms | ActiveRecord: 233.4ms)
+
+
+Started GET "/api/surfspots/73/reviews" for ::1 at 2019-08-23 00:12:08 -0400
+Processing by Api::ReviewsController#index as JSON
+  Parameters: {"surfspot_id"=>"73"}
+  [1m[36mSurfspot Load (17.7ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:39
+  Rendering api/reviews/index.json.jbuilder
+  [1m[36mReview Load (2.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."surfspot_id" = $1[0m  [["surfspot_id", 73]]
+  ↳ app/views/api/reviews/index.json.jbuilder:1
+  [1m[36mSurfspot Load (2.7ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:3
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:5
+  Rendered api/reviews/_review.json.jbuilder (10.1ms)
+  [1m[36mCACHE Surfspot Load (0.0ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:3
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:5
+  Rendered api/reviews/_review.json.jbuilder (18.0ms)
+  [1m[36mCACHE Surfspot Load (0.0ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:3
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 143], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:5
+  Rendered api/reviews/_review.json.jbuilder (8.2ms)
+  [1m[36mCACHE Surfspot Load (0.0ms)[0m  [1m[34mSELECT  "surfspots".* FROM "surfspots" WHERE "surfspots"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/views/api/reviews/_review.json.jbuilder:5
+  Rendered api/reviews/_review.json.jbuilder (4.5ms)
+  Rendered api/reviews/index.json.jbuilder (55.8ms)
+Completed 200 OK in 90ms (Views: 45.2ms | ActiveRecord: 41.8ms)
+
+

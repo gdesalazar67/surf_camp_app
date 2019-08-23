@@ -4,7 +4,7 @@ import {format} from "date-fns";
 
 const ReviewItem = ({review, currentUser, deleteReview, user})=>{
     let createDate = format(review.created_at, "MMMM Do, YYYY");
-debugger
+
     if(currentUser === review.author_id){
         return(
             <div className="review-item-container">
