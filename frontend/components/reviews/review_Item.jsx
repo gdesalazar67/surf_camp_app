@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from 'react-router-dom';
 import {format} from "date-fns";
 
 const ReviewItem = ({review, currentUser, deleteReview, user})=>{

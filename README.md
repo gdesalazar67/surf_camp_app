@@ -1,6 +1,6 @@
 # SurfCamp
 
-A responsive single-page app clone of HipCamp where you can browse campsites on beautiful surfspots.
+A responsive single-page app clone of HipCamp where you can browse campsites at beautiful surf spots.
 
 The technologies used to create SurfCamp are React, Redux, PostgresSQL, Ruby on Rails, CSS, JS, and HTML5.
 
