@@ -10,6 +10,8 @@ The technologies used to create SurfCamp are React, Redux, PostgresSQL, Ruby on 
 
 * Users are able to create accounts, login and logout using BCrypt authentication system and rails backend. Demo user provided to navigate site.
 
+![log in auth](https://user-images.githubusercontent.com/48927999/63972724-55bed700-ca77-11e9-9627-ab36a8129e25.png)
+
 ### Surfspot bookings
   
 * Interactive bookings calendar, That adds reservations to the specific surfspot and logged in user profile. Verifies User and opens log in modal if User is not signed in when attempting to reserve surfspot
