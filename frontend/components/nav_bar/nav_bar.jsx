@@ -35,7 +35,7 @@ export default ({ currentUser, logout, openModal }) => {
                 </h1>
             </Link>
             <div className="nav-bar-right">
-                <Link to="/" className="header-link">
+                <div className="header-link">
                     <label className="nav-bar-links">
                       Camp
                     </label>
@@ -48,7 +48,7 @@ export default ({ currentUser, logout, openModal }) => {
                     <label className="nav-bar-links">
                         Help
                     </label>
-                </Link>
+                </div>
                 {display}
             </div>
         </header>

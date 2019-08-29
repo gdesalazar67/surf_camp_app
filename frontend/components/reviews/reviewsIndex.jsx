@@ -45,7 +45,7 @@ class ReviewsIndex extends React.Component{
 
             <div className="review-container">
                 <nav className="create-review-button">
-                    <p className="add-reviews">Tell us about your experiance</p>
+                    <p className="add-reviews">Tell us about your experience</p>
                     <button className="review-button-link" onClick={this.onClick}>Review</button>
                 </nav>
                 <ul className="review-list-container">

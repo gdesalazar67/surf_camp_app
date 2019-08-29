@@ -16,7 +16,7 @@ export default ()=>{
                     </div>
                     <input type="txt" 
                         className="search-txt" 
-                        placeholder="Search..."/>
+                        placeholder="503 maintance"/>
                     </div>
                     <input className="search-submit" type="submit" value="Search"/>
                 </div>

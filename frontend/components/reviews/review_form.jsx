@@ -47,7 +47,7 @@ class ReviewForm extends React.Component{
                 <p className="review-form-title">{`${this.props.surfspot.title}`}</p>
                     <form className="review-text area" onSubmit={this.handleSubmit}>
                         <textarea onChange={this.update('body')} className="review-form-input"
-                         placeholder="Tell us about your experiance"
+                         placeholder="Tell us about your experience"
                          value={this.state.body}
                          rows="10"
                          col="10"
