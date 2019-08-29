@@ -14,6 +14,7 @@ The technologies used to create SurfCamp are React, Redux, PostgresSQL, Ruby on 
   
 * Interactive bookings calendar, That adds reservations to the specific surfspot and logged in user profile. Verifies User and opens log in modal if User is not signed in when attempting to reserve surfspot
 ![surfspot calander](https://user-images.githubusercontent.com/48927999/63971495-99641180-ca74-11e9-9042-57f0d3720240.png)
+![booking code](https://user-images.githubusercontent.com/48927999/63972238-48edb380-ca76-11e9-9bc7-8dd779ba4cdd.png)
 
 ### Surfspot show page
 
