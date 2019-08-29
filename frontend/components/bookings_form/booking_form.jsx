@@ -21,10 +21,10 @@ class BookingForm extends React.Component{
     componentWillUnmount() {
         this.props.removeErrors()
     }
-   
-    
-    handleSubmit(event){
+     
+    handleSubmit(event){     
         event.preventDefault();
+
         if(!this.props.currentUserId){
             this.props.openModal('login');
         }else{
@@ -34,17 +34,14 @@ class BookingForm extends React.Component{
             booking.surfspot_id = this.props.surfspot.id;
             booking.host_id = this.props.surfspot.host_id;
             
-            this.props.createBooking(booking)
+            this.props.createBooking(booking);
         }
     }
-        // this.setState({confirmed: true})
 
     handleDayClick(inOut){
         return day=>{
-            let selectedDay = format(day, "YYYY-MM-DD");
-            // selectedDay = parseInt(selectedDay);            
-            this.setState({[inOut]: selectedDay});
-            
+            let selectedDay = format(day, "YYYY-MM-DD");          
+            this.setState({[inOut]: selectedDay});     
         };
     }
 
