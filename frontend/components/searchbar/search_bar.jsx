@@ -1,6 +1,8 @@
 import React from "react";
 
-export default ()=>{
+export default class SearchBar extends React.Component{
+
+  render(){
     return (
         <div className="search-bar-container">
             <h2 className="search-title">Step into liquid.</h2>
@@ -24,4 +26,5 @@ export default ()=>{
 
         </div>
     )
+  }
 }
