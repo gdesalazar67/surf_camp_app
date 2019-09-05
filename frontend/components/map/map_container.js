@@ -1,18 +1,19 @@
 import {connect} from 'react-redux';
 import SearchIndexMap from './index_map'
-import { fetchSurfspot } from '../../util/surfspots_api_util';
+import { fetchSurfspot, fetchSurfspots } from '../../actions/surfspots_actions';
 
 const msp =(state, ownProps)=>{
-
+    debugger
     return ({
-        surfspots: state.entities.surfSpots
+        surfspots: Object.values(state.entities.surfSpots)
     })
 }
 
 const mdp = dispatch=>{
 
     return ({
-        fetchSurfspot: (id)=>dispatch(fetchSurfspot(id))
+        fetchSurfspot: (id)=>dispatch(fetchSurfspot(id)),
+        fetchSurfspots: ()=>dispatch(fetchSurfspots()),
     })
 }
 

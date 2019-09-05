@@ -10,6 +10,7 @@ const mapStyles = {
 class GoogleMap extends React.Component {
 
     constructor(props){
+      
         super(props);
         this.state = {
             showingInfoWindow: false,
@@ -49,7 +50,7 @@ class GoogleMap extends React.Component {
           return <Redirect to='/'/>
         }
 
-        debugger
+ 
 
         return (
             <div className="google-map">

@@ -6,14 +6,7 @@ class SurfspotIndexItem extends React.Component{
      constructor(props){
          super(props);
         }
-        // this.handleClick = this.handleClick.bind(this);
-
-    //  handleClick() {
-    //       
-    //      const surfspotId = this.props.surfspot.id;
-    //      this.props.push(`/surfspots/${surfspotId}`);
-    //  }
-    // onClick = { this.handleClick }
+    
    
     render(){
 
