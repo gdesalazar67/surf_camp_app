@@ -49,6 +49,8 @@ class GoogleMap extends React.Component {
           return <Redirect to='/'/>
         }
 
+        debugger
+
         return (
             <div className="google-map">
                 <Map
@@ -69,6 +71,7 @@ class GoogleMap extends React.Component {
                     >
                         <div>
                             <h4>{this.state.selectedPlace.name}</h4>
+                            <img src="https://image.flaticon.com/icons/svg/651/651140.svg" />
                         </div>
                     </InfoWindow>
                 </Map>

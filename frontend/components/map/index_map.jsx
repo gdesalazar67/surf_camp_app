@@ -4,10 +4,15 @@ import GoogleMap from './google_map';
 
 
 
-export default class SurfSportsIndexSearchMap extends React.Component{
+export default class SurfSpotsIndexSearchMap extends React.Component{
+
+ constructor(props){
+     super(props)
+ }
 
     render(){
 
+        debugger
         return(
         <div className="searchIndexMap-container">
             <SearchBar/>

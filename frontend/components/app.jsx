@@ -11,7 +11,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import Modal from './modal/modal';
 import SurfSpotIndex from './surfspots/surfspots_index_container';
 import SurfSpotShow from './surfspot_showpage/surfspot_show_container';
-import SurfSpotIndexSearchMap from './map/index_map';
+import SearchIndexMap from './map/map_container';
 
 const App = ()=>(
     <div>
@@ -22,7 +22,7 @@ const App = ()=>(
         <Switch>
             <Route exact path="/" component={SurfSpotIndex}/>
             <Route exact path="/surfspots/:id" component={SurfSpotShow}/>
-            <Route exact path="/surfspots" component={SurfSpotIndexSearchMap}/>
+            <Route exact path="/surfspots" component={SearchIndexMap}/>
         </Switch>
     </div>
 );
