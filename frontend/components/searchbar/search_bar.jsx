@@ -1,7 +1,7 @@
 import React from "react";
+import {withRouter} from 'react-router-dom';
 
-
-export default class SearchBar extends React.Component{
+class SearchBar extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -13,7 +13,7 @@ export default class SearchBar extends React.Component{
 
 
     handleSubmit(event){
-        debugger
+        debugger 
         event.preventDefault()
         this.props.history.push("/surfspots");
     };
@@ -56,3 +56,4 @@ export default class SearchBar extends React.Component{
     )
   }
 }
+export default withRouter(SearchBar);

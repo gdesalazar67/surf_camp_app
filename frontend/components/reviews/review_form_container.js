@@ -4,7 +4,7 @@ import {createReview } from "../../actions/reviews_actions";
 import ReviewForm from "./review_form";
 
 const msp = (state)=>{
-    debugger
+    
     const surfspot = state.entities.surfSpots[Object.keys(state.entities.surfSpots)[0]];
     
     return({

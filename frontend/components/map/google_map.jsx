@@ -39,7 +39,7 @@ class GoogleMap extends React.Component {
     }
 
     markerClick(){
-        debugger
+        
         this.setState({redirect: true})
         
     }
