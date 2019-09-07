@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from '../searchbar/search_bar';
+import SearchBar from '../searchbar/search_bar_container';
 import GoogleMap from './google_map';
 import SurfSpotIndex from '../surfspots/surfspot_index_item'
 

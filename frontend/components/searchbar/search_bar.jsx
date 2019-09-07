@@ -1,6 +1,6 @@
 import React from "react";
 import {withRouter} from 'react-router-dom';
-import {receiveGeolocation} from '../../actions/geo_location';
+
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -16,7 +16,7 @@ class SearchBar extends React.Component{
     handleSubmit(event){
         debugger 
         event.preventDefault()
-        receiveGeolocation(event.target.firstchild.value);
+        this.props.receiveGeolocation(event.target.firstChild.value);
         this.props.history.push("/surfspots");
     };
 

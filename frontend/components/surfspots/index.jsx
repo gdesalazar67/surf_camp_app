@@ -1,6 +1,6 @@
 import React from "react";
 import SurfspotIndexItem from "./surfspot_index_item";
-import SearchBar from "../searchbar/search_bar";
+import SearchBar from "../searchbar/search_bar_container";
 
 export default class Index extends React.Component{
     constructor(props){
