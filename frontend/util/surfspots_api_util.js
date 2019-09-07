@@ -43,6 +43,16 @@ export const deleteSurfspot = (id)=>{
     )
 }
 
+// export const FetchSearchSurfspots = (searchParams)=>{
+//     return(
+//         $.ajax({
+//             method: "GET",
+//             url: "api/surfspots",
+//             data: {searchParams},
+//         })
+//     )
+// }
+
 
 
 
