@@ -40,7 +40,10 @@ export default class SurfSpotsIndexSearchMap extends React.Component{
                         {surfspots}
                     </ul>
                 </div>
-                <GoogleMap surfspots={this.props.surfspots}/>
+                <GoogleMap 
+                surfspots={this.props.surfspots}
+                location={this.props.location}
+                />
             </div>
         </div>
         )

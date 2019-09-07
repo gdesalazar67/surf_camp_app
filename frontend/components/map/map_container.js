@@ -4,7 +4,8 @@ import { fetchSurfspot, fetchSurfspots } from '../../actions/surfspots_actions';
 
 const msp =(state, ownProps)=>{
     return ({
-        surfspots: Object.values(state.entities.surfSpots)
+        surfspots: Object.values(state.entities.surfSpots),
+        location: state.ui.geoLocation.address,
     })
 }
 

@@ -38,10 +38,8 @@ class GoogleMap extends React.Component {
         })
     }
 
-    markerClick(){
-        
-        this.setState({redirect: true})
-        
+    markerClick(){      
+        this.setState({redirect: true})   
     }
    
     
@@ -49,8 +47,6 @@ class GoogleMap extends React.Component {
         if(this.state.redirect === true){
           return <Redirect to='/'/>
         }
-
- 
 
         return (
             <div className="google-map">
