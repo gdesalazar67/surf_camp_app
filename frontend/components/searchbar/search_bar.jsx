@@ -15,8 +15,9 @@ class SearchBar extends React.Component{
 
     handleSubmit(event){
         debugger 
-        event.preventDefault()
-        this.props.receiveGeolocation(event.target.firstChild.value);
+        event.preventDefault();
+        // this.props.receiveGeolocation(event.target.firstChild.value);
+        this.props.fetchGeoCode(event.target.firstChild.value);
         this.props.history.push("/surfspots");
     };
 
