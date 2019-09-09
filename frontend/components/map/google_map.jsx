@@ -42,38 +42,51 @@ class GoogleMap extends React.Component {
         this.setState({redirect: true})   
     }
    
+    mapIt(){
+
+        return (
+            <Map
+                google={this.props.google}
+                zoom={8}
+                style={mapStyles}
+                initialCenter={this.props.location.results[0].geometry.location || {}}
+            >
+                <Marker
+                    onMouseover={this.onMarkerMouseON}
+                    name={'placeholder'}
+                    onMouseout={this.onMouseOut}
+                    onClick={this.markerClick}
+                />
+                <InfoWindow
+                    marker={this.state.activeMarker}
+                    visible={this.state.showingInfoWindow}
+                >
+                    <div>
+                        <h4>{this.state.selectedPlace.name}</h4>
+                        <img src="https://image.flaticon.com/icons/svg/651/651140.svg" />
+                    </div>
+                </InfoWindow>
+            </Map>
+        )
+    }
     
     render() {
+
+        debugger
         if(this.state.redirect === true){
           return <Redirect to='/'/>
         }
 
-        debugger
-        console.log(this.props.location)
+        if(this.props.location){
+            return (
+                <div className="google-map">
+                    {this.mapIt()}
+                </div>
+            )
+        }
         return (
             <div className="google-map">
-                <Map
-                    google={this.props.google}
-                    zoom={8}
-                    style={mapStyles}
-                    initialCenter={this.props.location.results[0].geometry.location || {}}
-                > 
-                    <Marker
-                        onMouseover={this.onMarkerMouseON}
-                        name={'Kenyatta International Convention Centre'}
-                        onMouseout={this.onMouseOut}
-                        onClick={this.markerClick}
-                    />
-                    <InfoWindow
-                        marker={this.state.activeMarker}
-                        visible={this.state.showingInfoWindow}
-                    >
-                        <div>
-                            <h4>{this.state.selectedPlace.name}</h4>
-                            <img src="https://image.flaticon.com/icons/svg/651/651140.svg" />
-                        </div>
-                    </InfoWindow>
-                </Map>
+                Loading map...
             </div>
         )
     };
