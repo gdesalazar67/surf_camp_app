@@ -4,7 +4,7 @@ import {merge} from "lodash";
 const geoLocationReducer = (state = {}, action)=>{
     Object.freeze(state);
     let newState;
-debugger
+
     switch(action.type){
        case RECEIVE_GEOLOCATION:
         newState = merge({},{address: action.location})

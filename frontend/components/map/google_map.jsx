@@ -48,13 +48,15 @@ class GoogleMap extends React.Component {
           return <Redirect to='/'/>
         }
 
+        debugger
+        console.log(this.props.location)
         return (
             <div className="google-map">
                 <Map
                     google={this.props.google}
                     zoom={8}
                     style={mapStyles}
-                    initialCenter={{ lat: 47.444, lng: -122.176 }}
+                    initialCenter={this.props.location.results[0].geometry.location || {}}
                 > 
                     <Marker
                         onMouseover={this.onMarkerMouseON}
