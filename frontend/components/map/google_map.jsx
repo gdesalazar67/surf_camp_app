@@ -17,11 +17,24 @@ class GoogleMap extends React.Component {
             activeMarker: {},
             selectedPlace: {},
             redirect: false,
+            mapCenter:{lat: null},
         }
         this.onMarkerMouseON = this.onMarkerMouseON.bind(this);
         this.onMouseOut = this.onMouseOut.bind(this);
         this.markerClick = this.markerClick.bind(this);
     }
+
+    // componentDidUpdate(){
+    //     console.log("didmount")
+    //     debugger
+    //     let center = this.props.location.results[0].geometry.location || {};
+    //     console.log(center)
+    //     if (center !== this.state.mapCenter){
+    //         this.setState({
+    //             mapCenter: center,
+    //         });
+    //     }
+    // }
 
     onMarkerMouseON(props, marker, e){ 
         this.setState({
@@ -41,19 +54,34 @@ class GoogleMap extends React.Component {
     markerClick(){      
         this.setState({redirect: true})   
     }
+
+    initialMapCenter(){
+        return this.props.location.results[0].geometry.location
+       
+        // if(this.state.mapCenter.lat === null){    
+        //     console.log("in the null")
+        //     return { lat: 31.9685988, lng: -99.9018131 }
+        // }else{
+        //     console.log("in state.mapcenter")
+        // return this.state.mapCenter
+        // };
+    }
    
     mapIt(){
+        console.log("map rendering")
 
         return (
             <Map
                 google={this.props.google}
-                zoom={8}
+                zoom={10}
                 style={mapStyles}
-                initialCenter={this.props.location.results[0].geometry.location || {}}
+                initialCenter={this.props.location.results[0].geometry.location}
+                center={this.initialMapCenter()}
             >
                 <Marker
                     onMouseover={this.onMarkerMouseON}
-                    name={'placeholder'}
+                    name={'Surfspot'}
+                    position={this.initialMapCenter()}
                     onMouseout={this.onMouseOut}
                     onClick={this.markerClick}
                 />
