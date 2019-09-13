@@ -26,7 +26,7 @@ class GoogleMap extends React.Component {
 
     // componentDidUpdate(){
     //     console.log("didmount")
-    //     debugger
+    //     
     //     let center = this.props.location.results[0].geometry.location || {};
     //     console.log(center)
     //     if (center !== this.state.mapCenter){
@@ -68,7 +68,6 @@ class GoogleMap extends React.Component {
     }
    
     mapIt(){
-        console.log("map rendering")
 
         return (
             <Map
@@ -100,7 +99,7 @@ class GoogleMap extends React.Component {
     
     render() {
 
-        debugger
+        
         if(this.state.redirect === true){
           return <Redirect to='/'/>
         }

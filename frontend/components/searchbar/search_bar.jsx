@@ -45,7 +45,7 @@ class SearchBar extends React.Component{
                     <form  onSubmit={this.handleSubmit}>
                         <input type="txt" 
                             className="search-txt" 
-                            placeholder="503 maintance"
+                            placeholder="Search..."
                             value={this.state.searchParams}
                             onChange={this.update}
                         />
