@@ -2,7 +2,10 @@
 
 A responsive single-page app clone of HipCamp where you can browse campsites at beautiful surf spots.
 
-The technologies used to create SurfCamp are React, Redux, PostgresSQL, Ruby on Rails, CSS, JS, and HTML5.
+The technologies used to create SurfCamp are React 16.8.6, Redux 4.0.4, PostgreSQL 11.4, Ruby on Rails 5.2.3, webpack 4.38.0, CSS3, JavaScript 9, and HTML5.
+<br>
+<a href="https://surfcamp.herokuapp.com">SurfCamp</a> 
+<br>
 
 ## Features
 
@@ -109,13 +112,13 @@ class BookingForm extends React.Component{
 
 ```
 
-### Surfspot show page
+### Surfspots:
 
-* Each surfspot's show page contains: 
+Each Surfspot contains: 
 * A photo carousel of the campsite and surrounding location.
-* Bookings Calendar
-* Campsite info
-* List all reviews and allows User to add Review 
+* Bookings Calendar - User can reserve surfspot.
+* Camp site info - host, location, amenities and description.
+* Reviews - User can add a review and see all reviews for the specified surfspot.
 
 ![surfspot show page](https://user-images.githubusercontent.com/48927999/63622694-7a253a00-c5c5-11e9-9d26-019d941381ad.png)
 ```javascript
