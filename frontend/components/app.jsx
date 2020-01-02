@@ -16,14 +16,17 @@ import SearchIndexMap from './map/map_container';
 const App = ()=>(
     <div>
         <Modal />
+        <div className="promotion">
+            <img className="giftbox" src={window.giftboxlogoURL}/>
+            Send the gift of camping.
+        </div>
+        {/* <NavBarContainer/> */}
         
-        <NavBarContainer/>
-        
-        <Switch>
+        {/* <Switch>
             <Route exact path="/" component={SurfSpotIndex}/>
             <Route exact path="/surfspots/:id" component={SurfSpotShow}/>
             <Route exact path="/surfspots" component={SearchIndexMap}/>
-        </Switch>
+        </Switch> */}
     </div>
 );
 
