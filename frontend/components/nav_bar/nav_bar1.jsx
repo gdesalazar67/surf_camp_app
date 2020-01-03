@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class Navbar extends React.Component{
     constructor(){
@@ -42,9 +41,10 @@ class Navbar extends React.Component{
     };
 
     renderDropDown(){
-        if(!this.state.isHidden){
-            return(
-            <div className="nav-bar-right">
+
+        let collapse = this.state.isHidden ? "iscollapsed nav-bar-right" : "nav-bar-right";
+        return(
+            <div className={collapse}>
                 <button className="button-link" onClick={this.toggleHidden}>
                     <div className="change">
                         <div className="bar1"></div>
@@ -68,14 +68,14 @@ class Navbar extends React.Component{
                 </div>
                 {this.renderUser()}
             </div>
-        )};
+        );
     };
 
     render(){
 
 
         return (
-            <header className="nav-bar">
+            <header className="nav-bar" >
                 <button className="button-link" onClick={this.toggleHidden}>
                     <div className="hamburger-icon-wrapper">
                         <div className="bar1"></div>
@@ -91,13 +91,7 @@ class Navbar extends React.Component{
                         </div>
                     </h1>
                 </Link>
-                <TransitionGroup component={null}>
-                    {!this.state.isHidden && (
-                        <CSSTransition classNames="nav-slide" timeout={300}>
-                            {this.renderDropDown()}
-                        </CSSTransition>
-                    )}
-                </TransitionGroup>
+                {this.renderDropDown()}
             </header>
         )
     }
