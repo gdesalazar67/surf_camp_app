@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import NavBar from './nav_bar';
+// import NavBar from './nav_bar';
+import NavBar from './nav_bar1';
 import {logout} from "../../actions/session_actions"
 import { openModal } from '../../actions/modal_actions';
 

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import {logout} from "../../actions/session_actions"
 
 export default ({ currentUser, logout, openModal }) => {
+
     
     const display = currentUser ? (
         <div className="login-signup">
@@ -22,13 +23,17 @@ export default ({ currentUser, logout, openModal }) => {
             </nav>
             
         );
+
+
     return (
         <header className="nav-bar">
+            <button className="button-link" onClick={() => }>
              <div className="hamburger-icon-wrapper">
                 <div className="bar1"></div>
                 <div className="bar2"></div>
                 <div className="bar3"></div>
             </div>
+            </button>
             <Link to="/" className="header-link">
                 <h1 className="logo-container">
                     <div className="logo-text">SURFC<span className="letter">A</span>MP</div>
@@ -37,7 +42,7 @@ export default ({ currentUser, logout, openModal }) => {
                     </div>
                 </h1>
             </Link>
-            {/* <div className="nav-bar-right">
+            <div className="nav-bar-right">
                 <div className="header-link">
                     <label className="nav-bar-links">
                       Camp
@@ -53,7 +58,7 @@ export default ({ currentUser, logout, openModal }) => {
                     </label>
                 </div>
                 {display}
-            </div> */}
+            </div>
         </header>
     )
 }
