@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class Navbar extends React.Component{
     constructor(){
@@ -24,8 +25,8 @@ class Navbar extends React.Component{
         </div>
     ) : (
             <nav className="login-signup">
-                <button className="button-link" onClick={() => this.props.openModal('signup')}>Signup</button>
-                <button className="button-link" onClick={() => this.props.openModal('login')}>Login</button>
+                <button className="button-link" onClick={() => this.props.openModal('login')}>Sign In</button>
+                <button className="button-link" onClick={() => this.props.openModal('signup')}>Sign Up</button>
             </nav>
 
         );
@@ -90,10 +91,20 @@ class Navbar extends React.Component{
                         </div>
                     </h1>
                 </Link>
-                {this.renderDropDown()}
+                <TransitionGroup component={null}>
+                    {!this.state.isHidden && (
+                        <CSSTransition classNames="nav-slide" timeout={300}>
+                            {this.renderDropDown()}
+                        </CSSTransition>
+                    )}
+                </TransitionGroup>
             </header>
         )
     }
 
 }
 export default Navbar;
+
+
+
+
