@@ -7,7 +7,8 @@ import ReviewFormContainer from '../reviews/review_form_container';
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
-        return null;
+        // return null;
+        return (<div className="iscollapsed modal-background"></div>);
     }
     let component;
     switch (modal) {
@@ -21,7 +22,7 @@ function Modal({ modal, closeModal }) {
             component = <ReviewFormContainer />;
             break;
         default:
-            return null;
+            return null;  
     }
     
     return (
@@ -29,7 +30,7 @@ function Modal({ modal, closeModal }) {
             <div className="modal-child" onClick={e => e.stopPropagation()}>
                 {component}
             </div>
-        </div>
+        </div>  
     );
 }
 

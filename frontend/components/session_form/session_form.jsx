@@ -77,8 +77,8 @@ class SessionForm extends React.Component {
                         />
                 </div>
             </div>
-            ) }
-    }
+            )};
+    };
 
     renderZipcode(){
         const type = this.props.formType;
@@ -103,28 +103,38 @@ class SessionForm extends React.Component {
         if(type === "signup"){
            return (
            <div>
-            <h2 className="login-big-title">Join Surfcamp</h2>
-            <p className="login-small-title">Discover the best surfspots near you</p>
+            <div className="logo-text">SURFC<span className="letter">A</span>MP</div>
+                <h2 className="login-big-title">Search, discover, and book<br></br>Everywhere you want to surfcamp.</h2>
            </div>)
         }else {
             return ( 
             <div>
-             <h2 className="login-big-title">Waves be calling!</h2>
-             <p className="login-small-title">It's about time for another surftrip</p>
+                <div className="logo-text">Welcome back<span className="letter">!</span></div>
+                    <h2 className="login-big-title">Waves are calling!<br></br>Time for another surftrip</h2>
             </div>)
         }
     };
+
+    renderButtontext(){
+        const type = this.props.formType;
+        if (type === "signup") {
+            return ("Join Surfcamp")
+               
+        } else {
+            return ("Log in")
+        }
+    }
 
     renderLink(){
         const type = this.props.formType;
         if(type === "signup"){
            return (
-           <div>
-                Already a memember?&nbsp;{this.props.otherForm}    
+           <div className="other-link">
+                Already a Surf Camper?&nbsp;{this.props.otherForm}    
            </div>)
         }else {
             return ( 
-            <div>
+            <div className="other-link">
                 not a memember?&nbsp;{this.props.otherForm}             
             </div>)
         }
@@ -164,7 +174,7 @@ class SessionForm extends React.Component {
                     </div>
                     {this.renderZipcode()}
                    
-                     <input className="session-submit" type="submit" value={this.props.formType} />
+                     <input className="session-submit" type="submit" value={this.renderButtontext()} />
                     <button onClick={this.demoSubmit}>
                         <input className="demo-button" type="submit" value="Demo Login" required/>
                     </button>

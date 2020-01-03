@@ -16,7 +16,7 @@ import SearchIndexMap from './map/map_container';
 
 const App = ()=>(
     <div>
-        <Modal />
+        <Modal/>
         <Giftbox/>
         
         <NavBarContainer/>

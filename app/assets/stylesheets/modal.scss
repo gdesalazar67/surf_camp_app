@@ -1,4 +1,9 @@
 
+.iscollapsed.modal-background{
+  opacity: 0;
+  height: 0;
+  transition: all .35s ease-in;
+}
 
 .modal-background {
   position: fixed;
@@ -8,6 +13,9 @@
   left: 0;
   background: rgba(238, 237, 237, 0.623);
   z-index: 10;
+  opacity: 1;
+  height: 100%;
+  transition: height .35s ease-out;
 }
 
 .modal-child {
@@ -15,6 +23,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 337.5px;
 }
 
 .login-form-container {
@@ -24,7 +33,8 @@
 }
 
 .login-form-box{ 
-  padding: 15px;
+  width: 100%;
+  padding: 19px;
   background: white;
   position: relative;
   display: flex;
@@ -34,22 +44,21 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.login-form-box .logo-text{
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 1.75px;
+  line-height: 40px;
+  text-align: center;
+  margin: 10px;
+}
 .login-big-title{
     display: block;
-    font-size: 1.3rem;
+    font-size: 18px;
     font-weight: 700;
     text-align: center;
     color: #333333;
-}
-
-.login-small-title{
-    display: block;
-    font-size: .9rem;
-    font-weight: 400;
-    color: #757575;
-    text-align: center;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+    margin: 13px 0px 11px;
 }
 
 .login-form{
@@ -57,42 +66,72 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 270px;
+  width: 100%;
+  margin-top: 14px;
+}
+.login-form div{
+  width: 100%;
+}
+.other-link{
+  text-align: center;
+  font-size: 15px;
+  margin-top: 14px;
 }
 
-.login-form-fields{
-   margin-bottom: 10px;
-   box-sizing: border-box;
-   display: block; 
-   font-weight: 400;
-}
+
 
 .login-input{
-    border: .25px solid #070707;
-    font-weight: 450 !important;
-    color: #070707;
+    border: .25px solid #333333;
+    font-weight: 600;
+    color: #333333;
     height: 68px;
     font-size: 1rem;
     padding: 16px;
     margin: 0 0 10px;
     background: #ffff;
-    width: 270px;
+    width: 100%;
+}
+.login-input::placeholder {
+  color: #333333;
+  opacity: 1; /* Firefox */
+}
+
+.login-form button{
+  width: 100%;
+  margin: 0;
+}
+.demo-button {
+  text-transform: capitalize;
+  height: 68px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px;
+  background-color: #ff615d;
+  color: #ffff;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #ff615d;;
+}
+.demo-button:hover{
+  color: #ff615d;
+  background-color: #ffff;
 }
 
 .session-submit{
   text-transform: capitalize;
   height: 68px;
   margin: 10px;
-  font-size: 1.25rem;
+  font-size: 18px;
+  font-weight: 600;
   padding: 16px;
-  background-color: #26bf73;
+  background-color: #40d9ac;
   color: white;
   width: 100%;
   text-align: center;
-  border: 2px solid #26bf73;
+  border: 2px solid #40d9ac;
 }
 .session-submit:hover{
-  border-bottom: 2px solid #40d9ac;
+  border: 2px solid #40d9ac;
   color: #40d9ac;
   background-color: white;
 }

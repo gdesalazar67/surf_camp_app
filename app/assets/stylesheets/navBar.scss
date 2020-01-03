@@ -285,7 +285,6 @@
     border-bottom: 2px solid #fff;
     margin: 0 6px;
     margin-right: 20px;
-
   }
   .login-signup .button-link:hover{
     border-bottom: 2px solid #40d9ac;
@@ -307,7 +306,18 @@
     color: #fff;
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   }
+}
 
-
+@media screen and (min-width: 1200px){
+   .nav-bar-links{
+    margin: 0 12px;
+  }
+  .login-signup .button-link{
+    margin: 0 14px;
+    margin-right: 20px;
+  }
+   .login-signup .button-link:last-child{
+    margin: 0 14px;
+  }
 
 }
