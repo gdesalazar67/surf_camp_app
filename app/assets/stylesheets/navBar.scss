@@ -186,10 +186,6 @@
   
 }
 
-// .nav-bar-links:hover{
-//   border-bottom: 1px solid #26bf73;
-// }
-
 
  .login-signup{
     display: flex;
@@ -220,13 +216,16 @@
   //   z-index: 4;
   // }
   .nav-bar{
+    margin: 17.5px 0;
     justify-content: space-between;    
   }
-  // .logo{
-  //   display: block;
-  // }
+ 
   .hamburger-icon-wrapper{
     display: none;
+  }
+  .logo-container{
+    margin-bottom: 0;
+    
   }
   .logo-text {
     font-size: 25px;
@@ -247,43 +246,60 @@
   .header-link{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    margin-left: 29px;
   }
 
   .nav-bar-links{
     box-sizing: border-box;
     height: fit-content;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 2px solid #fff;
     padding: 0;
-    font-size: 14.75px;
+    padding-top: 1px;
+    font-size: 15.75px;
     font-weight: 400;  
+    margin: 0 6px;
+  }
+  .nav-bar-links:hover{
+    border-bottom: 2px solid #40d9ac;
   }
 
   .nav-bar .button-link{
     display: none;
   }
 
+
    .login-signup{
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
   .login-signup .button-link{
     display: block;
     box-sizing: border-box;
     height: fit-content;
     padding: 0;
-    font-size: 14.75px;
+    padding-top: 1px;
+    font-size: 15.75px;
     font-weight: normal;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 2px solid #fff;
+    margin: 0 6px;
+    margin-right: 20px;
+
+  }
+  .login-signup .button-link:hover{
+    border-bottom: 2px solid #40d9ac;
   }
 
    .login-signup .button-link:last-child{
     width: 82.52px;
     height: 45px;
-    // font-size: 14.75px;
+    font-size: 14.75px;
     border: 3px solid #40d9ac;
     color: #40d9ac;
     background-color: transparent;
     padding: 7px 12px;
+    margin: 0 6px;
   }
    .login-signup .button-link:last-child:hover{
     border-color: #3cc69e;
