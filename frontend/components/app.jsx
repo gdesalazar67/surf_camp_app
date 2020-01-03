@@ -19,7 +19,7 @@ const App = ()=>(
         <Modal />
         <Giftbox/>
         
-        {/* <NavBarContainer/> */}
+        <NavBarContainer/>
         
         {/* <Switch>
             <Route exact path="/" component={SurfSpotIndex}/>

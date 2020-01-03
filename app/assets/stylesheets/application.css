@@ -34,22 +34,15 @@ time, mark, audio, video {
 	font: inherit;
     vertical-align: baseline;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
+    color: #333333;
 }
 * {-webkit-font-smoothing: antialiased;}
 body {
    font-size: 16px;
    line-height: 1.42;    
-   color: #333333;
    background-color: white;
-   max-width: 1417px;
-   
-    /* width: 400px; */
+   max-width: 1417px; 
     margin: 0 auto;
-    /* background-color: #66ffff; */
-
-    -webkit-font-smoothing: antialiased;
-    /* text-size-adjust: 100%; */
-
 }
 
 strong, b {
@@ -57,12 +50,16 @@ strong, b {
 }
 
 .logo{
+    display: none;
     max-width:  58px;
-    max-height: 53px;
     margin-right: 10px;
     padding-bottom: 2px;
     margin-left: 3px;
 
+}
+.letter {
+    /* color: #40d9ac; */
+    color: #ff615d;
 }
 
 .logo-container{
@@ -70,5 +67,10 @@ strong, b {
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
-    
+}
+.logo-text {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 1.75px;
+    line-height: 40px;
 }

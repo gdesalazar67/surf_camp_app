@@ -24,17 +24,20 @@ export default ({ currentUser, logout, openModal }) => {
         );
     return (
         <header className="nav-bar">
+             <div className="hamburger-icon-wrapper">
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+            </div>
             <Link to="/" className="header-link">
                 <h1 className="logo-container">
+                    <div className="logo-text">SURFC<span className="letter">A</span>MP</div>
                     <div className="logo">
                         <img src={window.surfcamplogoURL}/>
                     </div>
-                    <div>
-                        Surf Camp
-                    </div>
                 </h1>
             </Link>
-            <div className="nav-bar-right">
+            {/* <div className="nav-bar-right">
                 <div className="header-link">
                     <label className="nav-bar-links">
                       Camp
@@ -50,7 +53,7 @@ export default ({ currentUser, logout, openModal }) => {
                     </label>
                 </div>
                 {display}
-            </div>
+            </div> */}
         </header>
     )
 }
