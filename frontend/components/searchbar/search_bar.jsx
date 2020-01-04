@@ -30,29 +30,23 @@ class SearchBar extends React.Component{
   render(){
     return (
         <div className="search-bar-container">
-            <h2 className="search-title">Step into liquid.</h2>
+            <h2 className="search-title">Step into<br></br>liquid.</h2>
             <p className="search-subtext">Book unique camping spots on 
                 over <strong>100</strong> beaches where world renowned 
                 waves spray at your feet.
             </p>
             <div className="surfcamp-search-widget">
-                <div className="search-txt-container">
-                    <div className='row'>
-                        <div className="magnify-glass">
-                            <img src="https://image.flaticon.com/icons/svg/54/54990.svg"/>
-                        </div>
-                    </div>
-                    <form  onSubmit={this.handleSubmit}>
+                <form className="form" onSubmit={this.handleSubmit}>
+                    <div className="search-txt-container">
                         <input type="txt" 
                             className="search-txt" 
                             placeholder="Search..."
                             value={this.state.searchParams}
                             onChange={this.update}
                         />
-                     
-                        <input className="search-submit" type="submit" value="Search"/>
-                  </form>
-                </div>
+                    </div>
+                    <input className="search-submit" type="submit" value="Search"/>
+                </form>   
             </div>
 
         </div>

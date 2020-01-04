@@ -21,11 +21,11 @@ const App = ()=>(
         
         <NavBarContainer/>
         
-        {/* <Switch>
+        <Switch>
             <Route exact path="/" component={SurfSpotIndex}/>
-            <Route exact path="/surfspots/:id" component={SurfSpotShow}/>
-            <Route exact path="/surfspots" component={SearchIndexMap}/>
-        </Switch> */}
+            {/* <Route exact path="/surfspots/:id" component={SurfSpotShow}/>
+            <Route exact path="/surfspots" component={SearchIndexMap}/> */}
+        </Switch>
     </div>
 );
 

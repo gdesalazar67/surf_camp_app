@@ -48,3 +48,8 @@ strong, b {
     font-weight: bold;
 }
 
+::placeholder {
+  color: #555;
+  opacity: 1; /* Firefox */
+}
+
