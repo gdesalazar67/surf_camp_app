@@ -30,7 +30,7 @@ class SearchBar extends React.Component{
   render(){
     return (
         <div className="search-bar-container">
-            <h2 className="search-title">Step into<br></br>liquid.</h2>
+            <h2 className="search-title">Step into liquid.</h2>
             <p className="search-subtext">Book unique camping spots on 
                 over <strong>100</strong> beaches where world renowned 
                 waves spray at your feet.
