@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 
 export default class SplashCards extends React.Component {
 
-    constructor(props){
-        super(props)
+    constructor(prop){
+        super(prop)
         this.state = {
-            one: { continent: 'Asia', url: "http://31.media.tumblr.com/tumblr_m5zuviZnsG1r7wyeio1_500.png"},
+            one: { continent: 'Asia', url: "https://www.visitsingapore.com/content/dam/desktop/global/singapore-itineraries/best-of-sg-7days/gbtb-carousel-640x640.jpg"},
             two: { continent: 'Africa', url: "https://surfberbere.com/wp-content/uploads/2016/03/anchor_point_perfect_lineup_surf_spot_morocco.jpg"},
-            three: { continent: 'Australia', url: "https://www.ytravelblog.com/wp-content/uploads/2014/08/IMG_7455.jpg"},
-            four: { continent: 'California', url: "https://wavehuggers.com/wp-content/uploads/2016/12/best-surf-spots-socal-malibu.jpg"},
-            five: { continent: 'Europe', url: "https://secure.i.telegraph.co.uk/multimedia/archive/03484/potd-wave_3484959k.jpg"},
-            six: { continent: 'North America', url: "http://revistasextosentido.net/wp-content/uploads/2019/10/A-Month-Trip-of-Surf-Holidays-in-South-East-Asia.jpg"},
-            seven: { continent: 'South America', url: "https://qtxasset.com/styles/breakpoint_md_448px_w/s3/2017-04/riodejaneirogetty.jpg?8UfYMDYdaJ6xyh3.Z8OT9K6yk2pg.lgw&itok=oEfyl1G4"},
+            three: { continent: 'Australia', url: "https://i.imgur.com/IHYW2ZP.jpg"},
+            four: { continent: 'California', url: "http://res.cloudinary.com/simpleview/image/upload/v1427350301/clients/surfcityusa/conormac4_d1d08838-cab1-44cf-a32d-7cbb83f74da0.jpg"},
+            five: { continent: 'Europe', url:"https://d20t6we9nb6rnn.cloudfront.net/carmendowntheaisle/1505399686974-640x640.jpg"},
+            six: { continent: 'North America', url: "http://s13.favim.com/orig/160528/beach-life-summer-surf-Favim.com-4351793.jpeg"},
+            seven: { continent: 'South America', url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgG6copyseJ83aiYjqgMdvR-ss_ypCvJRl4_w0uGoPZVuKRP4Twg&s"},
         }
     }
 
@@ -30,7 +30,7 @@ export default class SplashCards extends React.Component {
                             <div className="card">
                                 <Link to="/" className="link">
                                     <div className="image-container">
-                                        <img src={this.state.two.url}/>
+                                        <img src={this.state.one.url}/>
                                         <div className="word-wrapper">
                                             <div className="location-box">{this.state.one.continent}</div>
                                         </div>
@@ -38,23 +38,30 @@ export default class SplashCards extends React.Component {
                                 </Link>
                                 <div className="caption-container">
                                     <h3 >
-                                        <Link>{this.state.one.continent}</Link>
+                                        <Link to='/'>{this.state.one.continent}</Link>
                                     </h3>
                                 <div className="subtext">Dumpling rolls</div>
                                 </div>
                             </div>
                         </div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
-                        <div className="card-container"></div>
+                        <div className="card-container">
+                            <div className="card">
+                                <Link to="/" >
+                                    <div className="image-container">
+                                        <img src={this.state.seven.url}/>
+                                        <div className="word-wrapper">
+                                            <div className="location-box">{this.state.seven.continent}</div>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <div className="caption-container">
+                                    <h3 >
+                                        <Link to="/">{this.state.seven.continent}</Link>
+                                    </h3>
+                                <div className="subtext">Dumpling rolls</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
