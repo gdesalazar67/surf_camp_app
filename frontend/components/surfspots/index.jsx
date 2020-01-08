@@ -18,6 +18,7 @@ export default class Index extends React.Component{
     render(){
          
          let surfspots = this.props.surfSpots || this.state.surfSpots;
+         console.log(surfspots)
          surfspots = surfspots.map(surfspot=>{
             
             return(
