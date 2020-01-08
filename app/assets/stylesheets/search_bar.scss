@@ -94,6 +94,10 @@
 }
 
 @media screen and (min-width: 815px){
+    .splash-wrapper{
+        width: 740px;
+        margin: auto;
+    }
     .search-bar-container{
         width: 740px;
         margin: auto;
@@ -122,6 +126,7 @@
 }
 
 @media screen and (min-width: 880px){
+     
     .search-bar-container{
         margin-top: 85px;
     }
@@ -138,18 +143,27 @@
 }
 
 @media screen and (min-width: 992px){
+    .splash-wrapper{
+        width: 920px;
+    }
      .search-bar-container{
         width: 920px;
         padding: 0 20px;
     }
 }
 @media screen and (min-width: 1200px){
+     .splash-wrapper{
+        width: 1020px;
+    }
      .search-bar-container{
         width: 1020px;
         padding: 0 10px;
     }
 }
 @media screen and (min-width: 1300px){
+     .splash-wrapper{
+        width: 1080px;
+    }
      .search-bar-container{
         width: 1080px;
     }

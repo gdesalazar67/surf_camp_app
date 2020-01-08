@@ -32,8 +32,8 @@ export default class SplashCards extends React.Component {
         return (
             <div>
                 <SearchBar />
-                <p className="search-txt2">Peep it...</p>
                 <div className="splash-wrapper">
+                <p className="search-txt2">Peep it...</p>
                     <div className="splash-grid-container">
                        {cards}
                     </div>

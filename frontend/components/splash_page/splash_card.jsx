@@ -10,7 +10,9 @@ export default ({continent, tag, url}) =>{
                     <div className="image-container">
                         <img src={url} />
                         <div className="word-wrapper">
-                            <div className="location-box">{continent}</div>
+                            <div className="location-box">
+                               <div>{continent}</div>
+                            </div>
                         </div>
                     </div>
                 </Link>

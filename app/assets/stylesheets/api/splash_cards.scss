@@ -1,3 +1,12 @@
+.search-txt2{
+    padding-left: 2%;
+    font-weight: 550;
+    font-size: 1.15em;
+    margin-left: 0;
+    margin-top: 71px;
+    color: rgb(51, 51, 51);
+}
+
 .splash-grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -63,8 +72,10 @@
     border: 4px solid #333333;
     background-color: #fff;
     font-weight: 700;
-    // font-size: 1.6rem;
     font-size: 16px;
+}
+.location-box div{
+    text-align: center;
 }
 
 .caption-container{
@@ -98,4 +109,15 @@
     color: #757575;
     font-weight: 400;
     line-height: 1.42;
+}
+
+@media screen and (min-width: 768px){
+    .splash-grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-txt2{
+        font-size: 22px
+    }
 }
