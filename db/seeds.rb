@@ -17,15 +17,25 @@ user02 = User.create!(first_name: 'Marina', last_name: 'demo', email: 'marina1@g
 user03 = User.create!(first_name: 'Luke', last_name: 'demo', email: 'luke1@gmail.com', zip_code: 90001, password: "1234567")
 user04 = User.create!(first_name: 'Marc', last_name: 'demo', email: 'marc1@gmail.com', zip_code: 90050, password: "1234567")
 user05 = User.create!(first_name: 'Kuna', last_name: 'demo', email: 'kuna1@gmail.com', zip_code: 92014, password: "1234567")
+user06 = User.create!(first_name: 'Galo', last_name: 'demo', email: 'gako@gmail.com', zip_code: 90405, password: "1234567")
 
 # surfspots
-surfspot1 =Surfspot.create!(host_id: user02.id, title: "Montanita Beach", description: "Hippy sand breaks", price: 30, lat: -1.8259639, long: -80.7580102, max_guest: 4, campfire?: true, pets?: true, toilets?: false, showers?: false, wifi?: false, water?: false, tent?: true)
-surfspot2 =Surfspot.create!(host_id: user01.id, title: "Surfrider Beach", description: "Tubes for days", price: 50, lat: 33.668244, long: -118.019043, max_guest: 4, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true)
+surfspot1 =Surfspot.create!(host_id: user01.id, title: "Montanita Beach", description: "Hippy sand breaks", price: 30, lat: -1.8259639, long: -80.7580102, max_guest: 4, campfire?: true, pets?: true, toilets?: false, showers?: false, wifi?: false, water?: false, tent?: true)
+surfspot2 =Surfspot.create!(host_id: user02.id, title: "Surfrider Beach", description: "Tubes for days", price: 50, lat: 33.668244, long: -118.019043, max_guest: 4, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true)
 surfspot3 =Surfspot.create!(host_id: user03.id, title: "Puerto Escondido", description: "Burrito barrel", price: 50, lat: 15.8649046, long: -97.0867278, max_guest: 6, campfire?: true, pets?: true, toilets?: true, showers?: true, wifi?: true, water?: true, tent?: true)
-surfspot4 =Surfspot.create!(host_id: user05.id, title: " Sao Francisco do Sul", description: "Pao de queijo", price: 45, lat: 33.668244, long: -118.019043, max_guest: 3, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true)
+surfspot4 =Surfspot.create!(host_id: user04.id, title: " Sao Francisco do Sul", description: "Pao de queijo", price: 45, lat: 33.668244, long: -118.019043, max_guest: 3, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true)
 surfspot5 =Surfspot.create!(host_id: user05.id, title: " Supertubes at Jeffrey's Bay", description: "fast barrels", price: 55, lat: 33.668244, long: -118.019043, max_guest: 3, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true)
-surfspot6 =Surfspot.create!(host_id: user05.id, title: " Tamarindo Beach", description: "Howler monkeys and waves", price: 60, lat: 33.668244, long: -118.019043, max_guest: 3, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true)
+surfspot6 =Surfspot.create!(host_id: user06.id, title: " Tamarindo Beach", description: "Howler monkeys and waves", price: 60, lat: 33.668244, long: -118.019043, max_guest: 3, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true)
 # Surfspot.create!(host_id: 1, title: "Surfrider Beach", description: "Tubes for days", price: 50, lat: 33.668244, long: -118.019043, max_guest: 4, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true)
+
+#california
+surfspot7 =Surfspot.create!(host_id: user01.id, title: "Arroyo Burro Beach", description: "Hippy sand breaks", price: 30, lat: 34.400089, long: -119.737618, max_guest: 4, campfire?: true, pets?: true, toilets?: false, showers?: false, wifi?: false, water?: false, tent?: true, continent: 1)
+surfspot8 =Surfspot.create!(host_id: user02.id, title: "Surfrider Beach", description: "Tubes for days", price: 50, lat: 33.668244, long: -118.019043, max_guest: 4, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true, continent: 1)
+surfspot9 =Surfspot.create!(host_id: user03.id, title: "Surfers Point at Seaside Park", description: "Burrito barrel", price: 50, lat: 34.274595, long: -119.298049, max_guest: 6, campfire?: true, pets?: true, toilets?: true, showers?: true, wifi?: true, water?: true, tent?: true, continent: 1)
+surfspot10 =Surfspot.create!(host_id: user04.id, title: " El Porto", description: "Pao de queijo", price: 45, lat: 33.902813, long: -118.421306, max_guest: 3, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true, continent: 1)
+surfspot11 =Surfspot.create!(host_id: user05.id, title: "Flat Rock Point", description: "fast barrels", price: 55, lat: 33.796817, long: -118.408333, max_guest: 3, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true, continent: 1)
+surfspot12 =Surfspot.create!(host_id: user06.id, title: " Trestles", description: "Howler monkeys and waves", price: 60, lat: 33.385915, long: -117.594949, max_guest: 3, campfire?: true, pets?: true, toilets?: true, showers?: false, wifi?: true, water?: true, tent?: true, continent: 1)
+
 # bookings
 Booking.create!(user_id: user01.id, surfspot_id: surfspot1.id, check_in: 20190809, check_out: 20190812, num_guest: 4, host_id: user02.id)
 Booking.create!(user_id: user02.id, surfspot_id: surfspot2.id, check_in: 20190810, check_out: 20190817, num_guest: 4, host_id: user03.id)

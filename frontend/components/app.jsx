@@ -25,8 +25,8 @@ const App = ()=>(
         <Switch>
             <Route exact path="/" component={SplashPage}/>
             <Route exact path="/index" component={SurfSpotIndex}/>
-            {/* <Route exact path="/surfspots/:id" component={SurfSpotShow}/>
-            <Route exact path="/surfspots" component={SearchIndexMap}/> */}
+            <Route exact path="/surfspots/:id" component={SurfSpotShow}/>
+            {/* <Route exact path="/surfspots" component={SearchIndexMap}/> */}
         </Switch>
     </div>
 );
