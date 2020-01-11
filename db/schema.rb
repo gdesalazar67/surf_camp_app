@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_10_212706) do
+ActiveRecord::Schema.define(version: 2019_08_11_200111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,8 +61,6 @@ ActiveRecord::Schema.define(version: 2020_01_10_212706) do
     t.boolean "tent?", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "continent"
-    t.index ["continent"], name: "index_surfspots_on_continent"
     t.index ["host_id", "lat", "long", "price"], name: "index_surfspots_on_host_id_and_lat_and_long_and_price"
     t.index ["title"], name: "index_surfspots_on_title", unique: true
   end
