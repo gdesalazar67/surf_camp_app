@@ -1,9 +1,10 @@
-export const fetchSurfspots = ()=>{
+export const fetchSurfspots = (searchParams)=>{
     
     return(
         $.ajax({
             url: "api/surfspots",
-            method: "GET"
+            method: "GET",
+            data: {searchParams}
         })
     )
 }

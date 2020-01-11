@@ -7,7 +7,7 @@ const surfSpotsReducer =(state = {}, action)=>{
     switch(action.type){
         case RECEIVE_SURFSPOTS:
             
-            newState = merge({}, state, action.surfspots);
+            newState = merge({}, action.surfspots);
             return  newState;
         case RECEIVE_SURFSPOT:
             newState = merge({}, {[action.surfspot.id]: action.surfspot});

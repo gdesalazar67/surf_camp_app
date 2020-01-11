@@ -6,7 +6,7 @@ export default ({continent, tag, url}) =>{
     return(
         <div className="card-container">
             <div className="card">
-                <Link to="/index" className="link">
+                <Link to={{pathname: "/index", search: `?query=${continent}`}} className="link">
                     <div className="image-container">
                         <img src={url} />
                         <div className="word-wrapper">

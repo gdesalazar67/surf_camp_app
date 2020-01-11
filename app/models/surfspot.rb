@@ -22,5 +22,15 @@ class Surfspot < ApplicationRecord
         primary_key: :id,
         foreign_key: :surfspot_id,
         class_name: :Review 
+
+    def self.searchFor(searchParams)
+
+        searchParams = searchParams.split("?query=").join("").downcase
+        if searchParams
+           where(["continent LIKE ?", "%#{searchParams}%"])
+        else
+           all
+        end
+    end
          
 end

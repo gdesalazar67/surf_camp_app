@@ -10,8 +10,7 @@ class Api::SurfspotsController < ApplicationController
     end
 
     def index
-        
-        @surfspots = Surfspot.all
+        @surfspots = Surfspot.searchFor(params["searchParams"])
     end
 
     def update

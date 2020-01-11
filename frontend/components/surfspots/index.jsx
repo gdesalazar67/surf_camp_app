@@ -12,7 +12,7 @@ export default class Index extends React.Component{
     
     componentDidMount(){
 
-        this.props.fetchSurfspots()
+        this.props.fetchSurfspots(this.props.searchParams)
     }
 
     render(){

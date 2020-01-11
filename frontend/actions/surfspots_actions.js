@@ -32,9 +32,9 @@ export const receiveErrors = errors =>{
     })
 };
 
-export const fetchSurfspots = ()=>dispatch =>{
+export const fetchSurfspots = (searchParams)=>dispatch =>{
     
-    return(SurfSpotsAPIUtil.fetchSurfspots()
+    return(SurfSpotsAPIUtil.fetchSurfspots(searchParams)
             .then(surfspots => dispatch(receiveSurfspots(surfspots)
         ), err =>(
             dispatch(receiveErrors(err.responseJson))
