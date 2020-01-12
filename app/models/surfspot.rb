@@ -27,7 +27,7 @@ class Surfspot < ApplicationRecord
 
         searchParams = searchParams.split("?query=").join("").downcase
         if searchParams
-           where(["continent LIKE ?", "%#{searchParams}%"])
+           where(["LOWER(surfspots.description) LIKE ? OR continent LIKE ?", "%#{searchParams}%",  "%#{searchParams}%"])
         else
            all
         end

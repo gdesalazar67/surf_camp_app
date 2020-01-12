@@ -10,7 +10,9 @@ class Api::SurfspotsController < ApplicationController
     end
 
     def index
+        # byebug
         @surfspots = Surfspot.searchFor(params["searchParams"])
+        # byebug
     end
 
     def update

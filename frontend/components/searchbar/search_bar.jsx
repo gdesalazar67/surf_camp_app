@@ -7,6 +7,7 @@ class SearchBar extends React.Component{
         super(props);
         this.state={
             searchParams: "",
+        
         }
         this.handleSubmit = this.handleSubmit.bind(this);        
         this.update = this.update.bind(this);
@@ -17,8 +18,10 @@ class SearchBar extends React.Component{
          
         event.preventDefault();
         // this.props.receiveGeolocation(event.target.firstChild.value);
-        this.props.fetchGeoCode(event.target.firstChild.value);
-        this.props.history.push("/surfspots");
+        // this.props.fetchGeoCode(event.target.firstChild.value);
+        event.currentTarget.children[0].firstChild.value = ""
+        console.log(this.props)
+        this.props.history.push({ pathname: "/index", search: `?query=${this.state.searchParams}` });
     };
 
     update(e){
