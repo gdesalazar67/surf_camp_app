@@ -18,7 +18,7 @@ export default ({continent, tag, url}) =>{
                 </Link>
                 <div className="caption-container">
                     <h3 >
-                        <Link to="/index">{continent}</Link>
+                        <Link to={{ pathname: "/index", search: `?query=${continent}` }}>{continent}</Link>
                     </h3>
                     <div className="subtext">{tag}</div>
                 </div>
