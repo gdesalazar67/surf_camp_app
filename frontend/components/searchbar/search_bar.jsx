@@ -15,13 +15,19 @@ class SearchBar extends React.Component{
 
 
     handleSubmit(event){
-         
         event.preventDefault();
         // this.props.receiveGeolocation(event.target.firstChild.value);
         // this.props.fetchGeoCode(event.target.firstChild.value);
-        event.currentTarget.children[0].firstChild.value = ""
-        console.log(this.props)
-        this.props.history.push({ pathname: "/index", search: `?query=${this.state.searchParams}` });
+
+        let searchTerm = this.state.searchParams;
+        event.currentTarget.children[0].firstChild.value = "";
+
+        if(this.props.match.path === "/index"){
+            this.props.fetchSurfspots(searchTerm)
+        }else{
+            console.log(this.props)
+            this.props.history.push({ pathname: "/index", search: `?query=${searchTerm}` });
+        }
     };
 
     update(e){
