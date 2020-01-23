@@ -12,22 +12,28 @@ class SurfspotIndexItem extends React.Component{
 
         return(
             
-            <li className="surfspot-container" >
-                <div className="photo-index-card">
-                <Link to={`/surfspots/${this.props.surfspot.id}`}>
-                        <img src={this.props.surfspot.photos[2]} className="photo"/>
-                </Link>   
-                </div>
-                <Link to={`/surfspots/${this.props.surfspot.id}`}>               
-                    <p className="surfspot-title">{`${this.props.surfspot.title}`}</p>
-                    <p className="surfspot-description">{`${this.props.surfspot.description}`}</p>
-                    <div className="price-thumb">
-                        <div className="thumbs-up">
-                            <img src="https://image.flaticon.com/icons/svg/651/651140.svg"/>
+            <li className="surfspot card-container" >
+                <div className="surfspot card">
+                    <Link className="surfspot link" to={`/surfspots/${this.props.surfspot.id}`}>
+                        <div className="surfspot image-container">
+                            <img src={this.props.surfspot.photos[2]} className="photo"/>
                         </div>
-                         <p className="surfspot-price">${`${this.props.surfspot.price}`}/night</p>
+                    </Link>    
+                    <div className="surfspot caption-container">
+                        <Link to={`/surfspots/${this.props.surfspot.id}`}>  
+                            <div className="title-description-container">
+                                <p className="surfspot-title">{`${this.props.surfspot.title}`}</p>
+                                <p className="surfspot-description">{`${this.props.surfspot.description}`}</p>
+                            </div>             
+                            <div className="price-info">
+                                {/* <div className="thumbs-up">
+                                    <img src="https://image.flaticon.com/icons/svg/651/651140.svg"/>
+                                </div> */}
+                                <p className="surfspot-price">${`${this.props.surfspot.price}`}/night</p>
+                            </div>
+                        </Link>  
                     </div>
-                </Link>  
+                </div>
             </li>
         )
     }

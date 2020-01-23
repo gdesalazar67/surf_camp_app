@@ -34,7 +34,7 @@ export default class Index extends React.Component{
                 <SearchBar/>
                 <div className="index-grid-container">
                     <p className="search-txt2">Peep it...</p>
-                    <p className="search-txt2 result">Search results for {this.props.searchParams.split("=")[1]}</p>
+                    <p className="search-txt2 result">Search results for "{this.props.searchParams.split("=")[1]}"</p>
                         <ul className="index-grid">
                             {surfspots}
                         </ul>
