@@ -32,11 +32,12 @@ export default class Index extends React.Component{
         return(
             <div>
                 <SearchBar/>
-                <p className="search-txt2">Peep it...</p>
-                <div className="index-container">
-                    <ul className="index-list">
-                        {surfspots}
-                    </ul>
+                <div className="index-grid-container">
+                    <p className="search-txt2">Peep it...</p>
+                    <p className="search-txt2 result">Search results for {this.props.searchParams.split("=")[1]}</p>
+                        <ul className="index-grid">
+                            {surfspots}
+                        </ul>
                 </div>
             </div>
         )
