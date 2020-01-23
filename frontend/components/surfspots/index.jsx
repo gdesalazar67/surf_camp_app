@@ -15,10 +15,16 @@ export default class Index extends React.Component{
         this.props.fetchSurfspots(this.props.searchParams)
     }
 
+    resultText(zero){
+        if(!zero){
+            return <p className="search-txt2 result">No sites found.  Try something like cali, barrel, or bay</p>
+
+        }
+    }
+
     render(){
          
          let surfspots = this.props.surfSpots || this.state.surfSpots;
-         console.log(surfspots)
          surfspots = surfspots.map(surfspot=>{
             
             return(
@@ -29,12 +35,14 @@ export default class Index extends React.Component{
             )
         });
 
+
         return(
             <div>
                 <SearchBar/>
                 <div className="index-grid-container">
                     <p className="search-txt2">Peep it...</p>
-                    <p className="search-txt2 result">Search results for "{this.props.searchParams.split("=")[1]}"</p>
+                    <p className="search-txt2 result">Search results for "{this.props.searchParams.split("=")[1].replace(/[^A-Z]/ig, " ")}"</p>
+                    {this.resultText(surfspots.length)}
                         <ul className="index-grid">
                             {surfspots}
                         </ul>
