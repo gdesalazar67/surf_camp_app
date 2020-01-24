@@ -21,13 +21,13 @@ class PhotoSlideShow extends Component {
             slidesToScroll: 1,
             dots: false,
             arrows: true,
-            infinite: true,
+            infinite: false,
             variableWidth: false,
             className: 'slider',
             adaptiveHeigth: false,
             responsive: [
                 {
-                    breakpoint: 700,
+                    breakpoint: 809,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,

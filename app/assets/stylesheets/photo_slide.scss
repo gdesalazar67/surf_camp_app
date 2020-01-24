@@ -3,14 +3,14 @@
 }
  
 @mixin medium {
-   @media (max-width: 700px) { @content; }
+   @media (max-width: 809px) { @content; }
 }
  
  .photo-slider {
   position: relative;
   overflow: hidden;
-  margin-top: 10px;
-  max-width: 1395px;
+  width: 100%;
+  min-width: 352px;
 
 }
 
@@ -19,31 +19,31 @@
   margin: 0 auto;
   width: 90%;
   background: #fff;
-  height: 425px;
+  height: 57vw;
+  max-height: 425px;
 
   @include medium {
-     width: 100%;
-     height: 50vh;
+     height: 57vw;
+     min-height: 215px;
   }
   img{
      min-height: -webkit-fill-available;
-     object-fit: cover;
-     max-height: 420px;
+     height: 57vw;
+     max-height: 425px;
+      
+     @include medium{
+        border: none;
+     }
+     
   }
 }
 
-.slick-list {
-    max-width: 1250px;
-}
 
-.slider {
-  height: 420px;
-}
-se
-.slick-slide {
+se .slick-slide {
   padding: 7px;
   height: 400px;
   overflow: hidden;
+  
 
   img {
      height: 400px;
@@ -55,11 +55,11 @@ se
 }
 
 .slick-slider {
+   position: static !important;
   button {
       
      @include large {
         display: none
-        c
      }
   }
 }
@@ -70,21 +70,39 @@ se
   }
 }
 
+
 .slick-prev:before, .slick-next:before {
   color: gray;
   font-size: 1.4rem;
   font-family: 'slick';
 }
 
+.slick-next.slick-disabled:before, .slick-prev.slick-disabled:before {
+    opacity: 0 !important;
+}
 
-.slick-next:before, .slick-prev:before{
-    color:   #238ab0 !important;
+.slick-next{
+   right: 6px !important;
+  
 }
-.slick-prev:hover:before, .slick-next:hover:before {
-  color: #fadb98;
+.slick-prev{
+   left: 6px !important;
+   z-index: 10;
+  
 }
-.price{
-    text-align: left;
-    margin-left: 2%;
+
+.slick-slide{
+   border-left: 15px solid white;
+}
+.slick-active{
+   min-width: 700px !important;
+   max-width: 700px !important;
+    @include medium{
+        min-width: 352px !important;
+     }
+
+}
+.slick-current{
+   border: none
 }
 
