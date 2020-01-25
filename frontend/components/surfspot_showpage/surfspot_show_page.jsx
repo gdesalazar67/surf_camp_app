@@ -140,40 +140,57 @@ export default class SurfSpotShow extends React.Component{
                    <div className="photo-slider">
                        <PhotoSlideShow photos={this.props.surfspot.photos}/>
                    </div>
-                {/* <div className="info-calendar-container">
+                <div className="info-calendar-container">
                    <div className="show-info-container">
-                        <p className="show-title">{`${this.props.surfspot.title}`}</p>
-                        <p className="show-description">{`${this.props.surfspot.description}`}</p>   
-                         <div className='host-container'>
-                               <p className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg"/></p>
-                              <p className="show-host">Hosted by {`${this.props.surfspot.host.first_name}`}</p>   
-                           <p className="show-host-1">
-                               These small, perfectly formed crests where Johnny Fain and Miki Dora surfed 
-                               in the 1950s are a great place to grab a longboard
-                                and surf Beach Boys-style. The place is 
-                                absolutely rammed for exactly this reason.
-                            </p>   
-                         </div> 
+                        <div className="show-title-container">
+                            <p className="show-title">{`${this.props.surfspot.title}`}</p>
+                            <p className="show-description">{`${this.props.surfspot.description}`}</p>   
+                        </div>
+                        <div className='host-container'>
+                            <div className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg"/></div>
+                            <div className="hosted-by-container">
+                                <p className="hosted-by">Hosted by</p>
+                                <p className="show-host">{`${this.props.surfspot.host.first_name}`}</p>   
+                            </div>
+                        </div> 
+                        <p className="show-host-description">
+                            These small, perfectly formed crests where Johnny Fain and Miki Dora surfed 
+                            in the 1950s are a great place to grab a longboard
+                            and surf Beach Boys-style. The place is 
+                            absolutely rammed for exactly this reason.
+                        </p>   
                     <div className="info-cards-container">
-
-                     <div className="info-container">
-                         <p className="icon-title">Campsite area</p>
-                        {this.renderTent()}
-                        {this.renderGuest()}
-                     </div>
-                     <div className="info-container">
-                         <p className="icon-title">Campsite area</p>
-                        {this.renderPet()}
-                        {this.renderWifi()}
-                        {this.renderWater()}
-                        {this.renderShowers()}
-                        {this.renderToilets()}
-                     </div>
+                        <div className="info-container">
+                            <p className="icon-title">Campsite area</p>
+                            {this.renderTent()}
+                            {this.renderGuest()}
+                        </div>
+                        <div className="info-container">
+                            <p className="icon-title">Essentials</p>
+                            {this.renderPet()}
+                            {this.renderWifi()}
+                            {this.renderWater()}
+                            {this.renderShowers()}
+                            {this.renderToilets()}
+                        </div>
                     </div>
-                    <ReviewsIndex/>
+                    <div className="show-details">
+                        <p className="title">Details</p>
+                        <div className="details-container">
+                            <p className="hosted-by">Check in:<span> After 3PM</span></p>
+                            <p className="hosted-by">Check out:<span> Before 11AM</span></p>
+                            <p className="hosted-by">Cancellation policy<span> Super Flexible</span></p>
+                        </div>
+                        <div className="details-container">
+                            <p className="hosted-by">On arrival:<span> Go straight to camp</span></p>
+                            <p className="hosted-by">Minimum nights:<span> 1 night</span></p>
+                            <p className="hosted-by">Accepts bookings:<span> 12 months out</span></p>
+                        </div>
+                    </div>                    
+                    {/* <ReviewsIndex/> */}
                    </div>
-                   <BookingsForm/>
-                </div> */}
+                   {/* <BookingsForm/> */}
+                </div>
                </div>
             )
         }

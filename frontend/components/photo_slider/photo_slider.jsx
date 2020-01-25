@@ -21,7 +21,7 @@ class PhotoSlideShow extends Component {
             slidesToScroll: 1,
             dots: false,
             arrows: true,
-            infinite: false,
+            infinite: true,
             variableWidth: false,
             className: 'slider',
             adaptiveHeigth: false,
@@ -31,7 +31,7 @@ class PhotoSlideShow extends Component {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        infinite: false,
+                        infinite: true,
                         variableWidth: false,
                     }
                 },
