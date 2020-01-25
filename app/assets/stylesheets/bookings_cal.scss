@@ -350,9 +350,9 @@
 .booking_banner {
   min-height: 50px;
   background-color: #fff;
-  border: 1px solid #ebebeb;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  // border: 1px solid #ebebeb;
+  // -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  //         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   padding: 15px 10px 10px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -367,12 +367,13 @@
   font-size: 1.3rem;
   font-weight: 700;
   color: #333333;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.08);
 }
 
 #widget_per_night {
   font-size: .8rem;
   font-weight: 400;
-  color: gray;
+  // color: gray;
 }
 
 .booking_well {
@@ -436,7 +437,6 @@
 
 .booking_guests {
   width: 24%;
-  cursor: pointer;
   padding: 10px 10px 10px 15px;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
@@ -458,22 +458,23 @@
 }
 
 .widget_button{
-    width: 80%;
-   padding: 10px 15px;
-   position: relative;
-   font-size: .9rem;
-   font-weight: 700;
-   border: 2px solid  #26bf73;
-   background-color:  #26bf73;
-   color: #fff;
-   cursor: pointer;
-
-   &:hover {
-       border: 3px solid  #39C39A;
-       background-color: #fff;
-       color:  #39C39A;
-       transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-   }
+  width: 80%;
+  height: 43px;
+  padding: 10px 15px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid  #40d9ac;
+  background-color:  #40d9ac;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  &:hover {
+     border: 2px solid #40d9ac;
+     color: #40d9ac;
+     background-color: white;
+     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+  }
 }
 
 .widget_guests{
@@ -481,7 +482,11 @@
     flex-direction: row;
     justify-content: space-around;
 }
-
+.widget_guests a{
+  cursor: pointer;
+  text-align: center;
+  width: 27px;
+}
 .booking-error{
     text-align: center;
     

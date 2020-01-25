@@ -189,7 +189,7 @@ export default class SurfSpotShow extends React.Component{
                     </div>                    
                     {/* <ReviewsIndex/> */}
                    </div>
-                   {/* <BookingsForm/> */}
+                   <BookingsForm/>
                 </div>
                </div>
             )
