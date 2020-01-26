@@ -1,10 +1,6 @@
 .review-container{
-    width: 58.33333333%;
     border-top: 1px solid #ebebeb;
-    margin-top: 5px;
-    padding-right: 3.25%;
-    padding-top: 15px;
-    
+    padding-top: 10px;
 }
 
 .create-review-button{
@@ -20,16 +16,16 @@
    position: relative;
    font-size: 13px;
    font-weight: 700;
-   border: 2px solid  #26bf73;
-   background-color:  #26bf73;
+   border: 2px solid  #40d9ac;
+   background-color:  #40d9ac;
    color: #fff;
    cursor: pointer;
 
    &:hover {
-       border: 3px solid  #39C39A;
-       background-color: #fff;
-       color:  #39C39A;
-       transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+    border: 2px solid #40d9ac;
+    color: #40d9ac;
+    background-color: white;
+    transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
    }
 
 }
@@ -45,57 +41,46 @@
 }
 
 .review-item-container{
-// border-bottom: 1px solid #ebebeb;
-padding-right: 6.25%;
-width: 100%;
 border-top: 1px solid #ebebeb;
 padding-top: 15px;
 padding-bottom: 7px;
-padding-left: 16px;
 
 }
 .review-details{
  display: flex;
 flex-direction: column;
 }
+
+.review-details .show-host-description{
+    margin-top: 0;
+}
+
 .author-date{
- display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding-bottom: 9px;
-
+    padding-bottom: 9px;
 }
 
-.review-author{
-    font-weight: bold;
-
+.author-date .host-container .host-photo{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+.author-date .host-container .review-date{
+    color: #757575;
+    font-size: 15.5px;
+}
+.no-reviews.show-host-description{
+    text-align: center;
 }
 
-.review-date{
-font-weight: bold;
-}
-
-.review-body{
-    font-size: 15px;
-    text-align: left;
-    // padding-left: 13px;
-
-}
 .delete{
     text-align: right;
-    font-size: 15px;
+    color: #757575;
+    font-size: 0.85em;
     &:hover {
-       
-       font-weight: bold;
-       
+       color: #40d9ac;
+       transition: color 0.3s ease 0s;
    }
 }
-.review-delete-button{
 
-}
-
-.review-body{
-
-}
 
 

@@ -13,7 +13,8 @@ import Giftbox from './splash_page/giftbox';
 import SurfSpotIndex from './surfspots/surfspots_index_container';
 import SurfSpotShow from './surfspot_showpage/surfspot_show_container';
 import SearchIndexMap from './map/map_container';
-import SplashPage from './splash_page/splash_page_cards'
+import SplashPage from './splash_page/splash_page_cards';
+import Footer from './footer'
 
 const App = ()=>(
     <div>
@@ -28,6 +29,7 @@ const App = ()=>(
             <Route exact path="/surfspots/:id" component={SurfSpotShow}/>
             {/* <Route exact path="/surfspots" component={SearchIndexMap}/> */}
         </Switch>
+        <Footer/>
     </div>
 );
 

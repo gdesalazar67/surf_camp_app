@@ -54,3 +54,7 @@ strong, b {
   opacity: 1; /* Firefox */
 }
 
+footer {
+    border-top: 1px solid #ebebeb;
+    padding: 24px 0px 0px;
+}

@@ -24,23 +24,34 @@ class ReviewsIndex extends React.Component{
 
    
     render(){
-        if (!this.props.reviews){
-            return null;
+        const reviews = Object.values(this.props.reviews)
+        let reviewlist;
+
+        if (!reviews.length){
+            reviewlist = 
+            <div className="review-item-container">
+                <div className="review-details">
+                    <div className="no-reviews show-host-description">
+                        This listing has no reviews yet. <br></br>If you stayed here and have some insider info for us, let us know!
+                    </div>
+                </div>
+            </div>
+        }else{
+            reviewlist = reviews.map(
+                review => {
+                    return (
+                        <ReviewItem
+                            key={review.id}
+                            review={review}
+                            currentUser={this.props.currentUser}
+                            deleteReview={this.props.deleteReview}
+                            user={this.props.user}
+                        />
+                    )
+                }
+            );
         };
-
-        
-        const reviewlist = Object.values(this.props.reviews).map(
-            review=>{return(
-                <ReviewItem
-                    key={review.id}
-                    review={review}
-                    currentUser={this.props.currentUser}
-                    deleteReview={this.props.deleteReview}
-                    user={this.props.user}
-                />
-            ) }
-        );
-
+      
         return(
 
             <div className="review-container">

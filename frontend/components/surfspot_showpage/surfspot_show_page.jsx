@@ -11,9 +11,9 @@ export default class SurfSpotShow extends React.Component{
         
     }
 
-    componentDidMount(){
-        
-        this.props.fetchSurfspot(this.props.match.params.id)
+    componentDidMount(){ 
+        this.props.fetchSurfspot(this.props.match.params.id);
+        this.props.fetchReviews(this.props.match.params.id);
     }
 
      renderTent() {
@@ -187,7 +187,7 @@ export default class SurfSpotShow extends React.Component{
                             <p className="hosted-by">Accepts bookings:<span> 12 months out</span></p>
                         </div>
                     </div>                    
-                    {/* <ReviewsIndex/> */}
+                    <ReviewsIndex/>
                    </div>
                    <BookingsForm/>
                 </div>
