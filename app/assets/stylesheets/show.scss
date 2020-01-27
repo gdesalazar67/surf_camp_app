@@ -62,6 +62,7 @@
     line-height: 25.56px;
 }
 .show-host-description{
+    max-width: 526px;
     margin: 23px 0 20px;
     font-weight: 400;
     font-size: 15.5px;
@@ -121,4 +122,20 @@
 
 .hosted-by span{
  font-weight: 400;
+}
+
+@media screen and (min-width: 900px){
+    .info-calendar-container{
+        width: 740px;
+        margin: auto;
+    }
+    .show-info-container{
+        margin: 0;
+        width: 56.88888%;
+
+    }
+    .show-title-container, .host-container, .show-host-description, .show-details, .review-container {
+        margin-right: 20px;
+    }
+
 }

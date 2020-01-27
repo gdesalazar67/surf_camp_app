@@ -13,14 +13,34 @@ class BookingForm extends React.Component{
         super(props);
         this.state = {
             num_guest: 1,
+            sticky: "widget_container"
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDayClick = this.handleDayClick.bind(this);
+        this.sticky = this.sticky.bind(this);
     }
     
-    componentWillUnmount() {
-        this.props.removeErrors()
+    componentDidMount(){
+        window.addEventListener("scroll", this.sticky)
     }
+
+    componentWillUnmount() {
+        this.props.removeErrors();
+        window.removeEventListener("scroll", this.sticky);
+    }
+
+    sticky(){
+        let div = document.getElementById("bookings-widget")
+        let position = div.offsetTop;
+        let y = window.pageYOffset;
+
+        if (y > position && y > 491) {
+            this.setState({ sticky: "widget_container sticky" });
+        } else {
+            this.setState({ sticky: "widget_container" });
+        };
+    }
+
      
     handleSubmit(event){     
         event.preventDefault();
@@ -92,7 +112,7 @@ class BookingForm extends React.Component{
 
         return (
             
-            <div className="widget_container">
+            <div id="bookings-widget" className={this.state.sticky}>
                 <form onSubmit={this.handleSubmit}>
                     <div className="booking_widget">
                         <div className="booking_banner">

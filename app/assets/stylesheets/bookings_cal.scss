@@ -317,10 +317,10 @@
   width: 319px;
   z-index: 8;
   background-color: transparent;
-  right: 20%;
+  // right: 20%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 899px) {
   .widget_container {
     position: fixed;
     width: 100%;
@@ -329,10 +329,31 @@
   }
 }
 
-@media (min-width: 1026px) {
-  .widget_container {
-    top: -50px;
+@media (min-width: 900px) {
+  .show-listing{
+    position: relative;
   }
+  .widget_container {
+    position: absolute;
+    top: 371px;
+    right: 10%;
+  }
+  .booking_banner{
+    border: 1px solid #ebebeb;
+    border-bottom: none;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  }
+  .well_dates_guests{
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  }
+  .widget_container.sticky{
+    position: fixed;
+    top: 0;
+    right: 10%;
+  }
+ 
 }
 
 .booking_widget {
@@ -340,8 +361,14 @@
   width: 339px;
 }
 
+// .widget_container.sticky{
+//   position: fixed;
+//   top: 0;
+//   right: 20%;
+// }
 
-@media (max-width: 1024px) {
+
+@media (max-width: 899px) {
   .booking_widget {
     width: 100%;
   }
@@ -446,6 +473,7 @@
   position:   relative;
   text-align: center;
   border: 1px solid #ebebeb;
+  border-top: none;
   background: white;
   padding: 10px;
 //   width: 93%;
