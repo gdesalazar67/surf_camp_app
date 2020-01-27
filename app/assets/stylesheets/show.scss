@@ -139,3 +139,78 @@
     }
 
 }
+
+@media screen and (min-width: 1025px){
+    .info-calendar-container{
+        width: 920px;
+    }
+    .show-info-container{
+        width: 60%;
+
+    }
+    .info-cards-container{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .info-container{
+        width: 220px;
+        margin: 0px 10px 25px;
+        min-height: 330px;
+    }
+    .info-container:first-child {
+        margin-left: 0;
+    }
+
+    .show-details{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0px 30px;
+    }
+    .show-details .title{
+        font-weight: 600;
+        margin-right: 40px;
+    }
+    .details-container{
+        padding-top: 10px;
+    }
+
+    .host-photo{
+        height: 90px;
+        width: 90px;
+        margin-right: 15px;
+    }
+    .show-title{
+        margin-top: 15px;
+        font-size: 42px;
+    }
+
+   
+
+}
+
+@media screen and (min-width: 1200px){
+    .info-calendar-container{
+        width: 1020px;
+    }
+     .widget_container{
+        right: 15%;
+    }
+    .widget_container.sticky{
+        right: 15%;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .info-calendar-container{
+        width: 1080px;
+    }
+}
+@media screen and (min-width: 1500px){
+     .widget_container{
+        right: 20%;
+    }
+    .widget_container.sticky{
+        right: 20%;
+    }
+}

@@ -82,5 +82,17 @@ flex-direction: column;
    }
 }
 
+@media screen and (min-width: 1025px){
+
+    .author-date .host-container .host-photo{
+        height: 75px;
+        width: 75px;
+    }
+   .review-details .show-host-description{
+       margin-left: 85px;
+    }
+
+}
+
 
 
