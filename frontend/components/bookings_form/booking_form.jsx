@@ -165,7 +165,7 @@ class BookingForm extends React.Component{
                             <div className="booking_error_message">{this.renderErrors()}</div>
 
                             <div className="booking_submit">
-                                <input className="widget_button" type="submit" value="Check availability"/>
+                                <input className="widget_button" type="submit" value="Book it!"/>
                             </div>
                         </div>
                     </div>

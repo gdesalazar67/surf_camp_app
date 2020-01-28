@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import SearchIndexMap from './index_map'
+import GoogleMapContainer from './google_map_wrapper'
 import { fetchSurfspot, fetchSurfspots } from '../../actions/surfspots_actions';
 
 const msp =(state, ownProps)=>{
@@ -18,4 +18,4 @@ const mdp = dispatch=>{
     })
 }
 
-export default connect(msp, mdp)(SearchIndexMap);
+export default connect(msp, mdp)(GoogleMapContainer);

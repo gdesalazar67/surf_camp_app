@@ -1,6 +1,7 @@
 import React from "react";
 import SurfspotIndexItem from "./surfspot_index_item";
 import SearchBar from "../searchbar/search_bar_container";
+import GoogleMap from '../map/map_container';
 
 export default class Index extends React.Component{
     constructor(props){
@@ -43,9 +44,10 @@ export default class Index extends React.Component{
                     <p className="search-txt2">Peep it...</p>
                     <p className="search-txt2 result">Search results for "{this.props.searchParams.split("=")[1].replace(/[^A-Z]/ig, " ")}"</p>
                     {this.resultText(surfspots.length)}
-                        <ul className="index-grid">
-                            {surfspots}
-                        </ul>
+                    <ul className="index-grid">
+                        {surfspots}
+                    </ul>
+                    <GoogleMap/>
                 </div>
             </div>
         )

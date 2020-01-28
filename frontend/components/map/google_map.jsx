@@ -1,124 +1,126 @@
 import React from 'react';
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-import {Redirect} from 'react-router-dom';
+// import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
-const mapStyles = {
-    width: "400px",
-    height: "600px",
-}
+export default class GoogleMap extends React.Component {
 
-class GoogleMap extends React.Component {
-
-    constructor(props){
-      
+    constructor(props) {
         super(props);
+
+        const { lat, lng } = this.props.initialCenter;
         this.state = {
-            showingInfoWindow: false,
-            activeMarker: {},
-            selectedPlace: {},
-            redirect: false,
-            mapCenter:{lat: null},
+            currentLocation: {
+                lat: lat,
+                lng: lng
+            }
         }
-        this.onMarkerMouseON = this.onMarkerMouseON.bind(this);
-        this.onMouseOut = this.onMouseOut.bind(this);
-        this.markerClick = this.markerClick.bind(this);
-    }
-
-    // componentDidUpdate(){
-    //     console.log("didmount")
-    //     
-    //     let center = this.props.location.results[0].geometry.location || {};
-    //     console.log(center)
-    //     if (center !== this.state.mapCenter){
-    //         this.setState({
-    //             mapCenter: center,
-    //         });
-    //     }
-    // }
-
-    onMarkerMouseON(props, marker, e){ 
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true,
-        })
-    }
-
-    onMouseOut(props){
-        this.setState({
-            showingInfoWindow: false,
-            activeMarker: null,
-        })
-    }
-
-    markerClick(){      
-        this.setState({redirect: true})   
-    }
-
-    initialMapCenter(){
-        return this.props.location.results[0].geometry.location
-       
-        // if(this.state.mapCenter.lat === null){    
-        //     console.log("in the null")
-        //     return { lat: 31.9685988, lng: -99.9018131 }
-        // }else{
-        //     console.log("in state.mapcenter")
-        // return this.state.mapCenter
-        // };
-    }
-   
-    mapIt(){
-
-        return (
-            <Map
-                google={this.props.google}
-                zoom={10}
-                style={mapStyles}
-                initialCenter={this.props.location.results[0].geometry.location}
-                center={this.initialMapCenter()}
-            >
-                <Marker
-                    onMouseover={this.onMarkerMouseON}
-                    name={'Surfspot'}
-                    position={this.initialMapCenter()}
-                    onMouseout={this.onMouseOut}
-                    onClick={this.markerClick}
-                />
-                <InfoWindow
-                    marker={this.state.activeMarker}
-                    visible={this.state.showingInfoWindow}
-                >
-                    <div>
-                        <h4>{this.state.selectedPlace.name}</h4>
-                        <img src="https://image.flaticon.com/icons/svg/651/651140.svg" />
-                    </div>
-                </InfoWindow>
-            </Map>
-        )
     }
     
+
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.google !== this.props.google){
+            this.loadMap();
+            this.forceUpdate()
+        }
+        if (prevState.currentLocation !== this.state.currentLocation) {
+            this.recenterMap();
+        }
+    }
+    componentDidMount(){
+        if (this.props.centerAroundCurrentLocation) {
+            if (navigator && navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((pos) => {
+                    const coords = pos.coords;
+                    this.setState({
+                        currentLocation: {
+                            lat: coords.latitude,
+                            lng: coords.longitude
+                        }
+                    });
+                });
+            };
+        };
+        this.loadMap();
+        this.forceUpdate()
+    }
+
+    recenterMap(){
+        const map = this.map;
+        const current = this.state.currentLocation;
+        const {google} = this.props;
+        const maps = google.maps;
+
+        if (map) {
+            let center = new maps.LatLng(current.lat, current.lng)
+            map.panTo(center)
+        }
+    }
+
+    loadMap(){
+
+        if(this.props && this.props.google){
+            const { google } = this.props;
+            const maps = google.maps;
+
+            const node = this.refs.map;
+            // const node = ReactDOM.findDOMNode(mapRef);
+            let {lat, lng} = this.state.currentLocation;
+            let { zoom } = this.props;
+            const center = new maps.LatLng(lat, lng);
+            const mapConfig = Object.assign({}, {
+                center: center,
+                zoom: zoom,
+                mapTypeId: maps.MapTypeId.TERRAIN
+            });
+            this.map = new maps.Map(node, mapConfig);            
+        };
+
+    }
+
+
+    renderChildren() {
+        const { children } = this.props;
+
+        if (!children) return;
+        return React.Children.map(children, c => {
+            if (!c) return;
+            let parantProps = {
+                map: this.map,
+                google: this.props.google,
+                mapCenter: this.state.initialCenter
+            }
+            return React.cloneElement(c, parantProps);
+        });
+    }
+
     render() {
+        // this.setWidth();
 
-        
-        if(this.state.redirect === true){
-          return <Redirect to='/'/>
-        }
-
-        if(this.props.location){
-            return (
-                <div className="google-map">
-                    {this.mapIt()}
-                </div>
-            )
-        }
         return (
-            <div className="google-map">
-                Loading map...
+            <div className="google-map-grid-container">
+                <div style={this.props.mapStyles} ref="map" className="google-map"> 
+                    {this.renderChildren()}
+                    Loading map...
+                </div>
             </div>
-        )
+        );
+   
     };
-}
+};
 
-export default GoogleApiWrapper({
-    apiKey: ("AIzaSyAl8TSkkovuXys1EcUJFeDpZVI823ubNRg")
-})(GoogleMap)
+GoogleMap.propTypes = {
+    google: PropTypes.object,
+    zoom: PropTypes.number,
+    initialCenter: PropTypes.object,
+    centerAroundCurrentLocation: PropTypes.bool
+};
+GoogleMap.defaultProps = {
+    zoom: 8,
+    // venice, by default
+    initialCenter: {
+        lat: 33.993118,
+        lng: -118.456200
+    },
+    centerAroundCurrentLocation: true
+};
+
