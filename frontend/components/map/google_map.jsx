@@ -89,6 +89,7 @@ export default class GoogleMap extends React.Component {
         if (map) {
             let center = new maps.LatLng(current.lat, current.lng)
             map.panTo(center)
+            map.setZoom(4)
         }
     }
 
