@@ -10,32 +10,20 @@ export class GoogleMapContainer extends React.Component {
         super(props);
         this.state = {
             surfspots: this.props.surfspots,
-            windowWidth: window.innerWidth
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight
         }
     }
 
-
-    // setWidth(){
-    //     let width = window.innerWidth;
-    //     if(width >= 1300){
-    //         this.setState({mapStyles: 
-    //             { width:"460px", height: "600px"}   
-    //         });
-    //     }else if(width > 375){
-    //         this.setState({
-    //             mapStyles:
-    //                 { width: `${width}px`, height: "600px" }
-    //         });
-    //     };
-    // }
-    
-    componentDidUpdate(prevProps, prevState) {
+ 
+    componentDidUpdate(prevProps) {
 
         if(prevProps.surfspots !== this.props.surfspots){
-            console.log("in update wrapper")
             this.setState({surfspots: this.props.surfspots})
         }
     }
+
+  
 
 
     render() {
@@ -48,6 +36,7 @@ export class GoogleMapContainer extends React.Component {
 
         if (this.state.windowWidth >= 1300) {
                 mapStyles.width = "460px"
+                mapStyles.height = `${this.state.windowHeight - 20}px`
         } else if (this.state.windowWidth > 375) {
                 mapStyles.width = `${this.state.windowWidth}px`
         };

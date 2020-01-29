@@ -9,11 +9,26 @@ export default class GoogleMap extends React.Component {
 
         const { lat, lng } = this.props.initialCenter;
         this.state = {
+            sticky: "google-map",
             currentLocation: {
                 lat: lat,
                 lng: lng
             }
         }
+        this.sticky = this.sticky.bind(this);
+    }
+
+    sticky() {
+        let div = document.getElementById("google-map")
+        let position = div.offsetTop;
+        let y = window.pageYOffset;
+        console.log(y)
+        console.log(position)
+        if (y > (position - 10) && y > 599) {
+            this.setState({ sticky: "google-map sticky" });
+        } else {
+            this.setState({ sticky: "google-map" });
+        };
     }
     
 
@@ -26,6 +41,7 @@ export default class GoogleMap extends React.Component {
             this.recenterMap();
         }
     }
+
     componentDidMount(){
         if (this.props.centerAroundCurrentLocation) {
             if (navigator && navigator.geolocation) {
@@ -42,6 +58,11 @@ export default class GoogleMap extends React.Component {
         };
         this.loadMap();
         this.forceUpdate()
+        window.addEventListener("scroll", this.sticky)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.sticky);
     }
 
     recenterMap(){
@@ -98,7 +119,7 @@ export default class GoogleMap extends React.Component {
 
         return (
             <div className="google-map-grid-container">
-                <div style={this.props.mapStyles} ref="map" className="google-map"> 
+                <div style={this.props.mapStyles} id="google-map" ref="map" className={this.state.sticky}> 
                     {this.renderChildren()}
                     Loading map...
                 </div>
