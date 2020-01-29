@@ -40,13 +40,15 @@ export default class Index extends React.Component{
         return(
             <div>
                 <SearchBar/>
-                <div className="index-grid-container">
-                    <p className="search-txt2">Peep it...</p>
-                    <p className="search-txt2 result">Search results for "{this.props.searchParams.split("=")[1].replace(/[^A-Z]/ig, " ")}"</p>
-                    {this.resultText(surfspots.length)}
-                    <ul className="index-grid">
-                        {surfspots}
-                    </ul>
+                <div className="index-map-container">
+                    <div className="index-grid-container">
+                        <p className="search-txt2">Peep it...</p>
+                        <p className="search-txt2 result">Search results for "{this.props.searchParams.split("=")[1].replace(/[^A-Z]/ig, " ")}"</p>
+                        {this.resultText(surfspots.length)}
+                        <ul className="index-grid">
+                            {surfspots}
+                        </ul>
+                    </div>
                     <GoogleMap/>
                 </div>
             </div>

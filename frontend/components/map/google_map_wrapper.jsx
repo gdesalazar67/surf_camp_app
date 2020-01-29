@@ -3,37 +3,32 @@ import {GoogleApiWrapper} from 'google-maps-react';
 import GoogleMap from './google_map'
 import {Marker} from './marker';
 
-let mapStyles = {
-    width: "335px",
-    height: "600px"
-};
-
 
 export class GoogleMapContainer extends React.Component {
 
-    // setWidth(){
-    //     let width = window.innerWidth;
-
-    //     if(width >= 1300){
-    //         mapStyles.width = "460px";
-    //     }else if(width > 375){
-    //         mapStyles.width = `${width}px`;
-    //     }
-    // }
     constructor(props){
         super(props);
         this.state = {
-            surfspots: this.props.surfspots
+            surfspots: this.props.surfspots,
+            windowWidth: window.innerWidth
         }
     }
-    // state = {
-    //     surfspots: this.props.surfspots
-    //     // mapStyles: {
-    //     //     width: "335px",
-    //     //     height: "600px"
-    //     // }
-    // }
 
+
+    // setWidth(){
+    //     let width = window.innerWidth;
+    //     if(width >= 1300){
+    //         this.setState({mapStyles: 
+    //             { width:"460px", height: "600px"}   
+    //         });
+    //     }else if(width > 375){
+    //         this.setState({
+    //             mapStyles:
+    //                 { width: `${width}px`, height: "600px" }
+    //         });
+    //     };
+    // }
+    
     componentDidUpdate(prevProps, prevState) {
 
         if(prevProps.surfspots !== this.props.surfspots){
@@ -44,12 +39,21 @@ export class GoogleMapContainer extends React.Component {
 
 
     render() {
-        // this.setWidth();
-        console.log("in here wrapper")
-        
+
+
+        let mapStyles = {
+            width: "335px",
+            height: "600px"
+        };
+
+        if (this.state.windowWidth >= 1300) {
+                mapStyles.width = "460px"
+        } else if (this.state.windowWidth > 375) {
+                mapStyles.width = `${this.state.windowWidth}px`
+        };
+         console.log(mapStyles)
         let spots = this.props.surfspots.map(spot => {
             let { lat, long } = spot;
-            console.log("in map")
             return (
                 <Marker
                     position={{ lat: lat, lng: long }}

@@ -99,3 +99,23 @@
         margin-left: 0;
     }
 }
+
+@media screen and (min-width: 1300px){
+    
+   .index-map-container{
+       box-sizing: border-box;
+       width: 1300px;
+       margin: auto;
+       padding: 0px 10px;
+
+       display: grid;
+       grid-template-columns: 790px 460px;
+       grid-column-gap: 30px;
+   }
+
+   .index-grid-container{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0px 0px 20px;
+    }
+}

@@ -1,8 +1,11 @@
 
 footer .host-container {
-    width: 90%;
     margin: auto;
+    padding: 0px 20px;
+    max-width: 412px;
 }
+
+
 footer .hosted-by {
    font-size: 18px;
    line-height: 18px;
@@ -36,33 +39,36 @@ footer .promotion{
 }
 
 
-@media screen and (min-width: 900px){
+// @media screen and (min-width: 900px){
    
-    footer .host-container{
-        width: 740px;
-    }
-    footer .hosted-by-container {
-        width: 56.88888%;
-        max-width: 421px;
-    }
-}
-@media screen and (min-width: 1025px){
-    footer .host-container{
-        width: 920px;
-    }
-    .footer .hosted-by-container {
-        width: 60%;
-    }
-}
+//     // footer .host-container{
+//     //     width: 740px;
+//     //     display: flex;
+//     //     justify-content: center;
+//     // }
 
-@media screen and (min-width: 1200px){
-    footer .host-container{
-        width: 1020px;
-    }
-}
+//     footer .hosted-by-container {
+//         width: 56.88888%;
+//         max-width: 421px;
+//     }
+// }
+// @media screen and (min-width: 1025px){
+//     // footer .host-container{
+//     //     width: 920px;
+//     // }
+//     .footer .hosted-by-container {
+//         width: 60%;
+//     }
+// }
 
-@media screen and (min-width: 1300px){
-    footer .host-container{
-        width: 1080px;
-    }
-}
+// @media screen and (min-width: 1200px){
+//     footer .host-container{
+//         width: 1020px;
+//     }
+// }
+
+// @media screen and (min-width: 1300px){
+//     footer .host-container{
+//         width: 1080px;
+//     }
+// }
