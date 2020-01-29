@@ -32,61 +32,49 @@ export default class GoogleMap extends React.Component {
 
     componentDidUpdate(prevProps, prevState){
         
-        console.log("prevprops",prevProps)
-        console.log("this.props",this.props)
-        console.log("this.prevState",prevState)
-        console.log("this.State",this.state)
         if(prevProps.google !== this.props.google){
             this.loadMap();
             this.forceUpdate()
         }
         if ((prevState.currentLocation !== this.state.currentLocation) ||
             (prevProps.initialCenter !== this.props.initialCenter)) {
-            console.log("componentDidUpdate?")
-            console.log("update currentlocation")
             // this.loadMap();
             // this.forceUpdate();
             // this.forceUpdate()
             this.recenterMap();
-            
         }
     }
 
     componentDidMount(){    
-        // this.centerAroundSurfspot();   
-        // console.log("did mount")
         // this.centerAroundCurrentLocation();
         this.loadMap();
-        this.forceUpdate()
-        // window.addEventListener("scroll", this.sticky)
+        // this.forceUpdate()
+        window.addEventListener("scroll", this.sticky)
     }
 
-    centerAroundSurfspot(){
-        if(this.props.surfspots.length){
-            let surfspot = this.props.surfspots[0];
-            console.log(surfspot);
-            // let center = new this.props.google.maps.LatLng(surfspot.lat, surfspot.long)
-            let center = {lat: parseFloat(surfspot.lat), lng: parseFloat(surfspot.long)}
-            this.setState({currentLocation: center})
-        };
-    }
+    // centerAroundSurfspot(){
+    //     if(this.props.surfspots.length){
+    //         let surfspot = this.props.surfspots[0];
+    //         let center = {lat: parseFloat(surfspot.lat), lng: parseFloat(surfspot.long)}
+    //         this.setState({currentLocation: center})
+    //     };
+    // }
 
-    centerAroundCurrentLocation(){
-        if (this.props.centerAroundCurrentLocation) {
-            // if (navigator && navigator.geolocation) {
-            //     navigator.geolocation.getCurrentPosition((pos) => {
-                    this.centerAroundSurfspot();
-                    // const coords = pos.coords;
-                    // this.setState({
-                    //     currentLocation: {
-                    //         lat: coords.latitude,
-                    //         lng: coords.longitude
-                    //     }
-                    // });
-            //     });
-            // };
-        };
-    }
+    // centerAroundCurrentLocation(){
+    //     if (this.props.centerAroundCurrentLocation) {
+    //         if (navigator && navigator.geolocation) {
+    //             navigator.geolocation.getCurrentPosition((pos) => {
+    //                 const coords = pos.coords;
+    //                 this.setState({
+    //                     currentLocation: {
+    //                         lat: coords.latitude,
+    //                         lng: coords.longitude
+    //                     }
+    //                 });
+    //             });
+    //         };
+    //     };
+    // }
 
     componentWillUnmount() {
         window.removeEventListener("scroll", this.sticky);
@@ -100,8 +88,6 @@ export default class GoogleMap extends React.Component {
 
         if (map) {
             let center = new maps.LatLng(current.lat, current.lng)
-            console.log("in recenter")
-            console.log(center)
             map.panTo(center)
         }
     }
@@ -113,7 +99,6 @@ export default class GoogleMap extends React.Component {
             const maps = google.maps;
 
             const node = this.refs.map;
-            // let {lat, lng} = this.props.initialCenter;
             let { initialCenter, zoom } = this.props;
             const center = new maps.LatLng(initialCenter.lat, initialCenter.lng);
             const mapConfig = Object.assign({}, {
@@ -164,7 +149,7 @@ GoogleMap.propTypes = {
     surfspots: PropTypes.array
 };
 GoogleMap.defaultProps = {
-    zoom: 5,
+    zoom: 4,
     // venice, by default
     initialCenter: {
         lat: 33.993118,

@@ -55,11 +55,10 @@ export class GoogleMapContainer extends React.Component {
                 />
             );
         });
-        
+
         return (
             <div>
                 <GoogleMap 
-                    // surfspots={this.props.surfspots} 
                     initialCenter={this.props.initialCenter}
                     mapStyles={mapStyles} 
                     google={this.props.google}>
