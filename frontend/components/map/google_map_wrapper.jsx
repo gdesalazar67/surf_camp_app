@@ -11,19 +11,22 @@ export class GoogleMapContainer extends React.Component {
         this.state = {
             surfspots: this.props.surfspots,
             windowWidth: window.innerWidth,
-            windowHeight: window.innerHeight
+            windowHeight: window.innerHeight,
+           
         }
     }
 
  
     componentDidUpdate(prevProps) {
-
+        
         if(prevProps.surfspots !== this.props.surfspots){
-            this.setState({surfspots: this.props.surfspots})
-        }
+            this.setState({
+                surfspots: this.props.surfspots,
+                initialCenter: this.props.initialCenter
+            });
+            this.forceUpdate();
+        };
     }
-
-  
 
 
     render() {
@@ -34,15 +37,17 @@ export class GoogleMapContainer extends React.Component {
             height: "600px"
         };
 
+
         if (this.state.windowWidth >= 1300) {
                 mapStyles.width = "460px"
                 mapStyles.height = `${this.state.windowHeight - 20}px`
         } else if (this.state.windowWidth > 375) {
                 mapStyles.width = `${this.state.windowWidth}px`
         };
-         console.log(mapStyles)
+
         let spots = this.props.surfspots.map(spot => {
             let { lat, long } = spot;
+
             return (
                 <Marker
                     position={{ lat: lat, lng: long }}
@@ -50,10 +55,12 @@ export class GoogleMapContainer extends React.Component {
                 />
             );
         });
-
+        
         return (
             <div>
                 <GoogleMap 
+                    // surfspots={this.props.surfspots} 
+                    initialCenter={this.props.initialCenter}
                     mapStyles={mapStyles} 
                     google={this.props.google}>
                     {spots}
