@@ -9,10 +9,10 @@
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
     min-height: 600px;
 }
-.google-map div:first-of-type {
-    position: relative !important;
+// .google-map div:first-of-type {
+//     position: relative !important;
   
-}
+// }
  
 
 @media screen and (min-width: 1300px){
@@ -27,11 +27,38 @@
 
 }
 
-// .moveover{
-//     display: block;
-//     width: 50%;
-//     height: 60px;
-//     background-color: tomato;
+.gm-style .gm-style-iw-c {
+    padding: 0;
+}
+
+.gm-style .gm-style-iw-t::after {
+    display: none;
+}
+.gm-style .gm-style-iw-d {
+    max-width: 150px !important;
+    overflow: auto !important;
+}
+.gm-style .gm-style-iw-c  button{
+    display: none !important;
+}
+
+
+.map.surfspot.card-container{
+    width: 100px;
+    min-width: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+
+
+
+// .map.surfspot.card-container .surfspot.card{
+//     position: static !important;
+// }
+// .map.surfspot.card-container .surfspot.link{
+//     position: static !important;
 // }
 
 // .index-map-container{

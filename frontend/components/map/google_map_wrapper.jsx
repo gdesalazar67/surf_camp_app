@@ -2,7 +2,7 @@ import React from 'react';
 import {GoogleApiWrapper} from 'google-maps-react';
 import GoogleMap from './google_map'
 import {Marker} from './marker';
-
+import {InfoWindow} from './info_window';
 
 export class GoogleMapContainer extends React.Component {
 
@@ -46,13 +46,19 @@ export class GoogleMapContainer extends React.Component {
         };
 
         let spots = this.props.surfspots.map(spot => {
-            let { lat, long } = spot;
+            let { title, lat, long} = spot;
 
             return (
                 <Marker
                     position={{ lat: lat, lng: long }}
                     key={spot.long}
-                />
+                >
+                    <InfoWindow
+                        position={{ lat: lat, lng: long }}
+                        title={title}
+                        surfspot={spot}
+                    />
+                </Marker>
             );
         });
 
