@@ -2,7 +2,8 @@ import React from 'react';
 import {GoogleApiWrapper} from 'google-maps-react';
 import GoogleMap from './google_map'
 import {Marker} from './marker';
-import {InfoWindow} from './info_window';
+import InfoWindow from './info_window';
+import {withRouter} from "react-router-dom"
 
 export class GoogleMapContainer extends React.Component {
 
@@ -12,7 +13,6 @@ export class GoogleMapContainer extends React.Component {
             surfspots: this.props.surfspots,
             windowWidth: window.innerWidth,
             windowHeight: window.innerHeight,
-           
         }
     }
 
@@ -27,7 +27,6 @@ export class GoogleMapContainer extends React.Component {
             this.forceUpdate();
         };
     }
-
 
     render() {
 
@@ -77,4 +76,4 @@ export class GoogleMapContainer extends React.Component {
 
 export default GoogleApiWrapper({
     apiKey: ("AIzaSyAl8TSkkovuXys1EcUJFeDpZVI823ubNRg"),
-})(GoogleMapContainer);
+})(withRouter(GoogleMapContainer));

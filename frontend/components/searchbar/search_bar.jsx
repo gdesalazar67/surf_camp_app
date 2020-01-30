@@ -26,7 +26,6 @@ class SearchBar extends React.Component{
             this.props.location.search = `?query=${searchTerm}`
             this.props.fetchSurfspots(searchTerm)
         }else{
-            console.log(this.props)
             this.props.history.push({ pathname: "/index", search: `?query=${searchTerm}` });
         }
     };
