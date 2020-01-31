@@ -4,8 +4,7 @@ import ProfileCard from "./profile_card"
 
 
 class UserShow extends React.Component {
-
-    
+ 
     authenticateUser () {
         let {session, user, params} = this.props;
 
@@ -30,6 +29,7 @@ class UserShow extends React.Component {
     }
 
      validUser () {
+         this.props.closeModal();
         return (
            <div className="valid-user">
                <ProfileCard first_name={this.props.user.first_name}/>
