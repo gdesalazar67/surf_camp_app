@@ -18,24 +18,21 @@ class UserShow extends React.Component {
             };
         }else{
             return false;
-        }
-        
+        };
     }
 
      noUser() {
-
+        this.props.openModal('login') 
         return (
-            <div>
-                log in please
-            </div>
+            <div className="user-login"/>
         );
     }
 
      validUser () {
         return (
-            <div>
-                hello, you valid 
-            </div>
+           <div className="valid-user">
+               you the best valid user ever!
+           </div>
         );
     }
 
