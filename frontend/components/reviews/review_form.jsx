@@ -52,7 +52,7 @@ class ReviewForm extends React.Component{
                          rows="10"
                          col="10"
                         />
-                    <input className="create-review-submit" type="submit" value="Submit Review" />
+                    <input className="create-review-submit"  type="submit" value="Submit Review" />
                     <div className="booking_error_message">{this.renderErrors()}</div>
                 </form>
             </div>

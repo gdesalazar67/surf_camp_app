@@ -3,7 +3,7 @@ import {fetchSurfspots} from "../../actions/surfspots_actions";
 import Index from './index';
 
 const msp = (state, props)=>{
-    console.log(props)
+    
     return({
         surfSpots: Object.values(state.entities.surfSpots),
         searchParams: props.location.search ? props.location.search: nil 

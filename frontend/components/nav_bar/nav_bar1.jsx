@@ -53,9 +53,9 @@ class Navbar extends React.Component{
                     </div>
                 </button>
                 <div className="header-link">
-                    <label className="nav-bar-links">
+                    <Link to="/" className="nav-bar-links">
                         Camp
-                        </label>
+                        </Link >
                     <label className="nav-bar-links">
                         Host
                         </label>
