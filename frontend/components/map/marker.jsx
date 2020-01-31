@@ -32,6 +32,7 @@ export class Marker extends React.Component {
     }
 
     renderChildren() {
+        if (this.props.currentUrl === "/surfspots/:id") return;
         const { map, children, google } = this.props;
         
         if (!children) return;

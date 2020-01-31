@@ -47,6 +47,8 @@
 .surfspot.image-container img{
     border-radius: 4px 4px 0 0;
     max-height: inherit;
+    object-fit: cover;
+    object-position: bottom;
 }
 .surfspot.caption-container{
     height: auto;

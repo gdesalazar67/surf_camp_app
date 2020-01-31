@@ -38,44 +38,17 @@ export default class GoogleMap extends React.Component {
         }
         if ((prevState.currentLocation !== this.state.currentLocation) ||
             (prevProps.initialCenter !== this.props.initialCenter)) {
-            // this.loadMap();
-            // this.forceUpdate();
-            // this.forceUpdate()
             this.recenterMap();
+            if (this.props.currentUrl === "/surfspots/:id") this.map.setZoom(13);
         }
     }
 
     componentDidMount(){    
-        // this.centerAroundCurrentLocation();
         this.loadMap();
-        // this.forceUpdate()
         window.addEventListener("scroll", this.sticky)
     }
 
-    // centerAroundSurfspot(){
-    //     if(this.props.surfspots.length){
-    //         let surfspot = this.props.surfspots[0];
-    //         let center = {lat: parseFloat(surfspot.lat), lng: parseFloat(surfspot.long)}
-    //         this.setState({currentLocation: center})
-    //     };
-    // }
-
-    // centerAroundCurrentLocation(){
-    //     if (this.props.centerAroundCurrentLocation) {
-    //         if (navigator && navigator.geolocation) {
-    //             navigator.geolocation.getCurrentPosition((pos) => {
-    //                 const coords = pos.coords;
-    //                 this.setState({
-    //                     currentLocation: {
-    //                         lat: coords.latitude,
-    //                         lng: coords.longitude
-    //                     }
-    //                 });
-    //             });
-    //         };
-    //     };
-    // }
-
+  
     componentWillUnmount() {
         window.removeEventListener("scroll", this.sticky);
     }
@@ -85,7 +58,7 @@ export default class GoogleMap extends React.Component {
         const current = this.props.initialCenter;
         const {google} = this.props;
         const maps = google.maps;
-
+        
         if (map) {
             let center = new maps.LatLng(current.lat, current.lng)
             map.panTo(center)
@@ -100,7 +73,9 @@ export default class GoogleMap extends React.Component {
             const maps = google.maps;
 
             const node = this.refs.map;
-            let { initialCenter, zoom } = this.props;
+        
+            let { initialCenter, zoom, currentUrl } = this.props;
+            if (currentUrl === "/surfspots/:id") zoom = 14;
             const center = new maps.LatLng(initialCenter.lat, initialCenter.lng);
             const mapConfig = Object.assign({}, {
                 center: center,
@@ -114,7 +89,7 @@ export default class GoogleMap extends React.Component {
 
 
     renderChildren() {
-        const { children } = this.props;
+        const { children, currentUrl } = this.props;
 
         if (!children) return;
         return React.Children.map(children, c => {
@@ -122,7 +97,8 @@ export default class GoogleMap extends React.Component {
             let parantProps = {
                 map: this.map,
                 google: this.props.google,
-                mapCenter: this.state.initialCenter
+                mapCenter: this.state.initialCenter,
+                currentUrl: currentUrl
             }
             return React.cloneElement(c, parantProps);
         });

@@ -18,7 +18,6 @@ export class GoogleMapContainer extends React.Component {
 
  
     componentDidUpdate(prevProps) {
-        
         if(prevProps.surfspots !== this.props.surfspots){
             this.setState({
                 surfspots: this.props.surfspots,
@@ -30,18 +29,19 @@ export class GoogleMapContainer extends React.Component {
 
     render() {
 
-
         let mapStyles = {
             width: "335px",
             height: "600px"
         };
+        
 
-
-        if (this.state.windowWidth >= 1300) {
-                mapStyles.width = "460px"
-                mapStyles.height = `${this.state.windowHeight - 20}px`
+        if(this.props.match.path === "/surfspots/:id"){
+            mapStyles.width = `${this.state.windowWidth}px`
+        }else if (this.state.windowWidth >= 1300) {
+            mapStyles.width = "460px"
+            mapStyles.height = `${this.state.windowHeight - 20}px`
         } else if (this.state.windowWidth > 375) {
-                mapStyles.width = `${this.state.windowWidth}px`
+            mapStyles.width = `${this.state.windowWidth}px`
         };
 
         let spots = this.props.surfspots.map(spot => {
@@ -66,8 +66,10 @@ export class GoogleMapContainer extends React.Component {
                 <GoogleMap 
                     initialCenter={this.props.initialCenter}
                     mapStyles={mapStyles} 
+                    currentUrl={this.props.match.path}
                     google={this.props.google}>
                     {spots}
+            
                 </GoogleMap >
             </div>
         );

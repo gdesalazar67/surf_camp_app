@@ -85,7 +85,7 @@ photos = [
     "https://i.pinimg.com/originals/1f/71/84/1f71849eb74198c9394c11bb3af5989d.jpg",
     "https://i.pinimg.com/474x/a2/31/12/a23112d706daba0907afec5129cc42e4--hammocks-costa-rica.jpg",
     "https://travel.home.sndimg.com/content/dam/images/travel/fullrights/2017/4/25/0/Original_Jeremy-Pawlowski-Costa-Rica-10.jpg.rend.hgtvcom.1280.960.suffix/1493143970475.jpeg",
-    "https://b9i191t9swmfpa7o1fi3farz-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/slide-1.jpg"
+    "https://data.whicdn.com/images/327156684/original.jpg"
 ],
 [
     "http://www.trebolrentacar.com/uploads/manuel_antonio_trebolrentacar.jpeg",

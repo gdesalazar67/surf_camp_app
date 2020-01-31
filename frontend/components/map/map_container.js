@@ -3,7 +3,7 @@ import GoogleMapContainer from './google_map_wrapper'
 import { fetchSurfspot, fetchSurfspots } from '../../actions/surfspots_actions';
 import {fetchGeoCode} from '../../actions/geo_location_actions';
 
-const msp =(state, ownProps)=>{
+const msp =(state)=>{
     let surfspots = Object.values(state.entities.surfSpots);
     let center = surfspots[0]? 
         { lat: parseFloat(surfspots[0].lat), lng: parseFloat(surfspots[0].long) } : 

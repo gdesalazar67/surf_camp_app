@@ -49,7 +49,6 @@ class InfoWindow extends React.Component {
         this.props.onMouseOver(false)
     }
     mouseOver(){
-        console.log(this.props)
         this.props.onMouseOver(true)
     }
     onClick(){
