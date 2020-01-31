@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import ProfileCard from "./profile_card"
 
 
 class UserShow extends React.Component {
@@ -31,7 +32,7 @@ class UserShow extends React.Component {
      validUser () {
         return (
            <div className="valid-user">
-               you the best valid user ever!
+               <ProfileCard first_name={this.props.user.first_name}/>
            </div>
         );
     }
