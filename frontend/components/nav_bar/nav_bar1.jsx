@@ -16,9 +16,9 @@ class Navbar extends React.Component{
        let user = this.props.currentUser ? (
         <div className="login-signup">
             <button className="button-link" id="logout-b" onClick={this.props.logout}>Logout</button>
-            <button className="button-link" id="logout-b" onClick={() => this.props.history.push({
-                   pathname: `/user/${this.props.currentUser}`})}> user
-
+            <button className="icon button-link" id="logout-b" onClick={() => this.props.history.push({
+                pathname: `/user/${this.props.currentUser}`})}>
+                <div className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg" /></div>
             </button>
             {/* <p id="current-user">{currentUser.first_name}</p> */}
 
