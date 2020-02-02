@@ -12,7 +12,6 @@ class Navbar extends React.Component{
     };
 
     renderUser(){
-        console.log(this.props)
        let user = this.props.currentUser ? (
         <div className="login-signup">
             <button className="button-link" id="logout-b" onClick={this.props.logout}>Logout</button>
@@ -20,14 +19,6 @@ class Navbar extends React.Component{
                 pathname: `/user/${this.props.currentUser}`})}>
                 <div className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg" /></div>
             </button>
-            {/* <p id="current-user">{currentUser.first_name}</p> */}
-
-
-            {/* <h1 className="logo-container">
-                <div className="logo" id="userProfilePhoto">
-                    <img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg" />
-                </div>
-            </h1> */}
         </div>
     ) : (
             <nav className="login-signup">
