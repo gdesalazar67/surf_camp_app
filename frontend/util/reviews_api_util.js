@@ -1,8 +1,9 @@
-export const fetchReviews = (id)=>{
+export const fetchReviews = (id, user)=>{
     return(
         $.ajax({
             method: "GET",
-            url: `api/surfspots/${id}/reviews`
+            url: `api/surfspots/${id}/reviews`,
+            data: {user}
         })
     )
 }

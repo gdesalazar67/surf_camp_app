@@ -36,9 +36,9 @@ export const receiveErrors = (errors)=>{
 
 
 
-export const fetchReviews = (id) => dispatch =>{
+export const fetchReviews = (id, user) => dispatch =>{
     return(
-        REVIEWAPIUtil.fetchReviews(id).then(reviews=>
+        REVIEWAPIUtil.fetchReviews(id, user).then(reviews=>
             dispatch(receiveAllReviews(reviews)))
     );
 };

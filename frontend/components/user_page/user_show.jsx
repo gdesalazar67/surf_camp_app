@@ -1,9 +1,16 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import ProfileCard from "./profile_card"
+import ReviewsIndex from "../reviews/reviews_index_container"
 
 
 class UserShow extends React.Component {
+
+    componentDidMount(){
+        this.props.fetchReviews(null, true)
+        this.props.fetchBookings();
+        this.props.fetchSurfspots(null, this.props.user.id)
+    }
  
     authenticateUser () {
         let {session, user, params} = this.props;
@@ -32,7 +39,8 @@ class UserShow extends React.Component {
          this.props.closeModal();
         return (
            <div className="valid-user">
-               <ProfileCard first_name={this.props.user.first_name}/>
+                <ProfileCard first_name={this.props.user.first_name}/>
+                <ReviewsIndex userProfile={true}/>
            </div>
         );
     }

@@ -13,7 +13,6 @@ class Api::ReviewsController < ApplicationController
     end 
 
     def update
-
         @review = Review.find(params[:id])
         return render json: ["You are not the author of this review"] unless @review.author_id == current_user.id
 
@@ -36,8 +35,14 @@ class Api::ReviewsController < ApplicationController
     end 
 
     def index
-        @reviews = Surfspot.find(params[:surfspot_id]).reviews
-        render "api/reviews/index"
+        
+        if params["user"]
+                @reviews = current_user.reviews
+                render "api/reviews/index"
+        else
+            @reviews = Surfspot.find(params[:surfspot_id]).reviews
+            render "api/reviews/index"
+        end
     end 
 
     def show

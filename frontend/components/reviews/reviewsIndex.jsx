@@ -10,8 +10,12 @@ class ReviewsIndex extends React.Component{
     }
 
     componentDidMount(){
-        
-        this.props.fetchReviews(this.props.match.params.id)
+        let {fetchReviews, match} = this.props;
+        let {id} = match.params;
+
+        if(id){
+            fetchReviews(id);
+        };
     }
 
     onClick(){
@@ -24,8 +28,12 @@ class ReviewsIndex extends React.Component{
 
    
     render(){
-        const reviews = Object.values(this.props.reviews)
+
+        let {reviews, userProfile} = this.props
+
+        reviews = Object.values(reviews);
         let reviewlist;
+        let header;
 
         if (!reviews.length){
             reviewlist = 
@@ -46,23 +54,45 @@ class ReviewsIndex extends React.Component{
                             currentUser={this.props.currentUser}
                             deleteReview={this.props.deleteReview}
                             user={this.props.user}
+                            userProfile={userProfile}
                         />
                     )
                 }
             );
         };
-      
-        return(
 
+        header = userProfile ? 
             <div className="review-container">
+                <nav className="create-review-button">
+                    <p className="add-reviews">Reviews you've left</p>
+                    {/* <button className="review-button-link" onClick={this.onClick}>Review</button> */}
+                </nav>
+                <ul className="review-list-container">
+                    {reviewlist}
+                </ul>
+            </div>
+            : <div className="review-container">
                 <nav className="create-review-button">
                     <p className="add-reviews">Tell us about your experience</p>
                     <button className="review-button-link" onClick={this.onClick}>Review</button>
                 </nav>
                 <ul className="review-list-container">
-                    {reviewlist}                 
+                    {reviewlist}
                 </ul>
-            </div>
+            </div>;
+
+        return(
+            header
+
+            // <div className="review-container">
+            //     <nav className="create-review-button">
+            //         <p className="add-reviews">Tell us about your experience</p>
+            //         <button className="review-button-link" onClick={this.onClick}>Review</button>
+            //     </nav>
+            //     <ul className="review-list-container">
+            //         {reviewlist}                 
+            //     </ul>
+            // </div>
         )
     }
 

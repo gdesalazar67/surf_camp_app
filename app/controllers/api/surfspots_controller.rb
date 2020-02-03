@@ -10,11 +10,13 @@ class Api::SurfspotsController < ApplicationController
     end
 
     def index
-        # byebug
-        @surfspots = Surfspot.searchFor(params["searchParams"])
-        # byebug
+        if params["hostId"]
+            @surfspots = Surfspot.where(host_id: params["hostId"])
+        else 
+            @surfspots = Surfspot.searchFor(params["searchParams"])
+    
+        end
     end
-
     def update
         @surfspot = Surfspot.find(params[:id])
         if @surfspot.update(surfspot_params)

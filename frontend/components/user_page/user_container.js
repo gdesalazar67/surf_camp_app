@@ -1,4 +1,7 @@
 import { connect } from "react-redux";
+import { fetchReviews } from "../../actions/reviews_actions"
+import { fetchBookings } from "../../actions/bookings_actions";
+import { fetchSurfspots } from "../../actions/surfspots_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 import UserShow from './user_show';
 
@@ -16,8 +19,11 @@ const msp = (state, props) => {
 }
 
 const mdp = (dispatch) => ({
-    openModal: (modal) => dispatch(openModal(modal)),
-    closeModal: () => dispatch(closeModal())
+  fetchReviews: (id, user) => dispatch(fetchReviews(id,user)),
+  fetchBookings: () => dispatch(fetchBookings()),
+  fetchSurfspots: (searchParams,hostId) => dispatch(fetchSurfspots(searchParams, hostId)),
+  openModal: (modal) => dispatch(openModal(modal)),
+  closeModal: () => dispatch(closeModal())
 
 })
 
