@@ -38,7 +38,7 @@ class BookingForm extends React.Component{
         let positionMap = map.offsetTop
         let calander = div.offsetHeight
         let stop = y + calander ;
-        
+
         if (positionMap < stop) {
             this.setState({ sticky: "widget_container bottom" });
             return
@@ -90,12 +90,12 @@ class BookingForm extends React.Component{
        
             return (
                 <ul className="booking-errors-container">
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`} className="booking-error">{error}</li>
+                    {this.props.errors.map((error, i) => (
+                        <li key={`error-${i}`} className="booking-error">{error}</li>
                     ))}
-            </ul>
+                </ul>
             );
-        // }
+    
     }
 
     dayAfterCheckIn(day) {

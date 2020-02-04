@@ -1,4 +1,6 @@
 class Surfspot < ApplicationRecord
+     include PgSearch::Model
+
     validates :host_id, :title, :description, :price, :lat, :long, :max_guest, presence:true
     validates :campfire?, :pets?, :toilets?, :showers?, :wifi?, :water?, :tent?, inclusion: { in: [ true, false ] }
 
@@ -23,14 +25,16 @@ class Surfspot < ApplicationRecord
         foreign_key: :surfspot_id,
         class_name: :Review 
 
-    def self.searchFor(searchParams)
+    pg_search_scope :search, 
+        against: [:title, :description, :continent],
+        using: {
+            tsearch: {
+                prefix: true,
+                dictionary: "english",
+                any_word: true
+            }
+        }
 
-        searchParams = searchParams.split("?query=").join("").downcase
-        if searchParams
-           where(["LOWER(surfspots.description) LIKE ? OR continent LIKE ? OR LOWER(surfspots.title) LIKE ?", "%#{searchParams}%",  "%#{searchParams}%", "%#{searchParams}%"])
-        else
-           all
-        end
-    end
+
          
 end

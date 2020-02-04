@@ -62,7 +62,6 @@ export const deleteBooking = (id)=>dispatch=>(
 
 export const createBooking = (booking) => dispatch => (
     BookingsAPIUtil.createBooking(booking).then(booking => {
-        alert("Booking Confirmed")
        return  dispatch(receiveBooking(booking))
     }, err => (dispatch(receiveBookingErrors(err.responseJSON)))
     )
