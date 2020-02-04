@@ -30,6 +30,7 @@
 .valid-user .review-container{
     padding: 25px 25px 0px;
     margin-top: 30px;
+    border: 1px solid #ebebeb;
 }
 
 .valid-user .review-container:last-child{
@@ -47,28 +48,25 @@
     height: auto;
     width: 100%;
     box-shadow: none;
+    
 }
 .valid-user .review-container .host-photo{
     height: auto;
     width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    overflow: hidden;
 }
-.valid-user .review-container .hosted-by-container .hosted-by{
+.valid-user .review-container .hosted-by-container .hosted-by:first-child{
     padding-top: 10px;
     
 }
-.valid-user .review-container .hosted-by-container .hosted-by:hover{
+.valid-user .review-container .hosted-by-container .hosted-by:first-child:hover{
     color: #40d9ac;
     transition: color 0.4s ease 0s, color 0.4s ease 0s;
 
 }
 
-// .bookings.review-container .hosted-by-container .hosted-by{
-//     border-bottom: 2px solid #fff;
-// }
-// .bookings.review-container .hosted-by-container .hosted-by:hover{
-//     border-bottom: 2px solid #40d9ac;
-//     transition: border-color 0.4s ease 0s, color 0.4s ease 0s;
-// }
 
 @media screen and (min-width: 930px){
 
@@ -83,10 +81,22 @@
     }
 
     .userProfile-container {
+        margin-top: 30px;
         padding: 20px 15px;
         width: 280px;
         border: 1px solid #ebebeb;
+        height: 275px;
     }
+
+    .valid-user .review-container .host-container{
+        flex-direction: row;
+    }
+    .valid-user .review-container .hosted-by-container{
+        min-width: 230px;
+        padding-left: 10px;
+    }
+
+    
 
 }
 

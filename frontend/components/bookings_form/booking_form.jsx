@@ -54,7 +54,8 @@ class BookingForm extends React.Component{
             booking.surfspot_id = this.props.surfspot.id;
             booking.host_id = this.props.surfspot.host_id;
             
-            this.props.createBooking(booking);
+            this.props.createBooking(booking)
+                .then(()=> this.props.history.push({pathname: `/user/${this.props.currentUserId}`}))
         }
     }
 

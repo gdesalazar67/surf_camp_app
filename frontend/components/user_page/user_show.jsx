@@ -41,8 +41,10 @@ class UserShow extends React.Component {
         return (
            <div className="valid-user">
                 <ProfileCard first_name={this.props.user.first_name}/>
-                <BookingsIndex/>
-                <ReviewsIndex userProfile={true}/>
+                <div>
+                    <BookingsIndex/>
+                    <ReviewsIndex userProfile={true}/>
+                </div>
            </div>
         );
     }
