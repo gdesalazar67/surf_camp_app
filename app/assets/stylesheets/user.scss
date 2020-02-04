@@ -28,10 +28,47 @@
 }
 
 .valid-user .review-container{
-    padding-right: 25px;
-    padding-left: 25px;
+    padding: 25px 25px 0px;
     margin-top: 30px;
 }
+
+.valid-user .review-container:last-child{
+    margin-bottom: 30px;
+}
+
+.valid-user .review-container .host-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.valid-user .review-container .host-photo img{
+    border-radius: 0;
+    height: auto;
+    width: 100%;
+    box-shadow: none;
+}
+.valid-user .review-container .host-photo{
+    height: auto;
+    width: 100%;
+}
+.valid-user .review-container .hosted-by-container .hosted-by{
+    padding-top: 10px;
+    
+}
+.valid-user .review-container .hosted-by-container .hosted-by:hover{
+    color: #40d9ac;
+    transition: color 0.4s ease 0s, color 0.4s ease 0s;
+
+}
+
+// .bookings.review-container .hosted-by-container .hosted-by{
+//     border-bottom: 2px solid #fff;
+// }
+// .bookings.review-container .hosted-by-container .hosted-by:hover{
+//     border-bottom: 2px solid #40d9ac;
+//     transition: border-color 0.4s ease 0s, color 0.4s ease 0s;
+// }
 
 @media screen and (min-width: 930px){
 

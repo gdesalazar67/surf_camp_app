@@ -24,13 +24,16 @@ const ReviewItem = ({review, currentUser, deleteReview, userProfile})=>{
         </Link>
         : <p className="hosted-by">{review.authorFirstName}<span> recommends this listing.</span></p>;
 
+    let imgUrl = userProfile ? review.surfspot_photos[0] : "https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg";
+
+
 
     return(
         <div className="review-item-container">
             <div className="review-details">
                 <div className="author-date">
                     <div className='host-container'>
-                        <div className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg" /></div>
+                        <div className="host-photo"><img src={imgUrl} /></div>
                         <div className="hosted-by-container">
                             {/* <p className="hosted-by">{review.authorFirstName}<span> recommends this listing.</span></p> */}
                             {page}

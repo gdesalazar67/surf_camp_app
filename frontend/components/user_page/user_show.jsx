@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import ProfileCard from "./profile_card"
+import ProfileCard from "./profile_card";
+import BookingsIndex from "../bookings/booking_container"
 import ReviewsIndex from "../reviews/reviews_index_container"
 
 
@@ -8,7 +9,7 @@ class UserShow extends React.Component {
 
     componentDidMount(){
         this.props.fetchReviews(null, true)
-        this.props.fetchBookings();
+        // this.props.fetchBookings();
         this.props.fetchSurfspots(null, this.props.user.id)
     }
  
@@ -40,6 +41,7 @@ class UserShow extends React.Component {
         return (
            <div className="valid-user">
                 <ProfileCard first_name={this.props.user.first_name}/>
+                <BookingsIndex/>
                 <ReviewsIndex userProfile={true}/>
            </div>
         );
