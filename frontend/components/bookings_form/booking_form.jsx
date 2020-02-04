@@ -34,6 +34,15 @@ class BookingForm extends React.Component{
         let position = div.offsetTop;
         let y = window.pageYOffset;
 
+        let map = document.getElementById("google-map");
+        let positionMap = map.offsetTop
+        let calander = div.offsetHeight
+        let stop = y + calander ;
+        
+        if (positionMap < stop) {
+            this.setState({ sticky: "widget_container bottom" });
+            return
+        }
         if (y > position && y > 491) {
             this.setState({ sticky: "widget_container sticky" });
         } else {

@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
 export default class GoogleMap extends React.Component {
@@ -26,9 +25,7 @@ export default class GoogleMap extends React.Component {
         let positionFooter = footer.offsetTop
         let mapheight= div.offsetHeight
         let stop = y + mapheight + 95;
-        console.log(position, y, positionFooter)
-        console.log(stop)
-
+     
         if (positionFooter < stop) {
             this.setState({ sticky: "google-map bottom" });
             return 
@@ -149,7 +146,4 @@ GoogleMap.defaultProps = {
     centerAroundCurrentLocation: true,
     surfspots: []
 };
-
-
-
 

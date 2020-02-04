@@ -353,6 +353,10 @@
     top: 0;
     right: 10%;
   }
+  .widget_container.bottom{
+    bottom: -163px;
+    top: auto;
+  }
  
 }
 
@@ -360,12 +364,6 @@
   position: relative;
   width: 339px;
 }
-
-// .widget_container.sticky{
-//   position: fixed;
-//   top: 0;
-//   right: 20%;
-// }
 
 
 @media (max-width: 899px) {
