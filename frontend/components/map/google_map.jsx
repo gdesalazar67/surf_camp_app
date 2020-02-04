@@ -21,12 +21,26 @@ export default class GoogleMap extends React.Component {
         let div = document.getElementById("google-map")
         let position = div.offsetTop;
         let y = window.pageYOffset;
+
+        let footer = document.getElementsByTagName("footer")[0];
+        let positionFooter = footer.offsetTop
+        let mapheight= div.offsetHeight
+        let stop = y + mapheight + 95;
+        console.log(position, y, positionFooter)
+        console.log(stop)
+
+        if (positionFooter < stop) {
+            this.setState({ sticky: "google-map bottom" });
+            return 
+        }
       
-        if (y > (position - 10) && y > 599) {
+        if (y > (position - 10) && y > 599 ) {
             this.setState({ sticky: "google-map sticky" });
         } else {
             this.setState({ sticky: "google-map" });
         };
+
+       
     }
     
 
@@ -135,4 +149,7 @@ GoogleMap.defaultProps = {
     centerAroundCurrentLocation: true,
     surfspots: []
 };
+
+
+
 

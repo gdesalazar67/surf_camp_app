@@ -9,7 +9,6 @@ class UserShow extends React.Component {
 
     componentDidMount(){
         this.props.fetchReviews(null, true)
-        // this.props.fetchBookings();
         this.props.fetchSurfspots(null, this.props.user.id)
     }
  

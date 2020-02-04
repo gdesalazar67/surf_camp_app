@@ -16,6 +16,7 @@
  
 
 @media screen and (min-width: 1300px){
+  
     .google-map-grid-container{
         margin-top: 133px;
     }
@@ -27,6 +28,11 @@
 
     .show-map-container .google-map.sticky{
         position: relative !important;
+    }
+
+    .google-map.bottom {
+        position: absolute !important;
+        bottom: 65px;
     }
 
 }
