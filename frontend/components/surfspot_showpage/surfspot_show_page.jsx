@@ -132,27 +132,30 @@ export default class SurfSpotShow extends React.Component{
 
 
         render(){
-            // 
+            
             if(!this.props.surfspot || !this.props.surfspot.host){
                 return(<div></div>);
             }
+
+            let {surfspot} = this.props;
+            let {host} = surfspot;
            return (
                <div className="show-map-container">
                 <div className="show-listing">
                     <div className="photo-slider">
-                        <PhotoSlideShow photos={this.props.surfspot.photos}/>
+                        <PhotoSlideShow photos={surfspot.photos}/>
                     </div>
                     <div className="info-calendar-container">
                     <div className="show-info-container">
                             <div className="show-title-container">
-                                <p className="show-title">{`${this.props.surfspot.title}`}</p>
-                                <p className="show-description">{`${this.props.surfspot.description}`}</p>   
+                                <p className="show-title">{`${surfspot.title}`}</p>
+                                <p className="show-description">{`${surfspot.description}`}</p>   
                             </div>
                             <div className='host-container'>
-                                <div className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg"/></div>
+                                <div className="host-photo"><img src={host.photo}/></div>
                                 <div className="hosted-by-container">
                                     <p className="hosted-by">Hosted by</p>
-                                    <p className="show-host">{`${this.props.surfspot.host.first_name}`}</p>   
+                                    <p className="show-host">{`${host.first_name}`}</p>   
                                 </div>
                             </div> 
                             <p className="show-host-description">

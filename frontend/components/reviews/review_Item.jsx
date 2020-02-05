@@ -24,7 +24,7 @@ const ReviewItem = ({review, currentUser, deleteReview, userProfile})=>{
         </Link>
         : <p className="hosted-by">{review.authorFirstName}<span> recommends this listing.</span></p>;
 
-    let imgUrl = userProfile ? review.surfspot_photos[0] : "https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg";
+    let imgUrl = userProfile ? review.surfspot_photos[0] : review.authorPhoto;
 
     let userProfileReview = userProfile ? <div className="show-host-description">{review.body}</div> : null;
     let showReview = userProfile ? null : <div className="show-host-description">{review.body}</div>;
@@ -44,7 +44,6 @@ const ReviewItem = ({review, currentUser, deleteReview, userProfile})=>{
                     </div>
                 </div>
                 {showReview}
-                {/* <div className="show-host-description">{review.body}</div> */}
             </div>
             {deleteButton}
         </div>

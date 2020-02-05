@@ -37,9 +37,13 @@ class UserShow extends React.Component {
 
      validUser () {
          this.props.closeModal();
+         let{user: {first_name, photo}} = this.props
         return (
            <div className="valid-user">
-                <ProfileCard first_name={this.props.user.first_name}/>
+                <ProfileCard 
+                    first_name={first_name}
+                    photo={photo}
+                />
                 <div>
                     <BookingsIndex/>
                     <ReviewsIndex userProfile={true}/>

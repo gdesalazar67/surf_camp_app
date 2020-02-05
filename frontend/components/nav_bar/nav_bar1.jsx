@@ -38,11 +38,12 @@ class Navbar extends React.Component{
 
 
     renderUser(){
-       let user = this.props.currentUser ? (
+        let {currentUser} = this.props
+       let user = currentUser ? (
         <div className="login-signup">
             <button className="button-link" id="logout-b" onClick={()=> this.logoutSubmit(event)}>Logout</button>
             <button className="icon button-link" id="logout-b" onClick={() => this.onclick(event)}>
-                <div className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg" /></div>
+                <div className="host-photo"><img src={currentUser.photo} /></div>
             </button>
         </div>
     ) : (

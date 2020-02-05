@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
             first_name: '',
             last_name: '',
             zip_code: '',
+            photo: "https://image.flaticon.com/icons/svg/1518/1518205.svg"
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoSubmit = this.demoSubmit.bind(this);

@@ -26,12 +26,12 @@ class Surfspot < ApplicationRecord
         class_name: :Review 
 
     pg_search_scope :search, 
-        against: [:title, :description, :continent],
+        against: [:title, :description, :continent, :state, :country],
         using: {
             tsearch: {
                 prefix: true,
-                dictionary: "english",
-                any_word: true
+                dictionary: "english"
+                # any_word: true
             }
         }
 

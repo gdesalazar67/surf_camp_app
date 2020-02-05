@@ -4,5 +4,6 @@ surfspot = review.surfspot
 json.surfspot_title surfspot.title 
 json.surfspot_photos surfspot.photos.pluck(:img_url)
 
-json.authorFirstName review.author.first_name
-
+author = review.author 
+json.authorFirstName author.first_name
+json.authorPhoto author.photo
