@@ -9,14 +9,39 @@ class Navbar extends React.Component{
             isHidden: true
         };
         this.toggleHidden = this.toggleHidden.bind(this);
+        this.onclick = this.onclick.bind(this);
     };
+
+
+    onclick(event){
+        event.preventDefault();
+        let {push} = this.props.history;
+        
+        push({
+            pathname: `/user/${this.props.currentUser}`
+        });
+        if(!this.state.isHidden) this.setState({isHidden: true});
+    }
+
+    logoutSubmit(event){
+        event.preventDefault();
+        let{ currentUser, logout, history, location} = this.props
+
+        logout()
+
+        if(location.pathname === `/user/${currentUser.id}`){
+            history.push({
+                pathname: `/`
+            });
+        };
+    }
+
 
     renderUser(){
        let user = this.props.currentUser ? (
         <div className="login-signup">
-            <button className="button-link" id="logout-b" onClick={this.props.logout}>Logout</button>
-            <button className="icon button-link" id="logout-b" onClick={() => this.props.history.push({
-                pathname: `/user/${this.props.currentUser}`})}>
+            <button className="button-link" id="logout-b" onClick={()=> this.logoutSubmit(event)}>Logout</button>
+            <button className="icon button-link" id="logout-b" onClick={() => this.onclick(event)}>
                 <div className="host-photo"><img src="https://www.flaticon.com/premium-icon/icons/svg/1993/1993177.svg" /></div>
             </button>
         </div>
