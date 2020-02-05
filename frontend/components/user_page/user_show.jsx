@@ -29,6 +29,7 @@ class UserShow extends React.Component {
     }
 
      noUser() {
+         console.log("nosuer")
         this.props.openModal('login') 
         return (
             <div className="user-login"/>
@@ -36,8 +37,8 @@ class UserShow extends React.Component {
     }
 
      validUser () {
-         this.props.closeModal();
-         let{user: {first_name, photo}} = this.props
+         let{modal, closeModal, user: {first_name, photo}} = this.props
+         if(modal) closeModal();
         return (
            <div className="valid-user">
                 <ProfileCard 

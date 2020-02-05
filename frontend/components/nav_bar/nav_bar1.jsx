@@ -10,6 +10,7 @@ class Navbar extends React.Component{
         };
         this.toggleHidden = this.toggleHidden.bind(this);
         this.onclick = this.onclick.bind(this);
+        this.onClickHost = this.onClickHost.bind(this);
     };
 
 
@@ -23,16 +24,26 @@ class Navbar extends React.Component{
         if(!this.state.isHidden) this.setState({isHidden: true});
     }
 
+     onClickHost(event){
+         event.preventDefault()
+        let { push } = this.props.history;
+        
+        push({pathname: '/user/host/12'})
+         if (!this.state.isHidden) this.setState({ isHidden: true });
+    }
+
     logoutSubmit(event){
         event.preventDefault();
         let{ currentUser, logout, history, location} = this.props
 
         logout()
 
-        if(location.pathname === `/user/${currentUser.id}`){
+        if(location.pathname === `/user/${currentUser.id}` ||
+            location.pathname === `/user/host/${currentUser.id}`){
             history.push({
                 pathname: `/`
             });
+            // if (!this.state.isHidden) this.setState({ isHidden: true });
         };
     }
 
@@ -64,7 +75,10 @@ class Navbar extends React.Component{
         });
     };
 
+   
+
     renderDropDown(){
+        // console.log(this.props)
 
         let collapse = this.state.isHidden ? "iscollapsed nav-bar-right" : "nav-bar-right";
         return(
@@ -80,15 +94,15 @@ class Navbar extends React.Component{
                     <Link to="/" className="nav-bar-links">
                         Camp
                         </Link >
-                    <label className="nav-bar-links">
+                    <div onClick={() => this.onClickHost(event)} className="nav-bar-links">
                         Host
-                        </label>
-                    <label className="nav-bar-links">
+                        </div>
+                    {/* <label className="nav-bar-links">
                         About
                         </label>
                     <label className="nav-bar-links">
                         Help
-                        </label>
+                        </label> */}
                 </div>
                 {this.renderUser()}
             </div>

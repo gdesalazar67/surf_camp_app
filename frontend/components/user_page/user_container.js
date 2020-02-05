@@ -6,15 +6,16 @@ import { openModal, closeModal } from "../../actions/modal_actions";
 import UserShow from './user_show';
 
 const msp = (state, props) => {
-    let {session, entities} = state;
+    let {session, entities, ui} = state;
     let params = parseInt(props.match.params.username,10);
     let user = Object.values(entities.users)[0] || null;
-
+    let modal = ui.modal;
     return ({
       session: session.id,
       user: user,
       params: params,
       history: props.history,
+      modal: modal
     });
 }
 

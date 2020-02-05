@@ -15,6 +15,7 @@ import SurfSpotShow from './surfspot_showpage/surfspot_show_container';
 import SplashPage from './splash_page/splash_page_cards';
 import Footer from './footer';
 import User from './user_page/user_container';
+import Host from  './host_page/host_container'
 
 const App = ()=>{
 
@@ -30,6 +31,7 @@ const App = ()=>{
             <Route exact path="/index" component={SurfSpotIndex}/>
             <Route exact path="/surfspots/:id" component={SurfSpotShow} />
             <Route exact strict path="/user/:username" component={User} />
+            <Route exact strict path="/user/host/:id" component={Host} />
         </Switch>
         <Footer/>
     </div>)

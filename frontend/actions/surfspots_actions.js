@@ -65,6 +65,14 @@ export const updateSurfspot = surfspot => dispatch=>(
         ))
 )
 
+export const createSurfspot = surfspot => dispatch => (
+    SurfSpotsAPIUtil.createSurfspot(surfspot).then(surfspot=>
+        (dispatch(receiveSurfspot(surfspot))
+        ),err =>(
+            dispatch(receiveErrors(err.responseJSON))
+        ))
+)
+
 
 
 
