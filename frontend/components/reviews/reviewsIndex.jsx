@@ -45,7 +45,7 @@ class ReviewsIndex extends React.Component{
                 </div>
             </div>
         }else{
-            reviewlist = reviews.map(
+            reviewlist = reviews.reverse().map(
                 review => {
                     return (
                         <ReviewItem
