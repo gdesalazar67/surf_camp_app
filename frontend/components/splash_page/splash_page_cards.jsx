@@ -18,6 +18,10 @@ export default class SplashCards extends React.Component {
         ]
     }
 
+    componentDidMount(){
+         window.scrollTo(0, 0)
+    }
+
     render() {
 
         let cards = this.splashInfo.map(card =>(

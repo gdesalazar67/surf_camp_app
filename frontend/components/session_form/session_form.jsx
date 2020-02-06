@@ -136,7 +136,7 @@ class SessionForm extends React.Component {
         }else {
             return ( 
             <div className="other-link">
-                not a memember?&nbsp;{this.props.otherForm}             
+                not a member?&nbsp;{this.props.otherForm}             
             </div>)
         }
     };

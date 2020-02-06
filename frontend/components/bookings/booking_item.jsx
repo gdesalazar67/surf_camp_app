@@ -19,7 +19,7 @@ const BookingItem = ({ booking, deleteBooking }) => {
                             </Link>
                             <p className="hosted-by">Check in:<span> {check_in}</span></p>
                             <p className="hosted-by">Check out:<span> {check_out}</span></p>
-                            <p className="hosted-by">num of guest:<span> {booking.num_guest}</span></p>
+                            <p className="hosted-by">Guests:<span> {booking.num_guest}</span></p>
                             <p className="hosted-by">Hosted by:<span> {booking.host}</span></p>
                         </div>
                     </div>

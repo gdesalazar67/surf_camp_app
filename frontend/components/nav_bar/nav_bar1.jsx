@@ -13,6 +13,7 @@ class Navbar extends React.Component{
         this.onClickHost = this.onClickHost.bind(this);
     };
 
+   
 
     onclick(event){
         event.preventDefault();

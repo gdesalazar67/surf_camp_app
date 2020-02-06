@@ -8,8 +8,9 @@ import ReviewsIndex from "../reviews/reviews_index_container"
 class UserShow extends React.Component {
 
     componentDidMount(){
-        this.props.fetchReviews(null, true)
-        this.props.fetchSurfspots(null, this.props.user.id)
+        this.props.fetchReviews(null, true);
+        this.props.fetchSurfspots(null, this.props.user.id);
+        window.scrollTo(0, 0);
     }
  
     authenticateUser () {
