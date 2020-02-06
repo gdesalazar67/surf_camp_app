@@ -22,7 +22,7 @@ const App = ()=>{
 
     return (
    <div>
-       <Favicon url="/assets/favicon.ico"/>
+       {/* <Favicon url="/assets/favicon.ico"/> */}
         <Modal/>
         <Giftbox/>
         
