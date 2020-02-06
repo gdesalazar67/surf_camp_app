@@ -7,6 +7,7 @@ import {
     // Link,
     // HashRouter
 } from 'react-router-dom';
+import Favicon from 'react-favicon'
 import NavBarContainer from './nav_bar/nav_bar_container';
 import Modal from './modal/modal';
 import Giftbox from './splash_page/giftbox';
@@ -21,6 +22,7 @@ const App = ()=>{
 
     return (
    <div>
+       <Favicon url="/app/assests/images/favicon.ico"/>
         <Modal/>
         <Giftbox/>
         
