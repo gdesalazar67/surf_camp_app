@@ -1,5 +1,5 @@
 {
-  "name": "surfCampApp",
+  "name": "SurfCamp",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.5.5",
