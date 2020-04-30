@@ -33,7 +33,7 @@
     "test": "test"
   },
   "devDependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
